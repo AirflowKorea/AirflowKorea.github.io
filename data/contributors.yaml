@@ -1,0 +1,16 @@
+# Apache Airflow 한국인 기여자 정보
+# - contribution_type: code, docs, community, translation 등
+# - pr_count, issue_count는 대략적인 수치
+# - 본인 동의하에만 추가
+
+contributors:
+  - name: "추영욱"
+    github_username: "choo121600"
+    avatar_url: "https://github.com/choo121600.png"
+    contributions:
+      - "i18n(Ko): Add missing translations in admin.json and common.json #52417"
+      - "feat: Add real-time clock updates to timezone selector #52414"
+      - "Fix whitespace handling in DAG owners parsing for multiple owners #52216"
+    pr_count: 15
+    issue_count: 8
+    github_url: "https://github.com/choo121600"
