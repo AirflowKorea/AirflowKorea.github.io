@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 폰트 및 기본 설정 */
+:root {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', 'Roboto', sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* 기본 바디 설정 */
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: #333;
+  background-color: #ffffff;
+}
+
+/* 루트 엘리먼트 설정 */
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Airflow KRUG 특화 유틸리티 클래스 */
+.airflow-gradient {
+  background: linear-gradient(135deg, #00C7D4 0%, #017CEE 100%);
+}
+
+.primary-gradient {
+  background: linear-gradient(135deg, #00C7D4 0%, #017CEE 50%, #00AD46 100%);
+}
+
+.secondary-gradient {
+  background: linear-gradient(135deg, #11E1EE 0%, #0CB6FF 50%, #04D659 100%);
+}
+
+.section-padding {
+  @apply px-4 py-12 md:px-6 lg:px-8 xl:py-16;
+}
+
+.container-max {
+  @apply max-w-7xl mx-auto;
+}
+
+/* 반응형 텍스트 크기 */
+@screen sm {
+  .section-padding {
+    @apply px-6 py-16;
+  }
+}
+
+@screen lg {
+  .section-padding {
+    @apply px-8 py-20;
+  }
+}
+
+/* 포커스 스타일 개선 - 새로운 primary cyan 색상 사용 */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid #00C7D4;
+  outline-offset: 2px;
+}
+
+/* 링크 기본 스타일 - 새로운 컬러 팔레트 적용 */
+a {
+  color: #00C7D4;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #017CEE;
+}
+
+/* 이미지 기본 설정 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 버튼 기본 스타일 리셋 */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* 새로운 컬러 팔레트 기반 유틸리티 클래스 */
+.bg-brand-primary {
+  background-color: #00C7D4;
+}
+
+.bg-brand-secondary {
+  background-color: #11E1EE;
+}
+
+.text-brand-primary {
+  color: #00C7D4;
+}
+
+.text-brand-secondary {
+  color: #11E1EE;
+}
+
+.border-brand-primary {
+  border-color: #00C7D4;
+}

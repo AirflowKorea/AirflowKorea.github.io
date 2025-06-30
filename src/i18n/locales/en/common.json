@@ -1,0 +1,40 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "events": "Events", 
+    "organizers": "Organizers",
+    "contributors": "Contributors",
+    "channels": "Channels",
+    "more": "More"
+  },
+  "common": {
+    "upcoming": "Upcoming",
+    "past": "Past",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "learnMore": "Learn More",
+    "readMore": "Read More",
+    "joinNow": "Join Now",
+    "viewDetails": "View Details",
+    "register": "Register",
+    "presentation": "Presentation",
+    "video": "Watch Video",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "join": "Join",
+    "contactUs": "Contact Us",
+    "joinUs": "Join Us"
+  },
+  "footer": {
+    "title": "Airflow Korean User Group",
+    "description": "Apache Airflow Korean User Group is a community for everyone interested in data engineering and workflow management.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "joinOpenChat": "Join Open KakaoTalk",
+    "joinSlack": "Join Slack Workspace",
+    "copyright": "© 2025 Apache Airflow Korean User Group. All rights reserved.",
+    "trademark": "Apache Airflow is a registered trademark of the Apache Software Foundation."
+  }
+} 

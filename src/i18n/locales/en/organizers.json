@@ -1,0 +1,67 @@
+{
+  "title": "Organizers",
+  "subtitle": "Meet the people leading the Airflow Korea User Group",
+  "loading": "Loading organizers information...",
+  "intro": {
+    "title": "Meet Our Team",
+    "description": "Get to know the organizers who are building the Airflow Korean User Group together. Each contributes to community development based on their expertise and experience."
+  },
+  "filter": {
+    "generationView": "View by generation:",
+    "generationSuffix": "th",
+    "generationStats": "{{count}} organizers were active in the {{generation}}{{generationSuffix}} generation."
+  },
+  "teamSpirit": {
+    "title": "We're Building This Together",
+    "description": "All organizers are working with their expertise and passion for the growth and development of the community.",
+    "stats": {
+      "organizers": "Current Organizers",
+      "experience": "Average Experience",
+      "events": "Events Organized",
+      "members": "Members Managed"
+    }
+  },
+  "roles": {
+    "title": "Organizer Roles",
+    "community": {
+      "title": "Community Manager",
+      "description": "Responsible for overall community operations and communication between members."
+    },
+    "event": {
+      "title": "Event Planner",
+      "description": "Plans and organizes events such as meetups, workshops, and conferences."
+    },
+    "content": {
+      "title": "Content Curator",
+      "description": "Reviews technical content and provides high-quality information."
+    }
+  },
+  "recruitment": {
+    "title": "We're Looking for New Organizers!",
+    "description": "Want to grow with the Airflow Korea User Group? We're looking for passionate and dedicated new organizers.",
+    "button": "Apply as Organizer",
+    "requirements": {
+      "title": "Qualifications",
+      "items": [
+        "Experience with or interest in Apache Airflow",
+        "Passion for community activities",
+        "Ability to participate regularly",
+        "Enjoys collaboration and communication"
+      ]
+    },
+    "benefits": {
+      "title": "Organizer Benefits",
+      "items": [
+        "Opportunity to improve Airflow expertise",
+        "Networking and insight sharing",
+        "Community leadership experience",
+        "Support for Apache Software Foundation events"
+      ]
+    },
+    "apply": {
+      "title": "How to Apply",
+      "description": "If you're interested, please contact us anytime!",
+      "contact": "Send an email to organizers@airflow-kr.org or contact us via Slack/OpenChat."
+    }
+  }
+} 

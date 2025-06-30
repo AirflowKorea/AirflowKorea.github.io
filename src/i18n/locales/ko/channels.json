@@ -1,0 +1,106 @@
+{
+  "title": "커뮤니케이션 채널",
+  "subtitle": "Airflow 한국 사용자 모임과 다양한 방식으로 소통해보세요",
+  "loading": "채널 정보를 불러오는 중...",
+  "channelGuide": "채널 가이드",
+  "responseTime": "응답 시간",
+  "membersParticipating": "명이 함께하고 있습니다!",
+  "joinButton": "참여하기",
+  "intro": {
+    "title": "다양한 목적에 맞춘 소통 채널",
+    "description": "질문, 토론, 네트워킹 등 상황에 맞는 채널을 선택해 자유롭게 참여해보세요."
+  },
+  "channels": {
+    "forum": {
+      "title": "포럼 - 깊이 있는 토론",
+      "description": "기술적인 질문부터 구조적 고민까지, 주제별로 정리된 공간에서 깊이 있는 논의를 나눌 수 있습니다.",
+      "recommended": "추천 용도",
+      "responseTime": "응답 시간",
+      "participants": "참여자",
+      "responseTimeValue": "몇 시간 ~ 1일",
+      "participantsValue": "170+",
+      "pros": [
+        "체계적인 분류와 검색",
+        "깊이 있는 기술 토론",
+        "오래 보존되는 지식 저장소"
+      ],
+      "cons": [
+        "실시간 소통 어려움",
+        "상대적으로 높은 진입장벽"
+      ]
+    },
+    "chat": {
+      "title": "실시간 채팅 - 빠른 소통",
+      "description": "가볍게 질문하고 즉시 답변받고 싶을 때, 친근한 분위기에서 자유롭게 이야기 나눠보세요.",
+      "responseTimeValue": "몇 분 ~ 몇 시간",
+      "participantsValue": "120+",
+      "pros": [
+        "즉석 질문과 빠른 답변",
+        "친근한 분위기의 일상 대화",
+        "이벤트 실시간 공지"
+      ],
+      "cons": [
+        "지나간 대화 찾기 어려움",
+        "긴 기술 토론에는 부적합"
+      ]
+    },
+    "social": {
+      "title": "네트워킹 행사 - 전문적 교류",
+      "description": "밋업과 세미나를 통해 실제 사용자들과 만나고, 커리어와 경험을 나눌 수 있는 기회를 제공합니다.",
+      "responseTimeValue": "하루",
+      "participantsValue": "290+",
+      "pros": [
+        "전문적인 네트워킹",
+        "커리어 정보 공유",
+        "업계 트렌드 논의"
+      ],
+      "cons": [
+        "비공식적 소통 제한",
+        "상대적으로 느린 응답"
+      ]
+    },
+    "video": {
+      "title": "동영상 - 시각적 학습",
+      "description": "녹화된 밋업과 튜토리얼 영상을 통해 언제 어디서든 시각적으로 학습할 수 있습니다.",
+      "responseTimeValue": "행사 이후 1~2주 뒤 업로드",
+      "participantsValue": "30+",
+      "pros": [
+        "밋업 녹화 영상",
+        "튜토리얼 영상"
+      ],
+      "cons": [
+        "실시간 질문 불가",
+        "상호작용 제한"
+      ]
+    }
+  },
+  "guidelines": {
+    "title": "참여 가이드라인",
+    "description": "모든 구성원이 서로를 존중하며 건전한 소통 문화를 만들어가기 위한 기본 원칙입니다.",
+    "rules": [
+      {
+        "title": "서로 존중하기",
+        "description": "다양한 배경과 수준의 사람들이 함께 하는 공간입니다."
+      },
+      {
+        "title": "건설적인 토론",
+        "description": "비판보다는 제안과 개선 방향을 제시해주세요."
+      },
+      {
+        "title": "스팸 금지",
+        "description": "관련 없는 홍보나 반복 게시는 자제해주세요."
+      },
+      {
+        "title": "검색 먼저",
+        "description": "질문하기 전에 기존 답변이 있는지 확인해주세요."
+      }
+    ]
+  },
+  "memberCount": "{{count}}명 참여 중",
+  "cta": {
+    "joinButton": "참여하기",
+    "learnMore": "자세히 알아보기",
+    "title": "지금 바로 커뮤니티에 참여하세요!",
+    "description": "활발한 Airflow 한국 사용자들과 함께 배우고 성장하세요."
+  }
+} 

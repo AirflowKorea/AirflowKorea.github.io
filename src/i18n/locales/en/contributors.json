@@ -1,0 +1,24 @@
+{
+  "title": "Korean Contributors Status",
+  "subtitle": "Introducing Korean developers who have contributed to the Apache Airflow project",
+  "loading": "Loading contributor information...",
+  "intro": {
+    "title": "Our Proud Contributors"
+  },
+  "stats": {
+    "contributors": "Contributors",
+    "contributions": "Contributions"
+  },
+  "contributionLabel": "Major Contributions",
+  "profileButton": "View GitHub Profile",
+  "hallOfFame": {
+    "title": "Thank You to All Our Contributors",
+    "description": "We sincerely appreciate everyone who has contributed to the development of Apache Airflow, and we welcome more contributors to join us",
+    "button": "I Want to Contribute Too",
+    "registerButton": "View Contribution Guide"
+  },
+  "noContributors": {
+    "title": "No contributors yet",
+    "message": "Be the first contributor!"
+  }
+} 

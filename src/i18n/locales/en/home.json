@@ -1,0 +1,20 @@
+{
+  "heroTitle": "Apache Airflow Korean User Group",
+  "heroSubtitle": "A community where we learn and grow together in data workflow automation",
+  "joinButton": "Join Our Community",
+  "mainActivities": "Main Activities",
+  "regularMeetups": "Regular Meetups",
+  "regularMeetupsDesc": "Monthly technical sharing and networking sessions",
+  "knowledgeSharing": "Knowledge Sharing",
+  "knowledgeSharingDesc": "Presentations and discussions sharing practical experience and know-how",
+  "opensource": "Open Source Contribution",
+  "opensourceDesc": "Activities to directly contribute to the Apache Airflow project",
+  "communityStats": "Community Status",
+  "MeetupMembers": "Meetup Members",
+  "openKakaoMembers": "Open KakaoTalk Members",
+  "EventCounts": "Total Event Count",
+  "contributors": "Korean Contributors",
+  "heroDescription": "A community for everyone interested in data engineering and workflow management. Let's learn together, share experiences, and develop the Apache Airflow ecosystem.",
+  "getStarted": "Get Started",
+  "getStartedDesc": "Anyone interested in Apache Airflow is welcome. From beginners to experts, let's build a community that grows together."
+} 

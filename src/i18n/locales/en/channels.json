@@ -1,0 +1,107 @@
+{
+  "title": "Communication Channels",
+  "subtitle": "Connect with Airflow Korea User Group through various channels",
+  "loading": "Loading channel information...",
+  "channelGuide": "Channel Guide",
+  "responseTime": "Response Time",
+  "membersParticipating": "members are participating!",
+  "joinButton": "Join",
+  "intro": {
+    "title": "Which Channel Is Right for Me?",
+    "description": "Choose the right channel based on your purpose and preferences!"
+  },
+  "channels": {
+    "forum": {
+      "title": "Forum - In-depth Discussion",
+      "description": "From technical questions to advanced discussions, communicate in a systematically organized space.",
+      "recommended": "Recommended Use",
+      "responseTime": "Response Time",
+      "participants": "Participants",
+      "responseTimeValue": "Few hours ~ 1 day",
+      "participantsValue": "500+",
+      "pros": [
+        "Systematic categorization and search",
+        "In-depth technical discussions",
+        "Long-lasting knowledge repository"
+      ],
+      "cons": [
+        "Difficult real-time communication",
+        "Relatively high barrier to entry"
+      ]
+    },
+    "chat": {
+      "title": "Real-time Chat - Quick Communication",
+      "description": "Ask questions instantly and get real-time answers.",
+      "responseTimeValue": "Few minutes ~ Few hours",
+      "participantsValue": "300+",
+      "pros": [
+        "Instant questions and quick answers",
+        "Friendly casual conversations",
+        "Real-time event announcements"
+      ],
+      "cons": [
+        "Difficult to find past conversations",
+        "Unsuitable for long technical discussions"
+      ]
+    },
+    "social": {
+      "title": "Social Network - Professional Exchange",
+      "description": "Professional networking and career information sharing through LinkedIn and GitHub",
+      "responseTimeValue": "1 day ~ 1 week",
+      "participantsValue": "200+",
+      "pros": [
+        "Professional networking",
+        "Career information sharing",
+        "Industry trend discussions"
+      ],
+      "cons": [
+        "Limited informal communication",
+        "Relatively slower responses"
+      ]
+    },
+    "video": {
+      "title": "Video - Visual Learning",
+      "description": "Visual learning materials through YouTube and recorded meetups",
+      "responseTimeValue": "Asynchronous",
+      "participantsValue": "1000+",
+      "pros": [
+        "Visual learning materials",
+        "Repeatable learning",
+        "High-quality tutorials"
+      ],
+      "cons": [
+        "No real-time questions",
+        "Limited interaction"
+      ]
+    }
+  },
+  "guidelines": {
+    "title": "Participation Guidelines",
+    "description": "Basic principles for all members to respect each other and create a healthy communication culture.",
+    "rules": [
+      {
+        "title": "Respect Each Other",
+        "description": "This is a space where people from various backgrounds and levels come together."
+      },
+      {
+        "title": "Constructive Discussion",
+        "description": "Please provide suggestions and improvement directions rather than criticism."
+      },
+      {
+        "title": "No Spam",
+        "description": "Please refrain from unrelated promotions or repetitive posts."
+      },
+      {
+        "title": "Search First",
+        "description": "Please check if there are existing answers before asking questions."
+      }
+    ]
+  },
+  "memberCount": "{{count}} members",
+  "cta": {
+    "joinButton": "Join",
+    "learnMore": "Learn More",
+    "title": "Join the Community Right Now!",
+    "description": "Grow together with active Korean Airflow users."
+  }
+} 

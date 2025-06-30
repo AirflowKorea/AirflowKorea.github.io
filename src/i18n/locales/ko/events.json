@@ -1,0 +1,72 @@
+{
+  "title": "이벤트",
+  "subtitle": "Airflow Korea User Group의 다양한 이벤트에 참여하세요",
+  "loading": "이벤트 정보를 불러오는 중...",
+  "noEvents": {
+    "title": "예정된 이벤트가 없습니다",
+    "description": "새로운 이벤트가 곧 공지될 예정입니다!"
+  },
+  "upcoming": {
+    "title": "다가오는 이벤트",
+    "subtitle": "곧 개최될 흥미진진한 이벤트들을 확인해보세요",
+    "count": "{{count}}개의 예정된 이벤트가 있습니다",
+    "empty": {
+      "title": "예정된 이벤트가 없습니다",
+      "description": "새로운 이벤트가 곧 공지될 예정입니다. 커뮤니티 채널을 통해 업데이트를 받아보세요!"
+    }
+  },
+  "past": {
+    "title": "지난 이벤트 아카이브",
+    "subtitle": "지금까지 진행된 이벤트들과 자료를 둘러보세요",
+    "count": "{{count}}개의 지난 이벤트를 확인하실 수 있습니다"
+  },
+  "event": {
+    "date": "날짜",
+    "time": "시간",
+    "location": "장소",
+    "actions": {
+      "view": "보기",
+      "edit": "수정",
+      "calendar": "캘린더",
+      "celebrate": "축하"
+    }
+  },
+  "participation": {
+    "title": "이벤트 참여 방법",
+    "steps": [
+      {
+        "icon": "👀",
+        "title": "이벤트 확인",
+        "description": "웹사이트나 커뮤니티 채널에서 예정된 이벤트를 확인하세요."
+      },
+      {
+        "icon": "✍️",
+        "title": "사전 등록",
+        "description": "참가 신청 링크를 통해 미리 등록해 주세요."
+      },
+      {
+        "icon": "📅",
+        "title": "일정 확인",
+        "description": "이메일이나 채널 공지를 통해 최종 일정을 확인하세요."
+      },
+      {
+        "icon": "🎉",
+        "title": "참여 & 교류",
+        "description": "이벤트에 참여하여 동료들과 지식을 나누고 네트워킹하세요."
+      }
+    ]
+  },
+  "types": {
+    "meetup": "밋업",
+    "seminar": "세미나",
+    "workshop": "워크샵",
+    "study": "스터디",
+    "online": "온라인"
+  },
+  "speakers": {
+    "title": "발표자를 모집합니다!",
+    "description": "Airflow 관련 경험이나 지식을 커뮤니티와 공유하고 싶으시다면 언제든지 발표자로 참여해보세요.",
+    "proposalButton": "발표 제안하기",
+    "contactButton": "커뮤니티 문의하기"
+  }
+} 

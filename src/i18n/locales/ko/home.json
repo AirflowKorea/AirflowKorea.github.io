@@ -1,0 +1,20 @@
+{
+  "heroTitle": "Apache Airflow",
+  "heroSubtitle": "한국 사용자 모임",
+  "joinButton": "커뮤니티 참여하기",
+  "mainActivities": "주요 활동",
+  "regularMeetups": "정기 밋업",
+  "regularMeetupsDesc": "정기적으로 개최되는 기술 공유 및 네트워킹 모임",
+  "knowledgeSharing": "지식 공유", 
+  "knowledgeSharingDesc": "실무 경험과 노하우를 나누는 발표 및 토론",
+  "opensource": "오픈소스 기여",
+  "opensourceDesc": "Apache Airflow 프로젝트에 직접 기여하며 생태계 발전에 함께합니다",
+  "communityStats": "커뮤니티 현황",
+  "MeetupMembers": "밋업 멤버 수",
+  "openKakaoMembers": "오픈카톡 멤버 수",
+  "EventCounts": "누적 이벤트 수",
+  "contributors": "한국인 기여자 수",
+  "heroDescription": "워크플로우를 코드로 설계하고 운영하는 Apache Airflow에 관심 있는 모든 분들을 위한 커뮤니티입니다. 함께 배우고 나누며, 오픈소스 생태계를 함께 만들어갑니다.",
+  "getStarted": "시작하기",
+  "getStartedDesc": "Apache Airflow에 관심이 있으시다면 누구나 환영합니다. 초보자부터 전문가까지, 함께 성장하는 커뮤니티를 만들어가요."
+} 

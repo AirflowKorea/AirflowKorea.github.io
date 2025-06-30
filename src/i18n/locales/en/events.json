@@ -1,0 +1,71 @@
+{
+  "title": "Events",
+  "subtitle": "Join various events of Airflow Korea User Group",
+  "loading": "Loading event information...",
+  "noEvents": {
+    "title": "No upcoming events",
+    "description": "New events will be announced soon!"
+  },
+  "upcoming": {
+    "title": "Upcoming Events",
+    "subtitle": "Check out exciting events coming soon",
+    "count": "There are {{count}} upcoming events",
+    "empty": {
+      "title": "No upcoming events",
+      "description": "New events will be announced soon. Stay tuned for updates through our community channels!"
+    }
+  },
+  "past": {
+    "title": "Past Event Archive",
+    "subtitle": "Browse through events and materials we've conducted so far",
+    "count": "You can check {{count}} past events"
+  },
+  "event": {
+    "date": "Date",
+    "time": "Time",
+    "location": "Location",
+    "actions": {
+      "view": "View",
+      "edit": "Edit",
+      "calendar": "Calendar",
+      "celebrate": "Celebrate"
+    }
+  },
+  "participation": {
+    "title": "How to Participate",
+    "steps": [
+      {
+        "icon": "👀",
+        "title": "Check Events",
+        "description": "Check upcoming events on the website or community channels."
+      },
+      {
+        "icon": "✍️",
+        "title": "Pre-registration",
+        "description": "Please register in advance through the registration link."
+      },
+      {
+        "icon": "📅",
+        "title": "Check Schedule",
+        "description": "Check the final schedule through email or channel announcements."
+      },
+      {
+        "icon": "🎉",
+        "title": "Participate & Network",
+        "description": "Participate in events to share knowledge and network with peers."
+      }
+    ]
+  },
+  "types": {
+    "meetup": "Meetup",
+    "seminar": "Seminar",
+    "study": "Study",
+    "online": "Online"
+  },
+  "speakers": {
+    "title": "Looking for Speakers!",
+    "description": "If you want to share your Airflow-related experience or knowledge with the community, feel free to join as a speaker anytime.",
+    "proposalButton": "Propose a Talk",
+    "contactButton": "Contact Community"
+  }
+} 

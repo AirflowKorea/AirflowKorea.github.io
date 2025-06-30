@@ -1,0 +1,106 @@
+# Airflow Korea User Group 운영진 정보
+# - generation: 기수 (숫자)
+# - role: 리더, 운영진
+
+organizers:
+  generation_2:
+    - id: "1"
+      name: "추영욱"
+      role: "리더"
+      generation: 2
+      email: "choo121600@airflow-kr.org" 
+      linkedIn: "choo121600"
+      github: "choo121600"
+
+    - id: "2"
+      name: "김건우"
+      role: "운영진"
+      generation: 2
+      email: "test@airflow-kr.org"
+      linkedIn: "kimgunwoo"
+      github: "kimgunwoo"
+
+    - id: "3"
+      name: "김노은"
+      role: "운영진"
+      generation: 2
+      email: "test@airflow-kr.org"
+      linkedIn: "kimnoeun"
+
+    - id: "4"
+      name: "양원석"
+      role: "운영진"
+      generation: 2
+      email: "test@airflow-kr.org"
+      linkedIn: "yangwonseok"
+      github: "yangwonseok"
+      
+    - id: "5"
+      name: "이경준"
+      role: "운영진"
+      generation: 2
+      email: "test@airflow-kr.org"
+      linkedIn: "leekyungjun"
+
+    - id: "6"
+      name: "이준원"
+      role: "운영진"
+      generation: 2
+      email: "test@airflow-kr.org"
+      linkedIn: "leejunwon"
+      github: "leejunwon"
+
+    - id: "7"
+      name: "조민성"
+      role: "운영진"
+      generation: 2
+      email: "test@airflow-kr.org"
+      linkedIn: "chominseong"
+      github: "chominseong"
+
+    - id: "8"
+      name: "한상곤"
+      role: "운영진"
+      generation: 2
+      email: "test@airflow-kr.org"
+      linkedIn: "hansanggon"
+
+  generation_1:
+    - id: "1"
+      name: "추영욱"
+      role: "리더"
+      generation: 1
+      email: "choo121600@airflow-kr.org" 
+      linkedIn: "choo121600"
+      github: "choo121600"
+
+    - id: "2"
+      name: "이준원"
+      role: "운영진"
+      generation: 1
+      email: "test@airflow-kr.org"
+      linkedIn: "leejunwon"
+      github: "leejunwon"
+
+    - id: "3"
+      name: "조민성"
+      role: "운영진"
+      generation: 1
+      email: "test@airflow-kr.org"
+      linkedIn: "chominseong"
+      github: "chominseong"
+
+
+recruitment:
+  is_recruiting: true
+  positions:
+    - role: "3기 운영진"
+      requirements:
+        - "Apache Airflow 사용 경험"
+        - "커뮤니티 활동에 대한 열정"
+        - "정기 모임 참석 가능"
+      benefits:
+        - "Airflow 네트워크 확장"
+        - "기술 역량 성장"
+        - "오픈소스 생태계 기여"
+  application_url: "구글 폼 링크" 

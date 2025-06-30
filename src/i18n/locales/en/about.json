@@ -1,0 +1,72 @@
+{
+  "title": "About Airflow Korean User Group",
+  "subtitle": "A Korean developer community centered around Apache Airflow technology.",
+  "mission": {
+    "title": "Our Mission",
+    "description": "Build a healthy community ecosystem where Korean developers using Apache Airflow can share experiences and knowledge and grow together.",
+    "items": [
+      "Mutual learning through sharing practical experiences",
+      "Contributing to the development of the Apache Airflow ecosystem",
+      "Spreading data engineering culture"
+    ]
+  },
+  "vision": {
+    "title": "Our Vision",
+    "description": "Become the most active and influential Apache Airflow community in Asia and contribute to the global open source ecosystem.",
+    "items": [
+      "Contributing Korean content and documentation",
+      "Participating and presenting at international conferences",
+      "Expanding exchanges with global communities"
+    ]
+  },
+  "activities": {
+    "title": "Main Activities",
+    "meetup": {
+      "title": "Regular Meetups & Workshops",
+      "description": "We regularly host offline/online meetups monthly to share Airflow-related practical experiences and technical insights. We provide an interactive platform where both speakers and attendees can learn and grow.",
+      "items": [
+        "Regular meetups & workshops (Seoul/Busan)",
+        "Practical case presentations and discussions",
+        "Networking sessions"
+      ],
+      "stats": "We have held {{count}}+ meetups so far"
+    },
+    "study": {
+      "title": "Study Groups",
+      "description": "We operate small study groups on various topics to provide opportunities for in-depth learning. From beginners to advanced users, everyone can participate in learning groups that match their level.",
+      "items": [
+        "Contributing to Airflow study"
+      ],
+      "stats": "Currently {{count}} study groups are active"
+    },
+    "opensource": {
+      "title": "Open Source Contribution",
+      "description": "We support Korean contributors to the Apache Airflow project and spread the culture of open source contribution. We encourage various forms of contribution including code contribution, documentation, translation, and testing.",
+      "items": [
+        "Contributor mentoring program",
+        "Korean documentation project",
+        "Bug reports and improvement suggestions"
+      ],
+      "stats": "{{count}}+ Koreans have contributed to Apache Airflow"
+    }
+  },
+  "values": {
+    "title": "Community Values",
+    "cooperation": {
+      "title": "Cooperation",
+      "description": "Cooperative relationships where we help each other and grow together"
+    },
+    "learning": {
+      "title": "Learning",
+      "description": "Culture of continuous learning and knowledge sharing"
+    },
+    "innovation": {
+      "title": "Innovation",
+      "description": "Pursuing new ideas and technical challenges"
+    },
+    "openness": {
+      "title": "Openness",
+      "description": "An open community where anyone can participate"
+    }
+  }
+} 

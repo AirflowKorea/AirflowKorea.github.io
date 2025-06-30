@@ -1,0 +1,56 @@
+{
+  "title": "운영진",
+  "subtitle": "Airflow 한국 사용자 모임을 이끌어가는 사람들을 소개합니다",
+  "loading": "운영진 정보를 불러오는 중...",
+  "intro": {
+    "title": "우리를 소개합니다",
+    "description": "Airflow 한국 사용자 모임을 함께 만들어가는 운영진들을 만나보세요. 각자의 전문성과 경험을 바탕으로 커뮤니티 발전에 기여하고 있습니다."
+  },
+  "filter": {
+    "generationView": "기수별 보기:",
+    "generationSuffix": "기",
+    "generationStats": "{{generation}}기에 {{count}}명의 운영진이 활동했습니다."
+  },
+  "roles": {
+    "title": "운영진 역할",
+    "community": {
+      "title": "커뮤니티 매니저",
+      "description": "커뮤니티 전반적인 운영과 멤버들 간의 소통을 담당합니다."
+    },
+    "event": {
+      "title": "이벤트 기획자",
+      "description": "밋업, 워크샵 등의 이벤트를 기획하고 운영합니다."
+    },
+    "content": {
+      "title": "컨텐츠 큐레이터",
+      "description": "기술 컨텐츠를 검토하고 품질 높은 정보를 제공합니다."
+    }
+  },
+  "recruitment": {
+    "title": "새로운 운영진을 찾고 있습니다!",
+    "description": "Airflow 한국 사용자 모임과 함께 성장하고 싶으신가요? 우리는 열정적이고 헌신적인 새로운 운영진을 찾고 있습니다.",
+    "button": "운영진 지원하기",
+    "requirements": {
+      "title": "자격 요건",
+      "items": [
+        "Apache Airflow 사용 경험 또는 관심",
+        "커뮤니티 활동에 대한 열정",
+        "정기적인 참여 가능",
+        "협업과 소통을 즐기는 성향"
+      ]
+    },
+    "benefits": {
+      "title": "운영진 혜택",
+      "items": [
+        "Airflow 전문성 향상 기회",
+        "네트워킹 및 인사이트 공유",
+        "커뮤니티 리더십 경험"
+      ]
+    },
+    "apply": {
+      "title": "지원 방법",
+      "description": "관심이 있으시다면 언제든지 연락해 주세요!",
+      "contact": "organizers@airflow-kr.org로 이메일을 보내주시거나, 슬랙/오픈카톡을 통해 연락해 주세요."
+    }
+  }
+} 
