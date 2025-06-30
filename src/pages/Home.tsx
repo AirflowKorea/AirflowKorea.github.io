@@ -16,8 +16,13 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* 히어로 섹션 */}
-      <section className="airflow-gradient text-white">
-        <div className="container-max section-padding">
+      <section 
+        className="relative text-white bg-cover bg-center bg-no-repeat min-h-[60vh] flex items-center"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(1, 124, 238, 0.5)), url('/images/meetup_group_photo.JPG')`
+        }}
+      >
+        <div className="container-max section-padding relative z-10 w-full">
           <div className="text-center">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               {t('heroTitle', { ns: 'home' })}
