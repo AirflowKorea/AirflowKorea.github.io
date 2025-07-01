@@ -66,7 +66,7 @@
   "speakers": {
     "title": "발표자를 모집합니다!",
     "description": "Airflow 관련 경험이나 지식을 커뮤니티와 공유하고 싶으시다면 언제든지 발표자로 참여해보세요.",
-    "proposalButton": "발표 제안하기",
+    "proposalButton": "발표 지원하기",
     "contactButton": "커뮤니티 문의하기"
   }
 } 

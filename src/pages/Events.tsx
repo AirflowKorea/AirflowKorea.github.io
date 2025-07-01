@@ -205,13 +205,13 @@ const Events = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="mailto:speakers@airflowkrug.org" 
+              href="https://forms.gle/GLwpKSqgNxsShdH49" 
               className="bg-airflow-orange hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"
             >
               {t('speakers.proposalButton')}
             </a>
             <a 
-              href="/channels" 
+              href="mailto:contact@airflow-kr.org" 
               className="bg-transparent border-2 border-white hover:bg-white hover:text-airflow-navy text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200"
             >
               {t('speakers.contactButton')}
