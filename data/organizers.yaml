@@ -8,9 +8,10 @@ organizers:
       name: "김건우"
       role: "운영진"
       generation: 2
-      email: "test@airflow-kr.org"
-      linkedIn: "kimgunwoo"
-      github: "kimgunwoo"
+      email: "kgw7401@airflow-kr.org"
+      linkedIn: "kgw7401"
+      github: "kgw7401"
+      avatar_url: "https://avatars.githubusercontent.com/u/78521993?v=4"
 
     - id: "2"
       name: "김노은"
