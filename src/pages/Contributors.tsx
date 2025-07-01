@@ -31,7 +31,7 @@ const ContributorCard = ({ contributor }: { contributor: Contributor }) => {
         </div>
         
         <a
-          href={contributor.profileUrl}
+          href={contributor.githubUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="block w-full bg-gray-800 hover:bg-gray-900 text-white text-center py-3 rounded-lg font-semibold transition-colors duration-200"

@@ -29,7 +29,7 @@ export interface Contributor {
   name: string;
   githubUsername: string;
   contributions: string[];
-  profileUrl: string;
+  githubUrl: string;
   avatarUrl?: string;
 }
 
