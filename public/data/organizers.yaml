@@ -32,8 +32,10 @@ organizers:
       name: "이경준"
       role: "운영진"
       generation: 2
-      email: "test@airflow-kr.org"
-      linkedIn: "leekyungjun"
+      email: "kyungjunlee.me@airflow-kr.org"
+      linkedIn: "kyungjunleeme"
+      github: "kyungjunleeme"
+      avatar_url: "https://avatars.githubusercontent.com/u/45473846?v=4"
 
     - id: "5"
       name: "이준원"
