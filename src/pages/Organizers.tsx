@@ -20,9 +20,28 @@ const OrganizerCard = ({ organizer }: { organizer: Organizer }) => {
   return (
     <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-200 overflow-hidden">
       <div className="p-6 text-center">
-        {/* 프로필 이미지 플레이스홀더 */}
-        <div className="w-24 h-24 bg-gradient-to-br from-airflow-blue to-airflow-navy rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
-          {organizer.name.charAt(0)}
+        {/* 프로필 이미지 */}
+        <div className="w-24 h-24 mx-auto mb-4">
+          {organizer.avatar_url ? (
+            <img
+              src={organizer.avatar_url}
+              alt={`${organizer.name} 프로필`}
+              className="w-full h-full rounded-full object-cover border-4 border-white shadow-lg"
+              onError={(e) => {
+                // 이미지 로드 실패 시 기본 아바타로 대체
+                const target = e.target as HTMLImageElement;
+                target.style.display = 'none';
+                const fallback = target.nextElementSibling as HTMLElement;
+                if (fallback) fallback.style.display = 'flex';
+              }}
+            />
+          ) : null}
+          {/* 기본 아바타 (이미지가 없거나 로드 실패 시) */}
+          <div 
+            className={`w-full h-full bg-gradient-to-br from-airflow-blue to-airflow-navy rounded-full flex items-center justify-center text-white text-2xl font-bold ${organizer.avatar_url ? 'hidden' : 'flex'}`}
+          >
+            {organizer.name.charAt(0)}
+          </div>
         </div>
         
         {/* 기본 정보 */}

@@ -17,7 +17,7 @@ export interface Organizer {
   name: string;
   role: string;
   generation: number;
-  profileImage?: string;
+  avatar_url?: string;
   linkedIn?: string;
   github?: string;
   email?: string;

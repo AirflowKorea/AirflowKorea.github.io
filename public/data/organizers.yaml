@@ -5,14 +5,6 @@
 organizers:
   generation_2:
     - id: "1"
-      name: "추영욱"
-      role: "리더"
-      generation: 2
-      email: "choo121600@airflow-kr.org" 
-      linkedIn: "choo121600"
-      github: "choo121600"
-
-    - id: "2"
       name: "김건우"
       role: "운영진"
       generation: 2
@@ -20,14 +12,14 @@ organizers:
       linkedIn: "kimgunwoo"
       github: "kimgunwoo"
 
-    - id: "3"
+    - id: "2"
       name: "김노은"
       role: "운영진"
       generation: 2
       email: "test@airflow-kr.org"
       linkedIn: "kimnoeun"
 
-    - id: "4"
+    - id: "3"
       name: "양원석"
       role: "운영진"
       generation: 2
@@ -35,14 +27,14 @@ organizers:
       linkedIn: "yangwonseok"
       github: "yangwonseok"
       
-    - id: "5"
+    - id: "4"
       name: "이경준"
       role: "운영진"
       generation: 2
       email: "test@airflow-kr.org"
       linkedIn: "leekyungjun"
 
-    - id: "6"
+    - id: "5"
       name: "이준원"
       role: "운영진"
       generation: 2
@@ -50,13 +42,22 @@ organizers:
       linkedIn: "leejunwon"
       github: "leejunwon"
 
-    - id: "7"
+    - id: "6"
       name: "조민성"
       role: "운영진"
       generation: 2
       email: "test@airflow-kr.org"
       linkedIn: "chominseong"
       github: "chominseong"
+
+    - id: "7"
+      name: "추영욱"
+      role: "리더"
+      generation: 2
+      email: "choo121600@airflow-kr.org" 
+      linkedIn: "choo121600"
+      github: "choo121600"
+      avatar_url: "https://avatars.githubusercontent.com/u/54111883?v=4"
 
     - id: "8"
       name: "한상곤"
@@ -67,14 +68,6 @@ organizers:
 
   generation_1:
     - id: "1"
-      name: "추영욱"
-      role: "리더"
-      generation: 1
-      email: "choo121600@airflow-kr.org" 
-      linkedIn: "choo121600"
-      github: "choo121600"
-
-    - id: "2"
       name: "이준원"
       role: "운영진"
       generation: 1
@@ -82,7 +75,7 @@ organizers:
       linkedIn: "leejunwon"
       github: "leejunwon"
 
-    - id: "3"
+    - id: "2"
       name: "조민성"
       role: "운영진"
       generation: 1
@@ -90,6 +83,14 @@ organizers:
       linkedIn: "chominseong"
       github: "chominseong"
 
+    - id: "3"
+      name: "추영욱"
+      role: "리더"
+      generation: 1
+      email: "choo121600@airflow-kr.org" 
+      linkedIn: "choo121600"
+      github: "choo121600"
+      avatar_url: "https://avatars.githubusercontent.com/u/54111883?v=4"
 
 recruitment:
   is_recruiting: true
