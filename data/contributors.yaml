@@ -2,6 +2,12 @@
 # - contribution_type: code, docs, community, translation 등
 # - 본인 동의하에만 추가
 
+approvedContributors:
+  - githubUsername: "choo121600"
+  - githubUsername: "0ne-stone"
+  - githubUsername: "kyungjunleeme"
+  - githubUsername: "kgw7401"
+
 contributors:
   - name: "추영욱"
     githubUsername: "choo121600"
