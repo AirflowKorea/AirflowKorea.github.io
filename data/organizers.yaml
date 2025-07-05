@@ -17,8 +17,10 @@ organizers:
       name: "김노은"
       role: "운영진"
       generation: 2
-      email: "test@airflow-kr.org"
-      linkedIn: "kimnoeun"
+      email: "noeunkim511@airflow-kr.org"
+      linkedIn: "noeunkim"
+      github: "noeunkim"
+
 
     - id: "3"
       name: "양원석"
@@ -42,17 +44,15 @@ organizers:
       name: "이준원"
       role: "운영진"
       generation: 2
-      email: "test@airflow-kr.org"
-      linkedIn: "leejunwon"
-      github: "leejunwon"
+      email: "cpprhtn@airflow-kr.org"
+      github: "cpprhtn"
 
     - id: "6"
       name: "조민성"
       role: "운영진"
       generation: 2
-      email: "test@airflow-kr.org"
-      linkedIn: "chominseong"
-      github: "chominseong"
+      email: "mscho@airflow-kr.org"
+      github: "kkumtree"
 
     - id: "7"
       name: "추영욱"
@@ -67,25 +67,25 @@ organizers:
       name: "한상곤"
       role: "운영진"
       generation: 2
-      email: "test@airflow-kr.org"
+      email: "sangkon@airflow-kr.org"
       linkedIn: "hansanggon"
+      github: "sigmadream"
+
 
   generation_1:
     - id: "1"
       name: "이준원"
       role: "운영진"
       generation: 1
-      email: "test@airflow-kr.org"
-      linkedIn: "leejunwon"
-      github: "leejunwon"
+      email: "cpprhtn@airflow-kr.org"
+      github: "cpprhtn"
 
     - id: "2"
       name: "조민성"
       role: "운영진"
       generation: 1
-      email: "test@airflow-kr.org"
-      linkedIn: "chominseong"
-      github: "chominseong"
+      email: "mscho@airflow-kr.org"
+      github: "kkumtree"
 
     - id: "3"
       name: "추영욱"
