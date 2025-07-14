@@ -1,5 +1,5 @@
 import * as yaml from 'js-yaml';
-import type { Event, Organizer, Contributor, CommunityChannel, CommunityStats } from '../types';
+import type { Event, Organizer, Contributor, CommunityChannel, CommunityStats, Recruitment } from '../types';
 
 // YAML 파일 로드
 async function loadYamlFile(path: string): Promise<Record<string, unknown>> {
@@ -27,7 +27,7 @@ export async function loadEventsData(): Promise<{ upcoming: Event[]; past: Event
 }
 
 // 운영진 데이터 로드
-export async function loadOrganizersData(): Promise<Organizer[]> {
+export async function loadOrganizersData(): Promise<{ organizers: Organizer[]; recruitment: Recruitment }> {
   const data = await loadYamlFile('/data/organizers.yaml');
   const organizers: Organizer[] = [];
   
@@ -43,7 +43,10 @@ export async function loadOrganizersData(): Promise<Organizer[]> {
     }
   });
   
-  return organizers;
+  // recruitment 정보 추출
+  const recruitment = data.recruitment as Recruitment;
+  
+  return { organizers, recruitment };
 }
 
 // 기여자 데이터 로드
@@ -72,7 +75,7 @@ export async function loadStatsData(): Promise<CommunityStats> {
 // 데이터를 모두 로드
 export async function loadAllData() {
   try {
-    const [events, organizers, contributors, channels, stats] = await Promise.all([
+    const [events, organizerData, contributors, channels, stats] = await Promise.all([
       loadEventsData(),
       loadOrganizersData(),
       loadContributorsData(),
@@ -82,7 +85,8 @@ export async function loadAllData() {
 
     return {
       events,
-      organizers,
+      organizers: organizerData.organizers,
+      recruitment: organizerData.recruitment,
       contributors,
       channels,
       stats

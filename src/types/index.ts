@@ -23,6 +23,13 @@ export interface Organizer {
   email?: string;
 }
 
+// 운영진 모집 관련 타입
+export interface Recruitment {
+  is_recruiting: boolean;
+  application_url: string;
+  contact_email: string;
+}
+
 // 기여자 관련 타입
 export interface Contributor {
   id: string;

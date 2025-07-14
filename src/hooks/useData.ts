@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import type { Event, Organizer, Contributor, CommunityChannel, CommunityStats } from '../types';
+import type { Event, Organizer, Contributor, CommunityChannel, CommunityStats, Recruitment } from '../types';
 import { loadAllData } from '../utils/dataLoader';
 
 interface DataState {
@@ -8,6 +8,7 @@ interface DataState {
     past: Event[];
   };
   organizers: Organizer[];
+  recruitment: Recruitment;
   contributors: Contributor[];
   channels: CommunityChannel[];
   stats: CommunityStats;
@@ -22,6 +23,11 @@ export function useData(): DataState {
       past: []
     },
     organizers: [],
+    recruitment: {
+      is_recruiting: false,
+      application_url: '',
+      contact_email: ''
+    },
     contributors: [],
     channels: [],
     stats: {
@@ -46,6 +52,7 @@ export function useData(): DataState {
           setState({
             events: data.events,
             organizers: data.organizers,
+            recruitment: data.recruitment,
             contributors: data.contributors,
             channels: data.channels,
             stats: data.stats,
@@ -83,8 +90,8 @@ export function useEvents() {
 }
 
 export function useOrganizers() {
-  const { organizers, loading, error } = useData();
-  return { organizers, loading, error };
+  const { organizers, recruitment, loading, error } = useData();
+  return { organizers, recruitment, loading, error };
 }
 
 export function useContributors() {

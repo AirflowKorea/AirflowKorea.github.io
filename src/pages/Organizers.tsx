@@ -91,8 +91,9 @@ const OrganizerCard = ({ organizer }: { organizer: Organizer }) => {
 };
 
 const Organizers = () => {
-  const { organizers, loading, error } = useOrganizers();
+  const { organizers, recruitment, loading, error } = useOrganizers();
   const { t } = useTranslation('organizers');
+  
   // 기수별로 분류하고 정렬
   const generationsList = useMemo(() => {
     const generations = [...new Set(organizers.map(org => org.generation))];
@@ -121,6 +122,11 @@ const Organizers = () => {
       </div>
     );
   }
+
+  // recruitment 정보에 따라 링크 결정
+  const recruitmentHref = recruitment?.is_recruiting 
+    ? recruitment.application_url 
+    : `mailto:${recruitment?.contact_email}`;
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -242,7 +248,7 @@ const Organizers = () => {
             {t('recruitment.description')}
           </p>
           <a 
-            href="https://forms.gle/GmjWmxtpBPdYPb9f7" 
+            href={recruitmentHref}
             className="bg-airflow-orange hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"
           >
             {t('recruitment.button')}
