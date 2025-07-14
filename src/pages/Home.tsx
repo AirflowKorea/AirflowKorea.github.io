@@ -13,6 +13,7 @@ const Home = () => {
     EventCounts: 0,
     contributors: 0
   };
+
   return (
     <div className="min-h-screen">
       {/* 히어로 섹션 */}
@@ -135,4 +136,4 @@ const Home = () => {
   );
 };
 
-export default Home; 
+export default Home;
