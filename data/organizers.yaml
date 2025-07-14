@@ -98,14 +98,5 @@ organizers:
 
 recruitment:
   is_recruiting: true
-  positions:
-    - role: "3기 운영진"
-      requirements:
-        - "Apache Airflow 사용 경험"
-        - "커뮤니티 활동에 대한 열정"
-        - "정기 모임 참석 가능"
-      benefits:
-        - "Airflow 네트워크 확장"
-        - "기술 역량 성장"
-        - "오픈소스 생태계 기여"
-  application_url: "구글 폼 링크" 
+  application_url: "https://forms.gle/GmjWmxtpBPdYPb9f7"
+  contact_email: "contact@airflow-kr.org"
