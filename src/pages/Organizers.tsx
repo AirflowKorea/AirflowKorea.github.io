@@ -242,7 +242,7 @@ const Organizers = () => {
             {t('recruitment.description')}
           </p>
           <a 
-            href="mailto:contact@airflow-kr.org" 
+            href="https://forms.gle/GmjWmxtpBPdYPb9f7" 
             className="bg-airflow-orange hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"
           >
             {t('recruitment.button')}
