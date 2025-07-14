@@ -62,7 +62,7 @@ const Footer = () => {
                 <FaLinkedin className="h-4 w-4" />
               </a>
               <a 
-                href="https://github.com/airflow-krug" 
+                href="https://github.com/AirflowKorea" 
                 className="text-gray-300 hover:text-white transition-colors flex items-center gap-1"
                 target="_blank"
                 rel="noopener noreferrer"
