@@ -1,34 +1,27 @@
 {
   "title": "Events",
-  "subtitle": "Join various events of Airflow Korea User Group",
-  "loading": "Loading event information...",
-  "noEvents": {
-    "title": "No upcoming events",
-    "description": "New events will be announced soon!"
+  "subtitle": "Join various events of Apache Airflow Korea User Group",
+  "meetup": {
+    "title": "Meet us on Meetup!",
+    "description": "All events of Apache Airflow Korea User Group are announced on Meetup.com. Check out the latest event information and join us!",
+    "button": "Visit Meetup Page"
   },
-  "upcoming": {
-    "title": "Upcoming Events",
-    "subtitle": "Check out exciting events coming soon",
-    "count": "There are {{count}} upcoming events",
-    "empty": {
-      "title": "No upcoming events",
-      "description": "New events will be announced soon. Stay tuned for updates through our community channels!"
-    }
-  },
-  "past": {
-    "title": "Past Event Archive",
-    "subtitle": "Browse through events and materials we've conducted so far",
-    "count": "You can check {{count}} past events"
-  },
-  "event": {
-    "date": "Date",
-    "time": "Time",
-    "location": "Location",
-    "actions": {
-      "view": "View",
-      "edit": "Edit",
-      "calendar": "Calendar",
-      "celebrate": "Celebrate"
+  "features": {
+    "regularMeetup": {
+      "title": "Regular Meetups",
+      "description": "We host regular meetups 1-2 times per month"
+    },
+    "offlineMeeting": {
+      "title": "Offline Meetings", 
+      "description": "Meet us in various cities like Seoul and Busan"
+    },
+    "networking": {
+      "title": "Networking",
+      "description": "Share experiences with other Airflow users"
+    },
+    "notifications": {
+      "title": "Real-time Notifications",
+      "description": "Get event notifications by joining Meetup"
     }
   },
   "participation": {
@@ -37,7 +30,7 @@
       {
         "icon": "👀",
         "title": "Check Events",
-        "description": "Check upcoming events on the website or community channels."
+        "description": "Check upcoming events on Meetup or community channels."
       },
       {
         "icon": "✍️",
@@ -56,16 +49,23 @@
       }
     ]
   },
-  "types": {
-    "meetup": "Meetup",
-    "seminar": "Seminar",
-    "study": "Study",
-    "online": "Online"
-  },
   "speakers": {
     "title": "Looking for Speakers!",
-    "description": "If you want to share your Airflow-related experience or knowledge with the community, feel free to join as a speaker anytime.",
+    "description": "Want to share your Apache Airflow-related experience and knowledge with the community? Join us as a speaker!",
     "proposalButton": "Propose a Talk",
-    "contactButton": "Contact Community"
+    "contactButton": "Contact Us"
+  },
+  "resources": {
+    "title": "More Information",
+    "openChat": {
+      "title": "💬 Open Chat",
+      "description": "Communicate in real-time via KakaoTalk Open Chat",
+      "button": "Join Open Chat"
+    },
+    "newsletter": {
+      "title": "📧 Newsletter",
+      "description": "Receive monthly Airflow news and event information",
+      "button": "Subscribe to Newsletter"
+    }
   }
 } 

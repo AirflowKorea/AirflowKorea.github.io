@@ -1,34 +1,27 @@
 {
   "title": "이벤트",
-  "subtitle": "Airflow Korea User Group의 다양한 이벤트에 참여하세요",
-  "loading": "이벤트 정보를 불러오는 중...",
-  "noEvents": {
-    "title": "예정된 이벤트가 없습니다",
-    "description": "새로운 이벤트가 곧 공지될 예정입니다!"
+  "subtitle": "Apache Airflow Korea User Group의 다양한 이벤트에 참여하세요",
+  "meetup": {
+    "title": "Meetup에서 만나요!",
+    "description": "Apache Airflow Korea User Group의 모든 이벤트는 Meetup.com에서 공지됩니다. 최신 이벤트 정보를 확인하고 참여해보세요!",
+    "button": "Meetup 페이지 방문하기"
   },
-  "upcoming": {
-    "title": "다가오는 이벤트",
-    "subtitle": "곧 개최될 흥미진진한 이벤트들을 확인해보세요",
-    "count": "{{count}}개의 예정된 이벤트가 있습니다",
-    "empty": {
-      "title": "예정된 이벤트가 없습니다",
-      "description": "새로운 이벤트가 곧 공지될 예정입니다. 커뮤니티 채널을 통해 업데이트를 받아보세요!"
-    }
-  },
-  "past": {
-    "title": "지난 이벤트 아카이브",
-    "subtitle": "지금까지 진행된 이벤트들과 자료를 둘러보세요",
-    "count": "{{count}}개의 지난 이벤트를 확인하실 수 있습니다"
-  },
-  "event": {
-    "date": "날짜",
-    "time": "시간",
-    "location": "장소",
-    "actions": {
-      "view": "보기",
-      "edit": "수정",
-      "calendar": "캘린더",
-      "celebrate": "축하"
+  "features": {
+    "regularMeetup": {
+      "title": "정기 밋업",
+      "description": "월 1~2회 정기 밋업을 개최합니다"
+    },
+    "offlineMeeting": {
+      "title": "오프라인 모임", 
+      "description": "서울, 부산 등 다양한 지역에서 만나요"
+    },
+    "networking": {
+      "title": "네트워킹",
+      "description": "Airflow 사용자들과 경험을 공유해요"
+    },
+    "notifications": {
+      "title": "실시간 알림",
+      "description": "Meetup 가입으로 이벤트 알림을 받아요"
     }
   },
   "participation": {
@@ -37,7 +30,7 @@
       {
         "icon": "👀",
         "title": "이벤트 확인",
-        "description": "웹사이트나 커뮤니티 채널에서 예정된 이벤트를 확인하세요."
+        "description": "Meetup이나 커뮤니티 채널에서 예정된 이벤트를 확인하세요."
       },
       {
         "icon": "✍️",
@@ -56,17 +49,23 @@
       }
     ]
   },
-  "types": {
-    "meetup": "밋업",
-    "seminar": "세미나",
-    "workshop": "워크샵",
-    "study": "스터디",
-    "online": "온라인"
-  },
   "speakers": {
-    "title": "발표자를 모집합니다!",
-    "description": "Airflow 관련 경험이나 지식을 커뮤니티와 공유하고 싶으시다면 언제든지 발표자로 참여해보세요.",
-    "proposalButton": "발표 지원하기",
-    "contactButton": "커뮤니티 문의하기"
+    "title": "발표자를 찾습니다!",
+    "description": "Apache Airflow 관련 경험과 지식을 커뮤니티와 함께 나누고 싶으신가요? 발표자로 참여해 주세요!",
+    "proposalButton": "발표 제안하기",
+    "contactButton": "문의하기"
+  },
+  "resources": {
+    "title": "더 많은 정보",
+    "openChat": {
+      "title": "💬 오픈 채팅",
+      "description": "카카오톡 오픈채팅에서 실시간으로 소통해요",
+      "button": "오픈채팅 참여하기"
+    },
+    "newsletter": {
+      "title": "📧 뉴스레터",
+      "description": "월간 Airflow 소식과 이벤트 정보를 받아보세요",
+      "button": "뉴스레터 구독하기"
+    }
   }
 } 

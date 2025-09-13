@@ -1,16 +1,3 @@
-// 이벤트 관련 타입
-export interface Event {
-  id: string;
-  title: string;
-  description: string;
-  date: string;
-  location: string;
-  type: 'meetup' | 'seminar' | 'workshop' | 'study' | 'online';
-  registrationUrl?: string;
-  presentationUrl?: string;
-  videoUrl?: string;
-}
-
 // 운영진 관련 타입
 export interface Organizer {
   id: string;

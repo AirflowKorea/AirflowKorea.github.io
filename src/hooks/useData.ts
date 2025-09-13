@@ -1,12 +1,8 @@
 import { useState, useEffect } from 'react';
-import type { Event, Organizer, Contributor, CommunityChannel, CommunityStats, Recruitment } from '../types';
+import type { Organizer, Contributor, CommunityChannel, CommunityStats, Recruitment } from '../types';
 import { loadAllData } from '../utils/dataLoader';
 
 interface DataState {
-  events: {
-    upcoming: Event[];
-    past: Event[];
-  };
   organizers: Organizer[];
   recruitment: Recruitment;
   contributors: Contributor[];
@@ -18,10 +14,6 @@ interface DataState {
 
 export function useData(): DataState {
   const [state, setState] = useState<DataState>({
-    events: {
-      upcoming: [],
-      past: []
-    },
     organizers: [],
     recruitment: {
       is_recruiting: false,
@@ -50,7 +42,6 @@ export function useData(): DataState {
         
         if (mounted) {
           setState({
-            events: data.events,
             organizers: data.organizers,
             recruitment: data.recruitment,
             contributors: data.contributors,
@@ -84,11 +75,6 @@ export function useData(): DataState {
 }
 
 // 개별 데이터 타입별 Hook들
-export function useEvents() {
-  const { events, loading, error } = useData();
-  return { ...events, loading, error };
-}
-
 export function useOrganizers() {
   const { organizers, recruitment, loading, error } = useData();
   return { organizers, recruitment, loading, error };
