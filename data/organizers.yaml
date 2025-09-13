@@ -92,6 +92,6 @@ organizers:
       github: "choo121600"
 
 recruitment:
-  is_recruiting: true
+  is_recruiting: false
   application_url: "https://forms.gle/GmjWmxtpBPdYPb9f7"
   contact_email: "contact@airflow-kr.org"
