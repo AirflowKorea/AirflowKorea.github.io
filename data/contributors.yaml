@@ -1,20 +1,47 @@
 # Apache Airflow 한국인 기여자 정보
 # - contribution_type: code, docs, community, translation 등
 # - 본인 동의하에만 추가
+# - 자동 업데이트: 2025-09-13T04:23:58.465Z
 
 approvedContributors:
-  - githubUsername: "choo121600"
-  - githubUsername: "0ne-stone"
-  - githubUsername: "kyungjunleeme"
-  - githubUsername: "kgw7401"
-
+  - githubUsername: choo121600
+  - githubUsername: 0ne-stone
+  - githubUsername: kyungjunleeme
+  - githubUsername: kgw7401
 contributors:
-  - name: "추영욱"
-    githubUsername: "choo121600"
-    avatarUrl: "https://github.com/choo121600.png"
+  - name: Yeonguk Choo
+    githubUsername: choo121600
     contributions:
-      - "i18n(Ko): Add missing translations in admin.json and common.json #52417"
-      - "feat: Add real-time clock updates to timezone selector #52414"
-      - "Fix whitespace handling in DAG owners parsing for multiple owners #52216"
-    prCount: 15
-    githubUrl: "https://github.com/choo121600"
+      - 'i18n(ko): add missing translations(Sep 09) #55379'
+      - 'i18n(Ko): add missing translations(Sep 02) #55189'
+      - 'i18n(Ko): add missing translations for filters update #54611'
+    prCount: 39
+    githubUrl: https://github.com/choo121600
+    lastUpdated: '2025-09-13T04:23:58.464Z'
+  - name: Wonseok Yang
+    githubUsername: 0ne-stone
+    contributions:
+      - 'i18n(Ko): Replace 연결 as 커넥션 #52440'
+      - 'docs: Add missing ''param'' for waiter_max_attempts in EMR operator doc… #51676'
+      - 'Remove reference to ''scheduler_loop.jpg'' in _run_scheduler_loop docstring #42300'
+    prCount: 6
+    githubUrl: https://github.com/0ne-stone
+    lastUpdated: '2025-09-13T04:23:58.270Z'
+  - name: Kyungjun Lee
+    githubUsername: kyungjunleeme
+    contributions:
+      - 'delete assigned variable #54708'
+      - 'fix comment in dag.test() #54654'
+      - 'FIX reference #54490'
+    prCount: 28
+    githubUrl: https://github.com/kyungjunleeme
+    lastUpdated: '2025-09-13T04:23:58.462Z'
+  - name: Geonwoo Kim
+    githubUsername: kgw7401
+    contributions:
+      - 'delete: async_get_operation in test_dataproc #53531'
+      - 'fix: Change DataprocAsyncHook parent class to GoogleBaseAsyncHook #52981'
+      - 'Provider Migration: Update beam for Airflow 3.0 compatibility #52607'
+    prCount: 8
+    githubUrl: https://github.com/kgw7401
+    lastUpdated: '2025-09-13T04:23:58.232Z'
