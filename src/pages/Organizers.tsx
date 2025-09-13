@@ -16,15 +16,18 @@ import {
 
 const OrganizerCard = ({ organizer }: { organizer: Organizer }) => {
   const { t } = useTranslation('organizers');
+  
+  // GitHub 아이디로 자동 avatar URL 생성
+  const avatarUrl = organizer.avatar_url || (organizer.github ? `https://github.com/${organizer.github}.png` : null);
 
   return (
     <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-200 overflow-hidden">
       <div className="p-6 text-center">
         {/* 프로필 이미지 */}
         <div className="w-24 h-24 mx-auto mb-4">
-          {organizer.avatar_url ? (
+          {avatarUrl ? (
             <img
-              src={organizer.avatar_url}
+              src={avatarUrl}
               alt={`${organizer.name} 프로필`}
               className="w-full h-full rounded-full object-cover border-4 border-white shadow-lg"
               onError={(e) => {
@@ -38,7 +41,7 @@ const OrganizerCard = ({ organizer }: { organizer: Organizer }) => {
           ) : null}
           {/* 기본 아바타 (이미지가 없거나 로드 실패 시) */}
           <div 
-            className={`w-full h-full bg-gradient-to-br from-airflow-blue to-airflow-navy rounded-full flex items-center justify-center text-white text-2xl font-bold ${organizer.avatar_url ? 'hidden' : 'flex'}`}
+            className={`w-full h-full bg-gradient-to-br from-airflow-blue to-airflow-navy rounded-full flex items-center justify-center text-white text-2xl font-bold ${avatarUrl ? 'hidden' : 'flex'}`}
           >
             {organizer.name.charAt(0)}
           </div>
