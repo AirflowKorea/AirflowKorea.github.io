@@ -54,18 +54,5 @@
     "description": "Want to share your Apache Airflow-related experience and knowledge with the community? Join us as a speaker!",
     "proposalButton": "Propose a Talk",
     "contactButton": "Contact Us"
-  },
-  "resources": {
-    "title": "More Information",
-    "openChat": {
-      "title": "💬 Open Chat",
-      "description": "Communicate in real-time via KakaoTalk Open Chat",
-      "button": "Join Open Chat"
-    },
-    "newsletter": {
-      "title": "📧 Newsletter",
-      "description": "Receive monthly Airflow news and event information",
-      "button": "Subscribe to Newsletter"
-    }
   }
 } 

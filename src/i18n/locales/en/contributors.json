@@ -16,9 +16,5 @@
     "description": "We sincerely appreciate everyone who has contributed to the development of Apache Airflow, and we welcome more contributors to join us",
     "button": "I Want to Contribute Too",
     "registerButton": "View Contribution Guide"
-  },
-  "noContributors": {
-    "title": "No contributors yet",
-    "message": "Be the first contributor!"
   }
 } 

@@ -18,60 +18,44 @@
       "responseTime": "Response Time",
       "participants": "Participants",
       "responseTimeValue": "Few hours ~ 1 day",
-      "participantsValue": "500+",
+      "participantsValue": "170+",
       "pros": [
         "Systematic categorization and search",
         "In-depth technical discussions",
         "Long-lasting knowledge repository"
-      ],
-      "cons": [
-        "Difficult real-time communication",
-        "Relatively high barrier to entry"
       ]
     },
     "chat": {
       "title": "Real-time Chat - Quick Communication",
       "description": "Ask questions instantly and get real-time answers.",
       "responseTimeValue": "Few minutes ~ Few hours",
-      "participantsValue": "300+",
+      "participantsValue": "120+",
       "pros": [
         "Instant questions and quick answers",
         "Friendly casual conversations",
         "Real-time event announcements"
-      ],
-      "cons": [
-        "Difficult to find past conversations",
-        "Unsuitable for long technical discussions"
       ]
     },
     "social": {
       "title": "Social Network - Professional Exchange",
       "description": "Professional networking and career information sharing through LinkedIn and GitHub",
       "responseTimeValue": "1 day ~ 1 week",
-      "participantsValue": "200+",
+      "participantsValue": "290+",
       "pros": [
         "Professional networking",
         "Career information sharing",
         "Industry trend discussions"
-      ],
-      "cons": [
-        "Limited informal communication",
-        "Relatively slower responses"
       ]
     },
     "video": {
       "title": "Video - Visual Learning",
       "description": "Visual learning materials through YouTube and recorded meetups",
       "responseTimeValue": "Asynchronous",
-      "participantsValue": "1000+",
+      "participantsValue": "30+",
       "pros": [
         "Visual learning materials",
         "Repeatable learning",
         "High-quality tutorials"
-      ],
-      "cons": [
-        "No real-time questions",
-        "Limited interaction"
       ]
     }
   },
@@ -99,8 +83,6 @@
   },
   "memberCount": "{{count}} members",
   "cta": {
-    "joinButton": "Join",
-    "learnMore": "Learn More",
     "title": "Join the Community Right Now!",
     "description": "Grow together with active Korean Airflow users."
   }

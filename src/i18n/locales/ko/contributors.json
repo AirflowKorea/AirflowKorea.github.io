@@ -16,9 +16,5 @@
     "description": "Apache Airflow 발전에 기여해주신 여러분의 노력에 진심으로 감사드리며, 앞으로도 더 많은 분들의 참여를 기다립니다",
     "button": "나도 기여하기",
     "registerButton": "기여자 등록하기"
-  },
-  "noContributors": {
-    "title": "아직 기여자가 없습니다",
-    "message": "첫 번째 기여자가 되어주세요!"
   }
 } 

@@ -54,18 +54,5 @@
     "description": "Apache Airflow 관련 경험과 지식을 커뮤니티와 함께 나누고 싶으신가요? 발표자로 참여해 주세요!",
     "proposalButton": "발표 제안하기",
     "contactButton": "문의하기"
-  },
-  "resources": {
-    "title": "더 많은 정보",
-    "openChat": {
-      "title": "💬 오픈 채팅",
-      "description": "카카오톡 오픈채팅에서 실시간으로 소통해요",
-      "button": "오픈채팅 참여하기"
-    },
-    "newsletter": {
-      "title": "📧 뉴스레터",
-      "description": "월간 Airflow 소식과 이벤트 정보를 받아보세요",
-      "button": "뉴스레터 구독하기"
-    }
   }
 } 

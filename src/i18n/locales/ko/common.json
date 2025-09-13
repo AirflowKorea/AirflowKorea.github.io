@@ -9,31 +9,15 @@
     "more": "더보기"
   },
   "common": {
-    "upcoming": "예정",
-    "past": "지난",
-    "loading": "불러오는 중...",
-    "error": "오류가 발생했습니다",
-    "learnMore": "자세히 보기",
-    "readMore": "더 보기",
-    "joinNow": "지금 참여하기",
-    "viewDetails": "자세히 보기",
-    "register": "참가 신청",
-    "presentation": "발표 자료",
-    "video": "영상 보기",
     "email": "이메일",
     "github": "GitHub",
     "linkedin": "LinkedIn",
-    "join": "참여하기",
-    "contactUs": "문의하기",
     "joinUs": "참여하기"
   },
   "footer": {
     "title": "Airflow 한국 사용자 모임",
     "description": "Apache Airflow 한국 사용자 모임은 데이터 엔지니어링과 워크플로우 관리에 관심 있는 모든 분들을 위한 커뮤니티입니다.",
     "quickLinks": "빠른 링크",
-    "contact": "연락처",
-    "joinOpenChat": "오픈카카오톡 참여",
-    "joinSlack": "Slack 워크스페이스 참여",
     "copyright": "© 2025 Apache Airflow 한국 사용자 모임. All rights reserved.",
     "trademark": "Apache Airflow는 Apache Software Foundation의 등록 상표입니다."
   }
