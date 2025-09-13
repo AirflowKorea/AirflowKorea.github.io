@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "update-contributors": "node scripts/update-contributors.js"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",

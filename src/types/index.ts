@@ -38,6 +38,8 @@ export interface Contributor {
   contributions: string[];
   githubUrl: string;
   avatarUrl?: string;
+  prCount?: number;
+  lastUpdated?: string;
 }
 
 // 커뮤니티 채널 관련 타입

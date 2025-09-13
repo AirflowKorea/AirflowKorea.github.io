@@ -4,17 +4,42 @@ import { useTranslation } from 'react-i18next';
 
 const ContributorCard = ({ contributor }: { contributor: Contributor }) => {
   const { t } = useTranslation('contributors');
+  
+  // GitHub 아이디로 자동 avatar URL 생성
+  const avatarUrl = contributor.avatarUrl || (contributor.githubUsername ? `https://github.com/${contributor.githubUsername}.png` : null);
 
   return (
     <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 overflow-hidden">
       <div className="p-6">
         <div className="flex items-center mb-4">
-          <div className="w-16 h-16 bg-gradient-to-br from-airflow-blue to-airflow-navy rounded-full flex items-center justify-center text-white text-xl font-bold mr-4">
-            {contributor.name.charAt(0)}
+          <div className="w-16 h-16 mr-4">
+            {avatarUrl ? (
+              <img
+                src={avatarUrl}
+                alt={`${contributor.name} 프로필`}
+                className="w-full h-full rounded-full object-cover border-2 border-gray-200"
+                onError={(e) => {
+                  // 이미지 로드 실패 시 기본 아바타로 대체
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  const fallback = target.nextElementSibling as HTMLElement;
+                  if (fallback) fallback.style.display = 'flex';
+                }}
+              />
+            ) : null}
+            {/* 기본 아바타 (이미지가 없거나 로드 실패 시) */}
+            <div 
+              className={`w-full h-full bg-gradient-to-br from-airflow-blue to-airflow-navy rounded-full flex items-center justify-center text-white text-xl font-bold ${avatarUrl ? 'hidden' : 'flex'}`}
+            >
+              {contributor.name.charAt(0)}
+            </div>
           </div>
           <div>
             <h3 className="text-xl font-bold text-gray-800">{contributor.name}</h3>
             <p className="text-gray-600">@{contributor.githubUsername}</p>
+            {contributor.prCount && (
+              <p className="text-sm text-airflow-blue font-medium">{contributor.prCount} PRs</p>
+            )}
           </div>
         </div>
         
@@ -94,7 +119,7 @@ const Contributors = () => {
               
               <div className="bg-white p-8 rounded-xl shadow-lg">
                 <div className="text-4xl font-bold text-airflow-green mb-2">
-                  {contributors.reduce((sum: number, c: Contributor) => sum + c.contributions.length, 0)}+
+                  {contributors.reduce((sum: number, c: Contributor) => sum + (c.prCount || 0), 0)}+
                 </div>
                 <div className="text-gray-600">{t('stats.contributions')}</div>
               </div>
