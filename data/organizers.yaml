@@ -11,7 +11,6 @@ organizers:
       email: "kgw7401@airflow-kr.org"
       linkedIn: "kgw7401"
       github: "kgw7401"
-      avatar_url: "https://avatars.githubusercontent.com/u/78521993?v=4"
 
     - id: "2"
       name: "김노은"
@@ -29,7 +28,6 @@ organizers:
       email: "onestone.yang@airflow-kr.org"
       linkedIn: "wonseokyang-de"
       github: "0ne-stone"
-      avatar_url: "https://avatars.githubusercontent.com/u/62360849?v=4"
       
     - id: "4"
       name: "이경준"
@@ -38,7 +36,6 @@ organizers:
       email: "kyungjunlee.me@airflow-kr.org"
       linkedIn: "kyungjunleeme"
       github: "kyungjunleeme"
-      avatar_url: "https://avatars.githubusercontent.com/u/45473846?v=4"
 
     - id: "5"
       name: "이준원"
@@ -61,7 +58,6 @@ organizers:
       email: "choo121600@airflow-kr.org" 
       linkedIn: "yeonguk-choo"
       github: "choo121600"
-      avatar_url: "https://avatars.githubusercontent.com/u/54111883?v=4"
 
     - id: "8"
       name: "한상곤"
@@ -94,7 +90,6 @@ organizers:
       email: "choo121600@airflow-kr.org" 
       linkedIn: "yeonguk-choo"
       github: "choo121600"
-      avatar_url: "https://avatars.githubusercontent.com/u/54111883?v=4"
 
 recruitment:
   is_recruiting: true
