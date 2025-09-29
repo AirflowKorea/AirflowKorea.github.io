@@ -1,5 +1,10 @@
 import { useTranslation } from 'react-i18next';
-import { CalendarIcon, UserGroupIcon, MapPinIcon, ClockIcon } from '@heroicons/react/24/outline';
+import {
+  CalendarIcon,
+  UserGroupIcon,
+  MapPinIcon,
+  ClockIcon,
+} from '@heroicons/react/24/outline';
 
 const Events = () => {
   const { t } = useTranslation('events');
@@ -9,9 +14,7 @@ const Events = () => {
       {/* 페이지 헤더 */}
       <section className="airflow-gradient text-white section-padding">
         <div className="container-max text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            {t('title')}
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">{t('title')}</h1>
           <p className="text-xl max-w-3xl mx-auto leading-relaxed">
             {t('subtitle')}
           </p>
@@ -31,8 +34,8 @@ const Events = () => {
             <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
               {t('meetup.description')}
             </p>
-            
-            <a 
+
+            <a
               href="https://www.meetup.com/korea-apache-airflow-user-group/"
               target="_blank"
               rel="noopener noreferrer"
@@ -48,7 +51,9 @@ const Events = () => {
               <div className="w-12 h-12 bg-airflow-blue rounded-full mx-auto mb-4 flex items-center justify-center">
                 <CalendarIcon className="h-6 w-6 text-white" />
               </div>
-              <h3 className="font-bold mb-2">{t('features.regularMeetup.title')}</h3>
+              <h3 className="font-bold mb-2">
+                {t('features.regularMeetup.title')}
+              </h3>
               <p className="text-gray-600 text-sm">
                 {t('features.regularMeetup.description')}
               </p>
@@ -58,7 +63,9 @@ const Events = () => {
               <div className="w-12 h-12 bg-airflow-green rounded-full mx-auto mb-4 flex items-center justify-center">
                 <MapPinIcon className="h-6 w-6 text-white" />
               </div>
-              <h3 className="font-bold mb-2">{t('features.offlineMeeting.title')}</h3>
+              <h3 className="font-bold mb-2">
+                {t('features.offlineMeeting.title')}
+              </h3>
               <p className="text-gray-600 text-sm">
                 {t('features.offlineMeeting.description')}
               </p>
@@ -68,7 +75,9 @@ const Events = () => {
               <div className="w-12 h-12 bg-airflow-orange rounded-full mx-auto mb-4 flex items-center justify-center">
                 <UserGroupIcon className="h-6 w-6 text-white" />
               </div>
-              <h3 className="font-bold mb-2">{t('features.networking.title')}</h3>
+              <h3 className="font-bold mb-2">
+                {t('features.networking.title')}
+              </h3>
               <p className="text-gray-600 text-sm">
                 {t('features.networking.description')}
               </p>
@@ -78,13 +87,14 @@ const Events = () => {
               <div className="w-12 h-12 bg-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <ClockIcon className="h-6 w-6 text-white" />
               </div>
-              <h3 className="font-bold mb-2">{t('features.notifications.title')}</h3>
+              <h3 className="font-bold mb-2">
+                {t('features.notifications.title')}
+              </h3>
               <p className="text-gray-600 text-sm">
                 {t('features.notifications.description')}
               </p>
             </div>
           </div>
-
         </div>
       </section>
 
@@ -94,15 +104,19 @@ const Events = () => {
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
             {t('participation.title')}
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {(t('participation.steps', { returnObjects: true }) as Array<{icon: string, title: string, description: string}>).map((step, index) => (
+            {(
+              t('participation.steps', { returnObjects: true }) as Array<{
+                icon: string;
+                title: string;
+                description: string;
+              }>
+            ).map((step, index) => (
               <div key={index} className="bg-white p-6 rounded-xl text-center">
                 <div className="text-4xl mb-4">{step.icon}</div>
                 <h3 className="text-lg font-bold mb-2">{step.title}</h3>
-                <p className="text-gray-600 text-sm">
-                  {step.description}
-                </p>
+                <p className="text-gray-600 text-sm">{step.description}</p>
               </div>
             ))}
           </div>
@@ -117,16 +131,16 @@ const Events = () => {
             {t('speakers.description')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="https://forms.gle/GLwpKSqgNxsShdH49" 
+            <a
+              href="https://forms.gle/GLwpKSqgNxsShdH49"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-airflow-orange hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"
             >
               {t('speakers.proposalButton')}
             </a>
-            <a 
-              href="mailto:contact@airflow-kr.org" 
+            <a
+              href="mailto:contact@airflow-kr.org"
               className="bg-transparent border-2 border-white hover:bg-white hover:text-airflow-navy text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200"
             >
               {t('speakers.contactButton')}

@@ -2,23 +2,21 @@ import { useState, useMemo, useEffect } from 'react';
 import { useOrganizers } from '../hooks/useData';
 import type { Organizer } from '../types';
 import { useTranslation } from 'react-i18next';
-import { 
+import {
   CalendarIcon,
   ChatBubbleLeftRightIcon,
   UserGroupIcon,
-  FunnelIcon
+  FunnelIcon,
 } from '@heroicons/react/24/outline';
-import { 
-  FaGithub, 
-  FaLinkedin, 
-  FaEnvelope 
-} from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 const OrganizerCard = ({ organizer }: { organizer: Organizer }) => {
   const { t } = useTranslation('organizers');
-  
+
   // GitHub 아이디로 자동 avatar URL 생성
-  const avatarUrl = organizer.avatar_url || (organizer.github ? `https://github.com/${organizer.github}.png` : null);
+  const avatarUrl =
+    organizer.avatar_url ||
+    (organizer.github ? `https://github.com/${organizer.github}.png` : null);
 
   return (
     <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-200 overflow-hidden">
@@ -30,7 +28,7 @@ const OrganizerCard = ({ organizer }: { organizer: Organizer }) => {
               src={avatarUrl}
               alt={`${organizer.name} 프로필`}
               className="w-full h-full rounded-full object-cover border-4 border-white shadow-lg"
-              onError={(e) => {
+              onError={e => {
                 // 이미지 로드 실패 시 기본 아바타로 대체
                 const target = e.target as HTMLImageElement;
                 target.style.display = 'none';
@@ -40,20 +38,21 @@ const OrganizerCard = ({ organizer }: { organizer: Organizer }) => {
             />
           ) : null}
           {/* 기본 아바타 (이미지가 없거나 로드 실패 시) */}
-          <div 
+          <div
             className={`w-full h-full bg-gradient-to-br from-airflow-blue to-airflow-navy rounded-full flex items-center justify-center text-white text-2xl font-bold ${avatarUrl ? 'hidden' : 'flex'}`}
           >
             {organizer.name.charAt(0)}
           </div>
         </div>
-        
-        {/* 기본 정보 */}
-        <h3 className="text-xl font-bold mb-2 text-gray-800">{organizer.name}</h3>
-        <div className="flex items-center justify-center gap-2 mb-2">
 
+        {/* 기본 정보 */}
+        <h3 className="text-xl font-bold mb-2 text-gray-800">
+          {organizer.name}
+        </h3>
+        <div className="flex items-center justify-center gap-2 mb-2">
           <span className="text-gray-600">{organizer.role}</span>
         </div>
-        
+
         {/* 연락처 링크 */}
         <div className="flex justify-center gap-3">
           {organizer.email && (
@@ -96,7 +95,7 @@ const OrganizerCard = ({ organizer }: { organizer: Organizer }) => {
 const Organizers = () => {
   const { organizers, recruitment, loading, error } = useOrganizers();
   const { t } = useTranslation('organizers');
-  
+
   // 기수별로 분류하고 정렬
   const generationsList = useMemo(() => {
     const generations = [...new Set(organizers.map(org => org.generation))];
@@ -127,8 +126,8 @@ const Organizers = () => {
   }
 
   // recruitment 정보에 따라 링크 결정
-  const recruitmentHref = recruitment?.is_recruiting 
-    ? recruitment.application_url 
+  const recruitmentHref = recruitment?.is_recruiting
+    ? recruitment.application_url
     : `mailto:${recruitment?.contact_email}`;
 
   return (
@@ -138,13 +137,11 @@ const Organizers = () => {
           <p>{error}</p>
         </div>
       )}
-      
+
       {/* 페이지 헤더 */}
       <section className="airflow-gradient text-white section-padding">
         <div className="container-max text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            {t('title')}
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">{t('title')}</h1>
           <p className="text-xl max-w-3xl mx-auto leading-relaxed">
             {t('subtitle')}
           </p>
@@ -161,14 +158,14 @@ const Organizers = () => {
             <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
               {t('intro.description')}
             </p>
-            
+
             {/* 기수 필터 버튼 */}
             <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
               <div className="flex items-center gap-2">
                 <FunnelIcon className="h-5 w-5 text-gray-600" />
                 <span className="text-gray-600 font-medium">기수별 보기:</span>
               </div>
-              {generationsList.map((gen) => (
+              {generationsList.map(gen => (
                 <button
                   key={gen}
                   onClick={() => setSelectedGeneration(gen)}
@@ -187,7 +184,8 @@ const Organizers = () => {
           {/* 필터링 결과 수 표시 */}
           <div className="text-center mb-8">
             <p className="text-gray-600">
-              {selectedGeneration}기에 {filteredOrganizers.length}명의 운영진이 활동했습니다.
+              {selectedGeneration}기에 {filteredOrganizers.length}명의 운영진이
+              활동했습니다.
             </p>
           </div>
 
@@ -206,23 +204,25 @@ const Organizers = () => {
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
             {t('roles.title')}
           </h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-airflow-blue rounded-full mx-auto mb-4 flex items-center justify-center text-white">
                 <CalendarIcon className="h-8 w-8" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-800">{t('roles.event.title')}</h3>
-              <p className="text-gray-600">
-                {t('roles.event.description')}
-              </p>
+              <h3 className="text-xl font-bold mb-3 text-gray-800">
+                {t('roles.event.title')}
+              </h3>
+              <p className="text-gray-600">{t('roles.event.description')}</p>
             </div>
 
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-airflow-green rounded-full mx-auto mb-4 flex items-center justify-center text-white">
                 <ChatBubbleLeftRightIcon className="h-8 w-8" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-800">{t('roles.community.title')}</h3>
+              <h3 className="text-xl font-bold mb-3 text-gray-800">
+                {t('roles.community.title')}
+              </h3>
               <p className="text-gray-600">
                 {t('roles.community.description')}
               </p>
@@ -232,10 +232,10 @@ const Organizers = () => {
               <div className="w-16 h-16 bg-airflow-orange rounded-full mx-auto mb-4 flex items-center justify-center text-white">
                 <UserGroupIcon className="h-8 w-8" />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-800">{t('roles.content.title')}</h3>
-              <p className="text-gray-600">
-                {t('roles.content.description')}
-              </p>
+              <h3 className="text-xl font-bold mb-3 text-gray-800">
+                {t('roles.content.title')}
+              </h3>
+              <p className="text-gray-600">{t('roles.content.description')}</p>
             </div>
           </div>
         </div>
@@ -244,13 +244,11 @@ const Organizers = () => {
       {/* 운영진 모집 */}
       <section className="bg-airflow-navy text-white section-padding">
         <div className="container-max text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            {t('recruitment.title')}
-          </h2>
+          <h2 className="text-3xl font-bold mb-6">{t('recruitment.title')}</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             {t('recruitment.description')}
           </p>
-          <a 
+          <a
             href={recruitmentHref}
             className="bg-airflow-orange hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"
           >
@@ -262,4 +260,4 @@ const Organizers = () => {
   );
 };
 
-export default Organizers; 
+export default Organizers;

@@ -1,97 +1,144 @@
 # Airflow Korea User Group 운영진 정보
 # - generation: 기수 (숫자)
 # - role: 리더, 운영진
+# - pre-commit run --all-files 를 실행하면 이름 가나다 순으로 id 값이 정렬됨
 
 organizers:
+  generation_3:
+    - id: '1'
+      name: 김건우
+      role: 운영진
+      generation: 3
+      email: kgw7401@airflow-kr.org
+      linkedIn: kgw7401
+      github: kgw7401
+    - id: '2'
+      name: 김노은
+      role: 운영진
+      generation: 3
+      email: noeunkim511@airflow-kr.org
+      linkedIn: noeunkim
+      github: noeunkim
+    - id: '3'
+      name: 양원석
+      role: 운영진
+      generation: 3
+      email: onestone.yang@airflow-kr.org
+      linkedIn: wonseokyang-de
+      github: 0ne-stone
+    - id: '4'
+      name: 이경준
+      role: 운영진
+      generation: 3
+      email: kyungjunlee.me@airflow-kr.org
+      linkedIn: kyungjunleeme
+      github: kyungjunleeme
+    - id: '5'
+      name: 이준원
+      role: 운영진
+      generation: 3
+      email: cpprhtn@airflow-kr.org
+      linkedIn: cpprhtn
+      github: cpprhtn
+    - id: '6'
+      name: 조민성
+      role: 운영진
+      generation: 3
+      email: mscho@airflow-kr.org
+      linkedIn: mscho7969
+      github: kkumtree
+    - id: '7'
+      name: 추영욱
+      role: 리더
+      generation: 3
+      email: choo121600@airflow-kr.org
+      linkedIn: yeonguk-choo
+      github: choo121600
+    - id: '8'
+      name: 한상곤
+      role: 운영진
+      generation: 3
+      email: sangkon@airflow-kr.org
+      linkedIn: sangkonhan
+      github: sigmadream
   generation_2:
-    - id: "1"
-      name: "김건우"
-      role: "운영진"
+    - id: '1'
+      name: 김건우
+      role: 운영진
       generation: 2
-      email: "kgw7401@airflow-kr.org"
-      linkedIn: "kgw7401"
-      github: "kgw7401"
-
-    - id: "2"
-      name: "김노은"
-      role: "운영진"
+      email: kgw7401@airflow-kr.org
+      linkedIn: kgw7401
+      github: kgw7401
+    - id: '2'
+      name: 김노은
+      role: 운영진
       generation: 2
-      email: "noeunkim511@airflow-kr.org"
-      linkedIn: "noeunkim"
-      github: "noeunkim"
-
-
-    - id: "3"
-      name: "양원석"
-      role: "운영진"
+      email: noeunkim511@airflow-kr.org
+      linkedIn: noeunkim
+      github: noeunkim
+    - id: '3'
+      name: 양원석
+      role: 운영진
       generation: 2
-      email: "onestone.yang@airflow-kr.org"
-      linkedIn: "wonseokyang-de"
-      github: "0ne-stone"
-      
-    - id: "4"
-      name: "이경준"
-      role: "운영진"
+      email: onestone.yang@airflow-kr.org
+      linkedIn: wonseokyang-de
+      github: 0ne-stone
+    - id: '4'
+      name: 이경준
+      role: 운영진
       generation: 2
-      email: "kyungjunlee.me@airflow-kr.org"
-      linkedIn: "kyungjunleeme"
-      github: "kyungjunleeme"
-
-    - id: "5"
-      name: "이준원"
-      role: "운영진"
+      email: kyungjunlee.me@airflow-kr.org
+      linkedIn: kyungjunleeme
+      github: kyungjunleeme
+    - id: '5'
+      name: 이준원
+      role: 운영진
       generation: 2
-      email: "cpprhtn@airflow-kr.org"
-      github: "cpprhtn"
-
-    - id: "6"
-      name: "조민성"
-      role: "운영진"
+      email: cpprhtn@airflow-kr.org
+      linkedIn: cpprhtn
+      github: cpprhtn
+    - id: '6'
+      name: 조민성
+      role: 운영진
       generation: 2
-      email: "mscho@airflow-kr.org"
-      github: "kkumtree"
-
-    - id: "7"
-      name: "추영욱"
-      role: "리더"
+      email: mscho@airflow-kr.org
+      linkedIn: mscho7969
+      github: kkumtree
+    - id: '7'
+      name: 추영욱
+      role: 리더
       generation: 2
-      email: "choo121600@airflow-kr.org" 
-      linkedIn: "yeonguk-choo"
-      github: "choo121600"
-
-    - id: "8"
-      name: "한상곤"
-      role: "운영진"
+      email: choo121600@airflow-kr.org
+      linkedIn: yeonguk-choo
+      github: choo121600
+    - id: '8'
+      name: 한상곤
+      role: 운영진
       generation: 2
-      email: "sangkon@airflow-kr.org"
-      linkedIn: "hansanggon"
-      github: "sigmadream"
-
-
+      email: sangkon@airflow-kr.org
+      linkedIn: sangkonhan
+      github: sigmadream
   generation_1:
-    - id: "1"
-      name: "이준원"
-      role: "운영진"
+    - id: '1'
+      name: 이준원
+      role: 운영진
       generation: 1
-      email: "cpprhtn@airflow-kr.org"
-      github: "cpprhtn"
-
-    - id: "2"
-      name: "조민성"
-      role: "운영진"
+      email: cpprhtn@airflow-kr.org
+      github: cpprhtn
+    - id: '2'
+      name: 조민성
+      role: 운영진
       generation: 1
-      email: "mscho@airflow-kr.org"
-      github: "kkumtree"
-
-    - id: "3"
-      name: "추영욱"
-      role: "리더"
+      email: mscho@airflow-kr.org
+      github: kkumtree
+    - id: '3'
+      name: 추영욱
+      role: 리더
       generation: 1
-      email: "choo121600@airflow-kr.org" 
-      linkedIn: "yeonguk-choo"
-      github: "choo121600"
-
+      email: choo121600@airflow-kr.org
+      linkedIn: yeonguk-choo
+      github: choo121600
 recruitment:
   is_recruiting: false
-  application_url: "https://forms.gle/GmjWmxtpBPdYPb9f7"
-  contact_email: "contact@airflow-kr.org"
+  application_url: https://forms.gle/GmjWmxtpBPdYPb9f7
+  contact_email: contact@airflow-kr.org

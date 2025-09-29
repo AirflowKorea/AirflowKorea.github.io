@@ -2,21 +2,21 @@ import { FaBullseye, FaSeedling, FaHandshake, FaBook } from 'react-icons/fa';
 import { useChannels } from '../hooks/useData';
 import type { CommunityChannel } from '../types';
 import { useTranslation } from 'react-i18next';
-import { 
+import {
   FaDiscourse,
-  FaComments, 
+  FaComments,
   FaMeetup,
-  FaSlack, 
+  FaSlack,
   FaLinkedin,
-  FaYoutube 
+  FaYoutube,
 } from 'react-icons/fa';
 
 const ChannelCard = ({ channel }: { channel: CommunityChannel }) => {
   const { t } = useTranslation('channels');
 
   const getIconComponent = (channelPlatform: string) => {
-	// Discourse
-	if (channelPlatform.toLowerCase().includes('discourse')) {
+    // Discourse
+    if (channelPlatform.toLowerCase().includes('discourse')) {
       return <FaDiscourse className="h-12 w-12" />;
     }
     // YouTube 채널
@@ -31,12 +31,12 @@ const ChannelCard = ({ channel }: { channel: CommunityChannel }) => {
     if (channelPlatform.toLowerCase().includes('linkedin')) {
       return <FaLinkedin className="h-12 w-12" />;
     }
-	// KakakTalk
-	if (channelPlatform.toLowerCase().includes('kakaotalk')) {
+    // KakakTalk
+    if (channelPlatform.toLowerCase().includes('kakaotalk')) {
       return <FaComments className="h-12 w-12" />;
     }
-	// Meetups
-	if (channelPlatform.toLowerCase().includes('meetups')) {
+    // Meetups
+    if (channelPlatform.toLowerCase().includes('meetups')) {
       return <FaMeetup className="h-12 w-12" />;
     }
   };
@@ -58,8 +58,12 @@ const ChannelCard = ({ channel }: { channel: CommunityChannel }) => {
 
   return (
     <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 overflow-hidden">
-      <div className={`${getChannelTypeStyle(channel.type)} p-6 text-white text-center`}>
-        <div className="mb-3 flex justify-center">{getIconComponent(channel.platform)}</div>
+      <div
+        className={`${getChannelTypeStyle(channel.type)} p-6 text-white text-center`}
+      >
+        <div className="mb-3 flex justify-center">
+          {getIconComponent(channel.platform)}
+        </div>
         <h3 className="text-xl font-bold">{channel.name}</h3>
         {channel.memberCount && (
           <div className="text-sm opacity-90 mt-2">
@@ -67,10 +71,12 @@ const ChannelCard = ({ channel }: { channel: CommunityChannel }) => {
           </div>
         )}
       </div>
-      
+
       <div className="p-6">
-        <p className="text-gray-600 mb-6 leading-relaxed">{channel.description}</p>
-        
+        <p className="text-gray-600 mb-6 leading-relaxed">
+          {channel.description}
+        </p>
+
         <a
           href={channel.url}
           target="_blank"
@@ -99,10 +105,18 @@ const Channels = () => {
     );
   }
 
-  const forumChannels = communityChannels.filter((channel: CommunityChannel) => channel.type === 'forum');
-  const chatChannels = communityChannels.filter((channel: CommunityChannel) => channel.type === 'chat');
-  const socialChannels = communityChannels.filter((channel: CommunityChannel) => channel.type === 'social');
-  const videoChannels = communityChannels.filter((channel: CommunityChannel) => channel.type === 'video');
+  const forumChannels = communityChannels.filter(
+    (channel: CommunityChannel) => channel.type === 'forum'
+  );
+  const chatChannels = communityChannels.filter(
+    (channel: CommunityChannel) => channel.type === 'chat'
+  );
+  const socialChannels = communityChannels.filter(
+    (channel: CommunityChannel) => channel.type === 'social'
+  );
+  const videoChannels = communityChannels.filter(
+    (channel: CommunityChannel) => channel.type === 'video'
+  );
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -111,13 +125,11 @@ const Channels = () => {
           <p>{error}</p>
         </div>
       )}
-      
+
       {/* 페이지 헤더 */}
       <section className="airflow-gradient text-white section-padding">
         <div className="container-max text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            {t('title')}
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">{t('title')}</h1>
           <p className="text-xl max-w-3xl mx-auto leading-relaxed">
             {t('subtitle')}
           </p>
@@ -164,20 +176,34 @@ const Channels = () => {
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                   <div className="bg-white p-4 rounded-lg">
-                    <strong className="text-blue-600">{t('channels.forum.recommended')}</strong>
+                    <strong className="text-blue-600">
+                      {t('channels.forum.recommended')}
+                    </strong>
                     <ul className="mt-2 space-y-1 text-gray-600">
-                      {(t('channels.forum.pros', { returnObjects: true }) as string[]).map((item, index) => (
+                      {(
+                        t('channels.forum.pros', {
+                          returnObjects: true,
+                        }) as string[]
+                      ).map((item, index) => (
                         <li key={index}>• {item}</li>
                       ))}
                     </ul>
                   </div>
                   <div className="bg-white p-4 rounded-lg">
-                    <strong className="text-blue-600">{t('channels.forum.responseTime')}</strong>
-                    <p className="mt-2 text-gray-600">{t('channels.forum.responseTimeValue')}</p>
+                    <strong className="text-blue-600">
+                      {t('channels.forum.responseTime')}
+                    </strong>
+                    <p className="mt-2 text-gray-600">
+                      {t('channels.forum.responseTimeValue')}
+                    </p>
                   </div>
                   <div className="bg-white p-4 rounded-lg">
-                    <strong className="text-blue-600">{t('channels.forum.participants')}</strong>
-                    <p className="mt-2 text-gray-600">{t('channels.forum.participantsValue')}</p>
+                    <strong className="text-blue-600">
+                      {t('channels.forum.participants')}
+                    </strong>
+                    <p className="mt-2 text-gray-600">
+                      {t('channels.forum.participantsValue')}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -194,20 +220,34 @@ const Channels = () => {
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                   <div className="bg-white p-4 rounded-lg">
-                    <strong className="text-green-600">{t('channels.forum.recommended')}</strong>
+                    <strong className="text-green-600">
+                      {t('channels.forum.recommended')}
+                    </strong>
                     <ul className="mt-2 space-y-1 text-gray-600">
-                      {(t('channels.chat.pros', { returnObjects: true }) as string[]).map((item, index) => (
+                      {(
+                        t('channels.chat.pros', {
+                          returnObjects: true,
+                        }) as string[]
+                      ).map((item, index) => (
                         <li key={index}>• {item}</li>
                       ))}
                     </ul>
                   </div>
                   <div className="bg-white p-4 rounded-lg">
-                    <strong className="text-green-600">{t('channels.forum.responseTime')}</strong>
-                    <p className="mt-2 text-gray-600">{t('channels.chat.responseTimeValue')}</p>
+                    <strong className="text-green-600">
+                      {t('channels.forum.responseTime')}
+                    </strong>
+                    <p className="mt-2 text-gray-600">
+                      {t('channels.chat.responseTimeValue')}
+                    </p>
                   </div>
                   <div className="bg-white p-4 rounded-lg">
-                    <strong className="text-green-600">{t('channels.forum.participants')}</strong>
-                    <p className="mt-2 text-gray-600">{t('channels.chat.participantsValue')}</p>
+                    <strong className="text-green-600">
+                      {t('channels.forum.participants')}
+                    </strong>
+                    <p className="mt-2 text-gray-600">
+                      {t('channels.chat.participantsValue')}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -224,20 +264,34 @@ const Channels = () => {
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                   <div className="bg-white p-4 rounded-lg">
-                    <strong className="text-purple-600">{t('channels.forum.recommended')}</strong>
+                    <strong className="text-purple-600">
+                      {t('channels.forum.recommended')}
+                    </strong>
                     <ul className="mt-2 space-y-1 text-gray-600">
-                      {(t('channels.social.pros', { returnObjects: true }) as string[]).map((item, index) => (
+                      {(
+                        t('channels.social.pros', {
+                          returnObjects: true,
+                        }) as string[]
+                      ).map((item, index) => (
                         <li key={index}>• {item}</li>
                       ))}
                     </ul>
                   </div>
                   <div className="bg-white p-4 rounded-lg">
-                    <strong className="text-purple-600">{t('responseTime')}</strong>
-                    <p className="mt-2 text-gray-600">{t('channels.social.responseTimeValue')}</p>
+                    <strong className="text-purple-600">
+                      {t('responseTime')}
+                    </strong>
+                    <p className="mt-2 text-gray-600">
+                      {t('channels.social.responseTimeValue')}
+                    </p>
                   </div>
                   <div className="bg-white p-4 rounded-lg">
-                    <strong className="text-purple-600">{t('channels.forum.participants')}</strong>
-                    <p className="mt-2 text-gray-600">{t('channels.social.participantsValue')}</p>
+                    <strong className="text-purple-600">
+                      {t('channels.forum.participants')}
+                    </strong>
+                    <p className="mt-2 text-gray-600">
+                      {t('channels.social.participantsValue')}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -254,20 +308,34 @@ const Channels = () => {
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                   <div className="bg-white p-4 rounded-lg">
-                    <strong className="text-red-600">{t('channels.forum.recommended')}</strong>
+                    <strong className="text-red-600">
+                      {t('channels.forum.recommended')}
+                    </strong>
                     <ul className="mt-2 space-y-1 text-gray-600">
-                      {(t('channels.video.pros', { returnObjects: true }) as string[]).map((item, index) => (
+                      {(
+                        t('channels.video.pros', {
+                          returnObjects: true,
+                        }) as string[]
+                      ).map((item, index) => (
                         <li key={index}>• {item}</li>
                       ))}
                     </ul>
                   </div>
                   <div className="bg-white p-4 rounded-lg">
-                    <strong className="text-red-600">{t('responseTime')}</strong>
-                    <p className="mt-2 text-gray-600">{t('channels.video.responseTimeValue')}</p>
+                    <strong className="text-red-600">
+                      {t('responseTime')}
+                    </strong>
+                    <p className="mt-2 text-gray-600">
+                      {t('channels.video.responseTimeValue')}
+                    </p>
                   </div>
                   <div className="bg-white p-4 rounded-lg">
-                    <strong className="text-red-600">{t('channels.forum.participants')}</strong>
-                    <p className="mt-2 text-gray-600">{t('channels.video.participantsValue')}</p>
+                    <strong className="text-red-600">
+                      {t('channels.forum.participants')}
+                    </strong>
+                    <p className="mt-2 text-gray-600">
+                      {t('channels.video.participantsValue')}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -285,28 +353,34 @@ const Channels = () => {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto text-center mb-12">
             {t('guidelines.description')}
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {(t('guidelines.rules', { returnObjects: true }) as Array<{title: string, description: string}>).map((rule, index) => {
+            {(
+              t('guidelines.rules', { returnObjects: true }) as Array<{
+                title: string;
+                description: string;
+              }>
+            ).map((rule, index) => {
               const getIconForIndex = (idx: number) => {
                 const icons = [
                   <FaHandshake className="text-blue-600" />,
                   <FaBook className="text-green-600" />,
                   <FaBullseye className="text-yellow-600" />,
-                  <FaSeedling className="text-purple-600" />
+                  <FaSeedling className="text-purple-600" />,
                 ];
                 return icons[idx] || icons[0];
               };
 
               return (
-                <div key={index} className="bg-white p-6 rounded-xl text-center">
+                <div
+                  key={index}
+                  className="bg-white p-6 rounded-xl text-center"
+                >
                   <div className="text-4xl mb-4 flex justify-center">
                     {getIconForIndex(index)}
                   </div>
                   <h3 className="text-lg font-bold mb-2">{rule.title}</h3>
-                  <p className="text-gray-600 text-sm">
-                    {rule.description}
-                  </p>
+                  <p className="text-gray-600 text-sm">{rule.description}</p>
                 </div>
               );
             })}
@@ -317,16 +391,16 @@ const Channels = () => {
       {/* CTA */}
       <section className="bg-airflow-navy text-white section-padding">
         <div className="container-max text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            {t('cta.title')}
-          </h2>
+          <h2 className="text-3xl font-bold mb-6">{t('cta.title')}</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             {t('cta.description')}
           </p>
           <div className="text-lg">
             {(() => {
               if (communityChannels.length === 0) return null;
-              const maxCount = Math.max(...communityChannels.map(channel => channel.memberCount || 0));
+              const maxCount = Math.max(
+                ...communityChannels.map(channel => channel.memberCount || 0)
+              );
               return `${maxCount.toLocaleString()}+ ${t('membersParticipating')}`;
             })()}
           </div>
@@ -336,4 +410,4 @@ const Channels = () => {
   );
 };
 
-export default Channels; 
+export default Channels;

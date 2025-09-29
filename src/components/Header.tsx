@@ -27,17 +27,25 @@ const Header = () => {
         <div className="flex justify-between items-center py-4 px-6">
           {/* 로고 */}
           <Link to="/" className="flex items-center group focus:outline-none">
-            <img 
-              src={i18n.language === 'ko' ? '/images/airflow_krug_kr.png' : '/images/airflow_krug_en.png'}
-              alt={i18n.language === 'ko' ? 'Apache Airflow 한국사용자모임' : 'Apache Airflow Korea User Group'}
+            <img
+              src={
+                i18n.language === 'ko'
+                  ? '/images/airflow_krug_kr.png'
+                  : '/images/airflow_krug_en.png'
+              }
+              alt={
+                i18n.language === 'ko'
+                  ? 'Apache Airflow 한국사용자모임'
+                  : 'Apache Airflow Korea User Group'
+              }
               className="h-12 w-auto group-hover:scale-105 transition-transform duration-200"
             />
           </Link>
-          
+
           {/* 데스크톱 네비게이션 */}
           <div className="hidden md:flex items-center space-x-3">
             <nav className="flex items-center space-x-1">
-              {menuItems.map((item) => (
+              {menuItems.map(item => (
                 <Link
                   key={item.path}
                   to={item.path}
@@ -50,16 +58,26 @@ const Header = () => {
                   {item.label}
                 </Link>
               ))}
-              
+
               {/* 추가 메뉴 드롭다운 */}
               <div className="relative group">
                 <button className="px-4 py-2 rounded-lg text-sm font-medium text-gray-600 hover:text-primary-cyan hover:bg-cyan-50 transition-all duration-200 flex items-center space-x-1">
                   <span>{t('nav.more')}</span>
-                  <svg className="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <svg
+                    className="w-4 h-4 transition-transform group-hover:rotate-180"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
                   </svg>
                 </button>
-                
+
                 {/* 드롭다운 메뉴 */}
                 <div className="absolute right-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="py-2">
@@ -85,13 +103,15 @@ const Header = () => {
                 </div>
               </div>
             </nav>
-            
+
             {/* 언어 변경 버튼 */}
             <div className="flex items-center space-x-1 border-l border-gray-200 pl-3">
               <button
                 onClick={() => changeLanguage('ko')}
                 className={`px-2 py-1 text-xs font-medium rounded transition-colors ${
-                  i18n.language === 'ko' ? 'bg-primary-cyan text-white' : 'text-gray-600 hover:text-primary-cyan'
+                  i18n.language === 'ko'
+                    ? 'bg-primary-cyan text-white'
+                    : 'text-gray-600 hover:text-primary-cyan'
                 }`}
               >
                 한국어
@@ -99,39 +119,51 @@ const Header = () => {
               <button
                 onClick={() => changeLanguage('en')}
                 className={`px-2 py-1 text-xs font-medium rounded transition-colors ${
-                  i18n.language === 'en' ? 'bg-primary-cyan text-white' : 'text-gray-600 hover:text-primary-cyan'
+                  i18n.language === 'en'
+                    ? 'bg-primary-cyan text-white'
+                    : 'text-gray-600 hover:text-primary-cyan'
                 }`}
               >
                 English
               </button>
             </div>
           </div>
-          
+
           {/* 모바일 메뉴 버튼 */}
-          <button 
+          <button
             className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            <svg 
-              className={`w-6 h-6 transition-transform duration-200 ${isMobileMenuOpen ? 'rotate-90' : ''}`} 
-              fill="none" 
-              stroke="currentColor" 
+            <svg
+              className={`w-6 h-6 transition-transform duration-200 ${isMobileMenuOpen ? 'rotate-90' : ''}`}
+              fill="none"
+              stroke="currentColor"
               viewBox="0 0 24 24"
             >
               {isMobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               )}
             </svg>
           </button>
         </div>
-        
+
         {/* 모바일 메뉴 */}
         {isMobileMenuOpen && (
           <div className="md:hidden border-t border-gray-200 bg-white">
             <nav className="py-4 px-6 space-y-2">
-              {menuItems.map((item) => (
+              {menuItems.map(item => (
                 <Link
                   key={item.path}
                   to={item.path}
@@ -145,7 +177,7 @@ const Header = () => {
                   {item.label}
                 </Link>
               ))}
-              
+
               <div className="border-t border-gray-200 pt-2 mt-2">
                 <Link
                   to="/organizers"
@@ -167,7 +199,7 @@ const Header = () => {
                     {t('nav.contributors')}
                   </span>
                 </Link>
-                
+
                 {/* 모바일 언어 변경 */}
                 <div className="border-t border-gray-200 pt-2 mt-2">
                   <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">
@@ -177,7 +209,9 @@ const Header = () => {
                     <button
                       onClick={() => changeLanguage('ko')}
                       className={`flex-1 py-2 text-xs font-medium rounded transition-colors ${
-                        i18n.language === 'ko' ? 'bg-primary-cyan text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                        i18n.language === 'ko'
+                          ? 'bg-primary-cyan text-white'
+                          : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                       }`}
                     >
                       한국어
@@ -185,7 +219,9 @@ const Header = () => {
                     <button
                       onClick={() => changeLanguage('en')}
                       className={`flex-1 py-2 text-xs font-medium rounded transition-colors ${
-                        i18n.language === 'en' ? 'bg-primary-cyan text-white' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                        i18n.language === 'en'
+                          ? 'bg-primary-cyan text-white'
+                          : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                       }`}
                     >
                       English
@@ -201,4 +237,4 @@ const Header = () => {
   );
 };
 
-export default Header; 
+export default Header;

@@ -23,8 +23,8 @@ contributors:
     githubUsername: 0ne-stone
     contributions:
       - 'i18n(Ko): Replace 연결 as 커넥션 #52440'
-      - 'docs: Add missing ''param'' for waiter_max_attempts in EMR operator doc… #51676'
-      - 'Remove reference to ''scheduler_loop.jpg'' in _run_scheduler_loop docstring #42300'
+      - "docs: Add missing 'param' for waiter_max_attempts in EMR operator doc… #51676"
+      - "Remove reference to 'scheduler_loop.jpg' in _run_scheduler_loop docstring #42300"
     prCount: 6
     githubUrl: https://github.com/0ne-stone
     lastUpdated: '2025-09-29T01:37:53.322Z'

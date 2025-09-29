@@ -1,0 +1,46 @@
+repos:
+  # JavaScript/TypeScript formatting and linting
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: v9.29.0
+    hooks:
+      - id: eslint
+        files: \.(js|jsx|ts|tsx)$
+        args: [--fix]
+        additional_dependencies:
+          - '@eslint/js@9.29.0'
+          - 'eslint@9.29.0'
+          - 'eslint-plugin-react-hooks@5.2.0'
+          - 'eslint-plugin-react-refresh@0.4.20'
+          - 'typescript-eslint@8.34.1'
+          - 'globals@16.2.0'
+
+  # Prettier for code formatting
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v4.0.0-alpha.8
+    hooks:
+      - id: prettier
+        files: \.(js|jsx|ts|tsx|json|css|md|yaml|yml)$
+        args: [--write]
+
+  # Custom hook for organizers.yaml sorting
+  - repo: local
+    hooks:
+      - id: sort-organizers-yaml
+        name: Sort organizers.yaml
+        entry: node scripts/sort-organizers.js
+        language: node
+        files: ^public/data/organizers\.yaml$
+        pass_filenames: false
+
+  # General file checks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: check-yaml
+        files: \.ya?ml$
+      - id: check-json
+        exclude: '^tsconfig.*\.json$'
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-case-conflict
+      - id: check-merge-conflict

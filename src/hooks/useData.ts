@@ -1,5 +1,11 @@
 import { useState, useEffect } from 'react';
-import type { Organizer, Contributor, CommunityChannel, CommunityStats, Recruitment } from '../types';
+import type {
+  Organizer,
+  Contributor,
+  CommunityChannel,
+  CommunityStats,
+  Recruitment,
+} from '../types';
 import { loadAllData } from '../utils/dataLoader';
 
 interface DataState {
@@ -18,7 +24,7 @@ export function useData(): DataState {
     recruitment: {
       is_recruiting: false,
       application_url: '',
-      contact_email: ''
+      contact_email: '',
     },
     contributors: [],
     channels: [],
@@ -27,10 +33,10 @@ export function useData(): DataState {
       openChatMembers: 0,
       EventCounts: 0,
       contributors: 0,
-      studyGroups: 0
+      studyGroups: 0,
     },
     loading: true,
-    error: null
+    error: null,
   });
 
   useEffect(() => {
@@ -39,7 +45,7 @@ export function useData(): DataState {
     const loadData = async () => {
       try {
         const data = await loadAllData();
-        
+
         if (mounted) {
           setState({
             organizers: data.organizers,
@@ -48,17 +54,17 @@ export function useData(): DataState {
             channels: data.channels,
             stats: data.stats,
             loading: false,
-            error: null
+            error: null,
           });
         }
       } catch (error) {
         console.error('YAML 데이터 로드 실패:', error);
-        
+
         if (mounted) {
           setState(prev => ({
             ...prev,
             loading: false,
-            error: 'YAML 데이터 로드에 실패했습니다.'
+            error: 'YAML 데이터 로드에 실패했습니다.',
           }));
         }
       }
@@ -93,4 +99,4 @@ export function useChannels() {
 export function useStats() {
   const { stats, loading, error } = useData();
   return { stats, loading, error };
-} 
+}

@@ -4,7 +4,14 @@
 
 /* 폰트 및 기본 설정 */
 :root {
-  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', 'Roboto', sans-serif;
+  font-family:
+    'Pretendard',
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    'Segoe UI',
+    'Roboto',
+    sans-serif;
   line-height: 1.6;
   font-weight: 400;
   font-synthesis: none;
@@ -30,15 +37,15 @@ body {
 
 /* Airflow KRUG 특화 유틸리티 클래스 */
 .airflow-gradient {
-  background: linear-gradient(135deg, #00C7D4 0%, #017CEE 100%);
+  background: linear-gradient(135deg, #00c7d4 0%, #017cee 100%);
 }
 
 .primary-gradient {
-  background: linear-gradient(135deg, #00C7D4 0%, #017CEE 50%, #00AD46 100%);
+  background: linear-gradient(135deg, #00c7d4 0%, #017cee 50%, #00ad46 100%);
 }
 
 .secondary-gradient {
-  background: linear-gradient(135deg, #11E1EE 0%, #0CB6FF 50%, #04D659 100%);
+  background: linear-gradient(135deg, #11e1ee 0%, #0cb6ff 50%, #04d659 100%);
 }
 
 .section-padding {
@@ -67,19 +74,19 @@ button:focus,
 a:focus,
 input:focus,
 textarea:focus {
-  outline: 2px solid #00C7D4;
+  outline: 2px solid #00c7d4;
   outline-offset: 2px;
 }
 
 /* 링크 기본 스타일 - 새로운 컬러 팔레트 적용 */
 a {
-  color: #00C7D4;
+  color: #00c7d4;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 a:hover {
-  color: #017CEE;
+  color: #017cee;
 }
 
 /* 이미지 기본 설정 */
@@ -98,21 +105,21 @@ button {
 
 /* 새로운 컬러 팔레트 기반 유틸리티 클래스 */
 .bg-brand-primary {
-  background-color: #00C7D4;
+  background-color: #00c7d4;
 }
 
 .bg-brand-secondary {
-  background-color: #11E1EE;
+  background-color: #11e1ee;
 }
 
 .text-brand-primary {
-  color: #00C7D4;
+  color: #00c7d4;
 }
 
 .text-brand-secondary {
-  color: #11E1EE;
+  color: #11e1ee;
 }
 
 .border-brand-primary {
-  border-color: #00C7D4;
+  border-color: #00c7d4;
 }

@@ -12,7 +12,7 @@
       "description": "년 2~3회 정기 밋업을 개최합니다"
     },
     "offlineMeeting": {
-      "title": "오프라인 모임", 
+      "title": "오프라인 모임",
       "description": "서울, 부산 등 다양한 지역에서 만나요"
     },
     "networking": {
@@ -55,4 +55,4 @@
     "proposalButton": "발표 제안하기",
     "contactButton": "문의하기"
   }
-} 
+}

@@ -47,4 +47,4 @@ export interface CommunityStats {
   EventCounts: number;
   contributors: number;
   studyGroups: number;
-} 
+}

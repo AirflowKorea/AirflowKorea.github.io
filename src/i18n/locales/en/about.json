@@ -34,9 +34,7 @@
     "study": {
       "title": "Study Groups",
       "description": "We operate small study groups on various topics to provide opportunities for in-depth learning. From beginners to advanced users, everyone can participate in learning groups that match their level.",
-      "items": [
-        "Contributing to Airflow study"
-      ],
+      "items": ["Contributing to Airflow study"],
       "stats": "Currently {{count}} study groups are active"
     },
     "opensource": {
@@ -69,4 +67,4 @@
       "description": "An open community where anyone can participate"
     }
   }
-} 
+}

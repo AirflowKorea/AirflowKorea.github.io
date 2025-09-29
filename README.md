@@ -16,7 +16,6 @@ npm run dev
 
 http://localhost:5173 에서 실행됩니다.
 
-
 ## 프로젝트 구조
 
 ```
@@ -31,7 +30,7 @@ src/
 public/
 └── data/               # 사이트 데이터 (YAML 파일)
     ├── organizers.yaml     # 운영진 정보
-    ├── contributors.yaml   # 기여자 정보  
+    ├── contributors.yaml   # 기여자 정보
     ├── channels.yaml      # 커뮤니케이션 채널
     └── stats.yaml         # 커뮤니티 통계
 ```
@@ -44,17 +43,18 @@ public/
 
 ```yaml
 organizers:
-  generation_2:  # 기수별로 구성 예: generation_1, generation_2, generation_3, ...
-    - id: "9"    # 고유 ID
-      name: "추영욱"
-      role: "운영진"      # 리더 또는 운영진
-      generation: 2       # 기수 (숫자)
-      email: "yeonguk@airflow-kr.org"
-      github: "yeonguk"        # GitHub 아이디 (깃허브 프로필로 아바타 자동 생성)
-      linkedIn: "yeonguk"     # LinkedIn 아이디 (선택사항)
+  generation_2: # 기수별로 구성 예: generation_1, generation_2, generation_3, ...
+    - id: '9' # 고유 ID
+      name: '추영욱'
+      role: '운영진' # 리더 또는 운영진
+      generation: 2 # 기수 (숫자)
+      email: 'yeonguk@airflow-kr.org'
+      github: 'yeonguk' # GitHub 아이디 (깃허브 프로필로 아바타 자동 생성)
+      linkedIn: 'yeonguk' # LinkedIn 아이디 (선택사항)
 ```
 
 **주의사항:**
+
 - `avatar_url` 필드는 사용하지 않습니다. `github` 아이디로 자동 생성됩니다.
 - `generation` 숫자에 따라 자동으로 기수별 분류됩니다.
 - `recruitment` 섹션에서 모집 상태를 관리할 수 있습니다. `true` 또는 `false`로 설정하세요. 모집중이라면 `application_url`도 업데이트하세요.
@@ -64,12 +64,14 @@ organizers:
 **자동 업데이트**: 매일 GitHub Actions이 자동으로 Apache Airflow 기여도를 업데이트합니다.
 
 수동으로 기여자 추가:
+
 ```yaml
 approvedContributors:
-  - githubUsername: "새로운기여자아이디"  # 여기에만 추가하면 자동 업데이트됨
+  - githubUsername: '새로운기여자아이디' # 여기에만 추가하면 자동 업데이트됨
 ```
 
 **업데이트 스크립트 실행:**
+
 ```bash
 npm run update-contributors
 ```
@@ -78,24 +80,24 @@ npm run update-contributors
 
 ```yaml
 channels:
-  - id: "새채널"
-    name: "새로운 채널"
-    platform: "Discord"
-    type: "chat"           # chat, forum, social, video
-    url: "https://discord.gg/example"
-    description: "채널 설명"
-    memberCount: 150       # 멤버 수
+  - id: '새채널'
+    name: '새로운 채널'
+    platform: 'Discord'
+    type: 'chat' # chat, forum, social, video
+    url: 'https://discord.gg/example'
+    description: '채널 설명'
+    memberCount: 150 # 멤버 수
 ```
 
 ### 커뮤니티 통계 관리 (`public/data/stats.yaml`)
 
 ```yaml
 stats:
-  MeetupMembers: 500       # Meetup 멤버 수
-  openChatMembers: 120     # 오픈채팅 멤버 수
-  EventCounts: 15          # 총 이벤트 수
-  contributors: 8          # 기여자 수
-  studyGroups: 3           # 스터디 그룹 수
+  MeetupMembers: 500 # Meetup 멤버 수
+  openChatMembers: 120 # 오픈채팅 멤버 수
+  EventCounts: 15 # 총 이벤트 수
+  contributors: 8 # 기여자 수
+  studyGroups: 3 # 스터디 그룹 수
 ```
 
 ## 다국어 지원
@@ -119,6 +121,7 @@ function MyComponent() {
 ```
 
 ## 자동화된 기능
+
 ### GitHub Actions
 
 1. **기여자 자동 업데이트** (`.github/workflows/update-contributors.yml`)
@@ -133,6 +136,7 @@ function MyComponent() {
 ## 📋 운영진 체크리스트
 
 ### 새 운영진 온보딩 시
+
 - [ ] `organizers.yaml`에 운영진 정보 추가
 - [ ] GitHub 아이디가 올바른지 확인 (아바타 이미지 자동 생성)
 - [ ] 이메일 주소 형식 확인 (`@airflow-kr.org`)
@@ -140,6 +144,7 @@ function MyComponent() {
 - [ ] PR 생성 및 리뷰 후 병합
 
 ### 정기 관리 작업
+
 - [ ] 커뮤니티 통계 업데이트 (`stats.yaml`)
 - [ ] 채널 멤버 수 업데이트 (`channels.yaml`)
 - [ ] 모집 상태 업데이트 (`organizers.yaml`의 `recruitment` 섹션)
@@ -147,6 +152,7 @@ function MyComponent() {
 ## 🔍 트러블슈팅
 
 ### 개발 서버가 시작되지 않을 때
+
 ```bash
 # 캐시 클리어 후 재설치
 rm -rf node_modules package-lock.json
@@ -155,6 +161,7 @@ npm run dev
 ```
 
 ### 기여자 업데이트 실패 시
+
 ```bash
 # 수동으로 실행해서 오류 확인
 npm run update-contributors

@@ -2,7 +2,7 @@
   "nav": {
     "home": "Home",
     "about": "About",
-    "events": "Events", 
+    "events": "Events",
     "organizers": "Organizers",
     "contributors": "Contributors",
     "channels": "Channels",
@@ -21,4 +21,4 @@
     "copyright": "© 2025 Apache Airflow Korean User Group. All rights reserved.",
     "trademark": "Apache Airflow is a registered trademark of the Apache Software Foundation."
   }
-} 
+}

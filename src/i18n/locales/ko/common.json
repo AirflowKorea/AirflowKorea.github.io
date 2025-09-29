@@ -1,10 +1,10 @@
 {
   "nav": {
     "home": "홈",
-    "about": "소개", 
+    "about": "소개",
     "events": "이벤트",
     "organizers": "운영진",
-    "contributors": "기여자", 
+    "contributors": "기여자",
     "channels": "참여 채널",
     "more": "더보기"
   },
@@ -21,4 +21,4 @@
     "copyright": "© 2025 Apache Airflow 한국 사용자 모임. All rights reserved.",
     "trademark": "Apache Airflow는 Apache Software Foundation의 등록 상표입니다."
   }
-} 
+}

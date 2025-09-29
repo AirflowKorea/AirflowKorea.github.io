@@ -28,7 +28,7 @@ const resources = {
     events: koEvents,
     organizers: koOrganizers,
     contributors: koContributors,
-    channels: koChannels
+    channels: koChannels,
   },
   en: {
     common: enCommon,
@@ -37,8 +37,8 @@ const resources = {
     events: enEvents,
     organizers: enOrganizers,
     contributors: enContributors,
-    channels: enChannels
-  }
+    channels: enChannels,
+  },
 };
 
 i18n
@@ -48,21 +48,29 @@ i18n
     resources,
     fallbackLng: 'ko',
     lng: 'ko',
-    
+
     // Set default namespace to common
     defaultNS: 'common',
-    ns: ['common', 'home', 'about', 'events', 'organizers', 'contributors', 'channels'],
-    
+    ns: [
+      'common',
+      'home',
+      'about',
+      'events',
+      'organizers',
+      'contributors',
+      'channels',
+    ],
+
     detection: {
       order: ['localStorage', 'navigator', 'htmlTag'],
-      caches: ['localStorage']
+      caches: ['localStorage'],
     },
 
     interpolation: {
-      escapeValue: false
+      escapeValue: false,
     },
 
-    debug: process.env.NODE_ENV === 'development'
+    debug: process.env.NODE_ENV === 'development',
   });
 
-export default i18n; 
+export default i18n;

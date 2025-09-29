@@ -4,9 +4,13 @@ import { useTranslation } from 'react-i18next';
 
 const ContributorCard = ({ contributor }: { contributor: Contributor }) => {
   const { t } = useTranslation('contributors');
-  
+
   // GitHub 아이디로 자동 avatar URL 생성
-  const avatarUrl = contributor.avatarUrl || (contributor.githubUsername ? `https://github.com/${contributor.githubUsername}.png` : null);
+  const avatarUrl =
+    contributor.avatarUrl ||
+    (contributor.githubUsername
+      ? `https://github.com/${contributor.githubUsername}.png`
+      : null);
 
   return (
     <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105 overflow-hidden">
@@ -18,7 +22,7 @@ const ContributorCard = ({ contributor }: { contributor: Contributor }) => {
                 src={avatarUrl}
                 alt={`${contributor.name} 프로필`}
                 className="w-full h-full rounded-full object-cover border-2 border-gray-200"
-                onError={(e) => {
+                onError={e => {
                   // 이미지 로드 실패 시 기본 아바타로 대체
                   const target = e.target as HTMLImageElement;
                   target.style.display = 'none';
@@ -28,33 +32,42 @@ const ContributorCard = ({ contributor }: { contributor: Contributor }) => {
               />
             ) : null}
             {/* 기본 아바타 (이미지가 없거나 로드 실패 시) */}
-            <div 
+            <div
               className={`w-full h-full bg-gradient-to-br from-airflow-blue to-airflow-navy rounded-full flex items-center justify-center text-white text-xl font-bold ${avatarUrl ? 'hidden' : 'flex'}`}
             >
               {contributor.name.charAt(0)}
             </div>
           </div>
           <div>
-            <h3 className="text-xl font-bold text-gray-800">{contributor.name}</h3>
+            <h3 className="text-xl font-bold text-gray-800">
+              {contributor.name}
+            </h3>
             <p className="text-gray-600">@{contributor.githubUsername}</p>
             {contributor.prCount && (
-              <p className="text-sm text-airflow-blue font-medium">{contributor.prCount} PRs</p>
+              <p className="text-sm text-airflow-blue font-medium">
+                {contributor.prCount} PRs
+              </p>
             )}
           </div>
         </div>
-        
+
         <div className="mb-4">
-          <h4 className="text-sm font-semibold text-gray-700 mb-2">{t('contributionLabel')}</h4>
+          <h4 className="text-sm font-semibold text-gray-700 mb-2">
+            {t('contributionLabel')}
+          </h4>
           <ul className="space-y-1">
             {contributor.contributions.map((contribution, index) => (
-              <li key={index} className="text-sm text-gray-600 flex items-start">
+              <li
+                key={index}
+                className="text-sm text-gray-600 flex items-start"
+              >
                 <span className="text-airflow-blue mr-2 mt-1">•</span>
                 {contribution}
               </li>
             ))}
           </ul>
         </div>
-        
+
         <a
           href={contributor.githubUrl}
           target="_blank"
@@ -90,12 +103,10 @@ const Contributors = () => {
           <p>{error}</p>
         </div>
       )}
-      
+
       <section className="airflow-gradient text-white section-padding">
         <div className="container-max text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            {t('title')}
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">{t('title')}</h1>
           <p className="text-xl max-w-3xl mx-auto leading-relaxed">
             {t('subtitle')}
           </p>
@@ -108,7 +119,7 @@ const Contributors = () => {
             <h2 className="text-3xl font-bold mb-8 text-gray-800">
               {t('intro.title')}
             </h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
               <div className="bg-white p-8 rounded-xl shadow-lg">
                 <div className="text-4xl font-bold text-airflow-blue mb-2">
@@ -116,10 +127,14 @@ const Contributors = () => {
                 </div>
                 <div className="text-gray-600">{t('stats.contributors')}</div>
               </div>
-              
+
               <div className="bg-white p-8 rounded-xl shadow-lg">
                 <div className="text-4xl font-bold text-airflow-green mb-2">
-                  {contributors.reduce((sum: number, c: Contributor) => sum + (c.prCount || 0), 0)}+
+                  {contributors.reduce(
+                    (sum: number, c: Contributor) => sum + (c.prCount || 0),
+                    0
+                  )}
+                  +
                 </div>
                 <div className="text-gray-600">{t('stats.contributions')}</div>
               </div>
@@ -141,7 +156,7 @@ const Contributors = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               {t('hallOfFame.title')}
             </h2>
-            
+
             <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
               {t('hallOfFame.description')}
             </p>
@@ -149,17 +164,17 @@ const Contributors = () => {
 
           <div className="max-w-2xl mx-auto">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="https://github.com/apache/airflow" 
+              <a
+                href="https://github.com/apache/airflow"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-airflow-blue hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
               >
                 {t('hallOfFame.button')}
               </a>
-              
-              <a 
-                href="https://github.com/apache/airflow/blob/main/CONTRIBUTING.md" 
+
+              <a
+                href="https://github.com/apache/airflow/blob/main/CONTRIBUTING.md"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-100 hover:bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
@@ -174,4 +189,4 @@ const Contributors = () => {
   );
 };
 
-export default Contributors; 
+export default Contributors;

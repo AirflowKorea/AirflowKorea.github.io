@@ -6,21 +6,21 @@ import { useStats } from '../hooks/useData';
 const Home = () => {
   const { t } = useTranslation(['home', 'common']);
   const { stats, loading, error } = useStats();
-  
+
   const displayStats = stats || {
     MeetupMembers: 0,
     openChatMembers: 0,
     EventCounts: 0,
-    contributors: 0
+    contributors: 0,
   };
 
   return (
     <div className="min-h-screen">
       {/* 히어로 섹션 */}
-      <section 
+      <section
         className="relative text-white bg-cover bg-center bg-no-repeat min-h-[60vh] flex items-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(1, 124, 238, 0.5)), url('/images/meetup_group_photo.JPG')`
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(1, 124, 238, 0.5)), url('/images/meetup_group_photo.JPG')`,
         }}
       >
         <div className="container-max section-padding relative z-10 w-full">
@@ -35,8 +35,8 @@ const Home = () => {
               {t('heroDescription', { ns: 'home' })}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/channels" 
+              <Link
+                to="/channels"
                 className="bg-airflow-orange hover:bg-orange-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-200"
               >
                 {t('joinButton', { ns: 'home' })}
@@ -54,19 +54,25 @@ const Home = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-200">
-              <h3 className="text-xl font-bold mb-4 text-gray-800">{t('regularMeetups', { ns: 'home' })}</h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-800">
+                {t('regularMeetups', { ns: 'home' })}
+              </h3>
               <p className="text-gray-600">
                 {t('regularMeetupsDesc', { ns: 'home' })}
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-200">
-              <h3 className="text-xl font-bold mb-4 text-gray-800">{t('knowledgeSharing', { ns: 'home' })}</h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-800">
+                {t('knowledgeSharing', { ns: 'home' })}
+              </h3>
               <p className="text-gray-600">
                 {t('knowledgeSharingDesc', { ns: 'home' })}
               </p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-200">
-              <h3 className="text-xl font-bold mb-4 text-gray-800">{t('opensource', { ns: 'home' })}</h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-800">
+                {t('opensource', { ns: 'home' })}
+              </h3>
               <p className="text-gray-600">
                 {t('opensourceDesc', { ns: 'home' })}
               </p>
@@ -89,27 +95,43 @@ const Home = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="bg-gradient-to-br from-airflow-blue to-airflow-navy p-6 rounded-xl text-white">
               <div className="text-3xl font-bold mb-2">
-                {loading ? '...' : `${displayStats.MeetupMembers.toLocaleString()}+`}
+                {loading
+                  ? '...'
+                  : `${displayStats.MeetupMembers.toLocaleString()}+`}
               </div>
-              <div className="text-sm opacity-90">{t('MeetupMembers', { ns: 'home' })}</div>
+              <div className="text-sm opacity-90">
+                {t('MeetupMembers', { ns: 'home' })}
+              </div>
             </div>
             <div className="bg-gradient-to-br from-airflow-green to-green-600 p-6 rounded-xl text-white">
               <div className="text-3xl font-bold mb-2">
-                {loading ? '...' : `${displayStats.openChatMembers.toLocaleString()}+`}
+                {loading
+                  ? '...'
+                  : `${displayStats.openChatMembers.toLocaleString()}+`}
               </div>
-              <div className="text-sm opacity-90">{t('openKakaoMembers', { ns: 'home' })}</div>
+              <div className="text-sm opacity-90">
+                {t('openKakaoMembers', { ns: 'home' })}
+              </div>
             </div>
             <div className="bg-gradient-to-br from-airflow-orange to-red-500 p-6 rounded-xl text-white">
               <div className="text-3xl font-bold mb-2">
-                {loading ? '...' : `${displayStats.EventCounts.toLocaleString()}+`}
+                {loading
+                  ? '...'
+                  : `${displayStats.EventCounts.toLocaleString()}+`}
               </div>
-              <div className="text-sm opacity-90">{t('EventCounts', { ns: 'home' })}</div>
+              <div className="text-sm opacity-90">
+                {t('EventCounts', { ns: 'home' })}
+              </div>
             </div>
             <div className="bg-gradient-to-br from-purple-500 to-purple-700 p-6 rounded-xl text-white">
               <div className="text-3xl font-bold mb-2">
-                {loading ? '...' : `${displayStats.contributors.toLocaleString()}+`}
+                {loading
+                  ? '...'
+                  : `${displayStats.contributors.toLocaleString()}+`}
               </div>
-              <div className="text-sm opacity-90">{t('contributors', { ns: 'home' })}</div>
+              <div className="text-sm opacity-90">
+                {t('contributors', { ns: 'home' })}
+              </div>
             </div>
           </div>
         </div>
@@ -124,8 +146,8 @@ const Home = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             {t('getStartedDesc', { ns: 'home' })}
           </p>
-          <Link 
-            to="/channels" 
+          <Link
+            to="/channels"
             className="inline-flex items-center gap-2 bg-airflow-blue hover:bg-blue-600 text-white px-10 py-4 rounded-lg text-lg font-semibold transition-colors duration-200"
           >
             {t('common.joinUs', { ns: 'common' })} <FaArrowRight />

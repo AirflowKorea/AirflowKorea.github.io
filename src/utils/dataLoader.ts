@@ -1,5 +1,11 @@
 import * as yaml from 'js-yaml';
-import type { Organizer, Contributor, CommunityChannel, CommunityStats, Recruitment } from '../types';
+import type {
+  Organizer,
+  Contributor,
+  CommunityChannel,
+  CommunityStats,
+  Recruitment,
+} from '../types';
 
 // YAML 파일 로드
 async function loadYamlFile(path: string): Promise<Record<string, unknown>> {
@@ -18,25 +24,31 @@ async function loadYamlFile(path: string): Promise<Record<string, unknown>> {
 }
 
 // 운영진 데이터 로드
-export async function loadOrganizersData(): Promise<{ organizers: Organizer[]; recruitment: Recruitment }> {
+export async function loadOrganizersData(): Promise<{
+  organizers: Organizer[];
+  recruitment: Recruitment;
+}> {
   const data = await loadYamlFile('/data/organizers.yaml');
   const organizers: Organizer[] = [];
-  
-  const organizersData = data.organizers as Record<string, Record<string, unknown>[]>;
-  
+
+  const organizersData = data.organizers as Record<
+    string,
+    Record<string, unknown>[]
+  >;
+
   Object.keys(organizersData).forEach(generationKey => {
     if (generationKey.startsWith('generation_')) {
       const generationOrganizers = organizersData[generationKey].map(org => ({
         ...org,
-        generation: Number(org.generation) // string을 number로 변환
+        generation: Number(org.generation), // string을 number로 변환
       })) as Organizer[];
       organizers.push(...generationOrganizers);
     }
   });
-  
+
   // recruitment 정보 추출
   const recruitment = data.recruitment as Recruitment;
-  
+
   return { organizers, recruitment };
 }
 
@@ -55,12 +67,14 @@ export async function loadChannelsData(): Promise<CommunityChannel[]> {
 // 커뮤니티 통계 데이터 로드
 export async function loadStatsData(): Promise<CommunityStats> {
   const data = await loadYamlFile('/data/stats.yaml');
-  return (data.stats as CommunityStats) || {
-    MeetupMembers: 0,
-    openChatMembers: 0,
-    EventCounts: 0,
-    contributors: 0
-  };
+  return (
+    (data.stats as CommunityStats) || {
+      MeetupMembers: 0,
+      openChatMembers: 0,
+      EventCounts: 0,
+      contributors: 0,
+    }
+  );
 }
 
 // 데이터를 모두 로드
@@ -70,7 +84,7 @@ export async function loadAllData() {
       loadOrganizersData(),
       loadContributorsData(),
       loadChannelsData(),
-      loadStatsData()
+      loadStatsData(),
     ]);
 
     return {
@@ -78,10 +92,10 @@ export async function loadAllData() {
       recruitment: organizerData.recruitment,
       contributors,
       channels,
-      stats
+      stats,
     };
   } catch (error) {
     console.error('Error loading data:', error);
     throw error;
   }
-} 
+}

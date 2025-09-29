@@ -12,7 +12,7 @@
       "description": "We host regular meetups 2-3 times per year"
     },
     "offlineMeeting": {
-      "title": "Offline Meetings", 
+      "title": "Offline Meetings",
       "description": "Meet us in various cities like Seoul and Busan"
     },
     "networking": {
@@ -55,4 +55,4 @@
     "proposalButton": "Propose a Talk",
     "contactButton": "Contact Us"
   }
-} 
+}
