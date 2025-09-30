@@ -8,7 +8,7 @@ channels:
     type: 'forum'
     description: '기술 질문, 사용 사례 공유, 공지사항까지 — 구조화된 공간에서 깊이 있는 논의와 정보 교류가 이루어집니다.'
     url: 'https://discourse.airflow-kr.org'
-    memberCount: 174
+    memberCount: 197
 
   - id: '2'
     name: '오픈카카오톡'
@@ -16,7 +16,7 @@ channels:
     type: 'chat'
     description: '가볍게 질문하고 빠르게 답변받을 수 있는 일상 채팅방입니다. 친근한 분위기에서 자유롭게 소통해보세요.'
     url: 'https://open.kakao.com/o/gM4hR8Pg'
-    memberCount: 124
+    memberCount: 175
 
   - id: '3'
     name: 'Slack 워크스페이스'
@@ -32,7 +32,7 @@ channels:
     type: 'social'
     description: '업계 전문가들과의 네트워킹, 행사 정보, 기술 트렌드를 공유하는 전문 커뮤니티입니다.'
     url: 'https://www.linkedin.com/company/100898775'
-    memberCount: 375
+    memberCount: 449
 
   - id: '5'
     name: 'YouTube 채널'
@@ -40,7 +40,7 @@ channels:
     type: 'video'
     description: '밋업 발표, 튜토리얼, 데모 영상 등 다양한 시각적 자료로 언제든지 학습할 수 있는 채널입니다.'
     url: 'https://www.youtube.com/@Airflow-users-Korea'
-    memberCount: 36
+    memberCount: 53
 
   - id: '6'
     name: 'Meetups'
@@ -48,4 +48,4 @@ channels:
     type: 'social'
     description: '정기 밋업 참여를 위한 이벤트 신청 페이지입니다. 직접 만나 교류하고 경험을 나눠보세요.'
     url: 'https://www.meetup.com/korea-apache-airflow-user-group'
-    memberCount: 295
+    memberCount: 337
