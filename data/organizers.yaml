@@ -20,69 +20,68 @@ organizers:
       linkedIn: noeunkim
       github: noeunkim
     - id: '3'
+      name: 김진희
+      role: 운영진
+      generation: 3
+      email: null
+      linkedIn: null
+      github: null
+    - id: '4'
+      name: 김탄
+      role: 운영진
+      generation: 3
+      email: tan.kim@airflow-kr.org
+      linkedIn: tan-kim
+      github: tankim
+    - id: '5'
       name: 양원석
       role: 운영진
       generation: 3
       email: onestone.yang@airflow-kr.org
       linkedIn: wonseokyang-de
       github: 0ne-stone
-    - id: '4'
+    - id: '6'
       name: 이경준
       role: 운영진
       generation: 3
       email: kyungjunlee.me@airflow-kr.org
       linkedIn: kyungjunleeme
       github: kyungjunleeme
-    - id: '5'
+    - id: '7'
       name: 이준원
       role: 운영진
       generation: 3
       email: cpprhtn@airflow-kr.org
       linkedIn: cpprhtn
       github: cpprhtn
-    - id: '6'
+    - id: '8'
       name: 조민성
       role: 운영진
       generation: 3
       email: mscho@airflow-kr.org
       linkedIn: mscho7969
       github: kkumtree
-    - id: '7'
+    - id: '9'
+      name: 최지현
+      role: 운영진
+      generation: 3
+      email: null
+      linkedIn: null
+      github: null
+    - id: '10'
       name: 추영욱
       role: 리더
       generation: 3
       email: choo121600@airflow-kr.org
       linkedIn: yeonguk-choo
       github: choo121600
-    - id: '8'
+    - id: '11'
       name: 한상곤
       role: 운영진
       generation: 3
       email: sangkon@airflow-kr.org
       linkedIn: sangkonhan
       github: sigmadream
-    - id: '9'
-      name: 김탄
-      role: 운영진
-      generation: 3
-      email: 
-      linkedIn: 
-      github: 
-    - id: '10'
-      name: 김진희
-      role: 운영진
-      generation: 3
-      email: 
-      linkedIn: 
-      github: 
-    - id: '11'
-      name: 최지현
-      role: 운영진
-      generation: 3
-      email: 
-      linkedIn: 
-      github: 
-
   generation_2:
     - id: '1'
       name: 김건우
@@ -140,7 +139,6 @@ organizers:
       email: sangkon@airflow-kr.org
       linkedIn: sangkonhan
       github: sigmadream
-
   generation_1:
     - id: '1'
       name: 이준원
@@ -161,7 +159,6 @@ organizers:
       email: choo121600@airflow-kr.org
       linkedIn: yeonguk-choo
       github: choo121600
-
 recruitment:
   is_recruiting: false
   application_url: https://forms.gle/GmjWmxtpBPdYPb9f7
