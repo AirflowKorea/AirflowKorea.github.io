@@ -1,7 +1,7 @@
 # Apache Airflow 한국인 기여자 정보
 # - contribution_type: code, docs, community, translation 등
 # - 본인 동의하에만 추가
-# - 자동 업데이트: 2025-10-06T01:28:32.428Z
+# - 자동 업데이트: 2025-10-07T01:26:37.295Z
 
 approvedContributors:
   - githubUsername: choo121600
@@ -18,7 +18,7 @@ contributors:
       - 'i18n(Ko): add missing translations(Sep 02) #55189'
     prCount: 40
     githubUrl: https://github.com/choo121600
-    lastUpdated: '2025-10-06T01:28:32.235Z'
+    lastUpdated: '2025-10-07T01:26:37.293Z'
   - name: Wonseok Yang
     githubUsername: 0ne-stone
     contributions:
@@ -27,7 +27,7 @@ contributors:
       - 'Remove reference to ''scheduler_loop.jpg'' in _run_scheduler_loop docstring #42300'
     prCount: 6
     githubUrl: https://github.com/0ne-stone
-    lastUpdated: '2025-10-06T01:28:31.969Z'
+    lastUpdated: '2025-10-07T01:26:36.899Z'
   - name: Kyungjun Lee
     githubUsername: kyungjunleeme
     contributions:
@@ -36,7 +36,7 @@ contributors:
       - 'FIX reference #54490'
     prCount: 28
     githubUrl: https://github.com/kyungjunleeme
-    lastUpdated: '2025-10-06T01:28:32.426Z'
+    lastUpdated: '2025-10-07T01:26:37.121Z'
   - name: Geonwoo Kim
     githubUsername: kgw7401
     contributions:
@@ -45,11 +45,11 @@ contributors:
       - 'Provider Migration: Update beam for Airflow 3.0 compatibility #52607'
     prCount: 8
     githubUrl: https://github.com/kgw7401
-    lastUpdated: '2025-10-06T01:28:32.176Z'
+    lastUpdated: '2025-10-07T01:26:36.860Z'
   - name: NOEUN KIM
     githubUsername: noeunkim
     contributions:
       - 'Add run_id_pattern search for Dag Run API. #52437'
     prCount: 1
     githubUrl: https://github.com/noeunkim
-    lastUpdated: '2025-10-06T01:28:31.953Z'
+    lastUpdated: '2025-10-07T01:26:36.809Z'
