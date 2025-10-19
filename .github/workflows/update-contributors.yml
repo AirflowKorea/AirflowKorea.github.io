@@ -40,8 +40,10 @@ jobs:
         run: |
           git diff --exit-code public/data/contributors.yaml || echo "changes=true" >> $GITHUB_OUTPUT
 
-      - name: Commit and push changes
+      - name: Commit and push changes (with PAT)
         if: steps.git-check.outputs.changes == 'true'
+        env:
+          PAT_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
@@ -51,7 +53,7 @@ jobs:
           🆕 업데이트: $(date '+%Y-%m-%d %H:%M:%S KST')
 
           - 머지된 PR 개수 및 최근 기여 내역 갱신"
-          git push
+          git push https://x-access-token:${PAT_TOKEN}@github.com/${{ github.repository }} HEAD:main
 
       - name: Create summary
         if: steps.git-check.outputs.changes == 'true'
