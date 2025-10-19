@@ -1,7 +1,7 @@
 # Apache Airflow 한국인 기여자 정보
 # - contribution_type: code, docs, community, translation 등
 # - 본인 동의하에만 추가
-# - 자동 업데이트: 2025-10-18T01:24:41.070Z
+# - 자동 업데이트: 2025-10-19T01:46:51.888Z
 
 approvedContributors:
   - githubUsername: choo121600
@@ -13,12 +13,12 @@ contributors:
   - name: Yeonguk Choo
     githubUsername: choo121600
     contributions:
+      - 'i18n(Ko): add missing translations(Oct 19) #56823'
+      - 'Fix MyPy type errors in test_dags.py (#56735) #56770'
       - 'Fix(i18n dev tool): Preserve key structure when adding plural forms in add_keys #56753'
-      - 'Migrate CreateAssetEventsBody to Pydantic v2 ConfigDict #56697'
-      - 'i18n: Remove showGraph and showGrid keys #56188'
-    prCount: 42
+    prCount: 44
     githubUrl: https://github.com/choo121600
-    lastUpdated: '2025-10-18T01:24:41.068Z'
+    lastUpdated: '2025-10-19T01:46:51.886Z'
   - name: Wonseok Yang
     githubUsername: onestn
     contributions:
@@ -27,7 +27,7 @@ contributors:
       - 'docs: Add missing ''param'' for waiter_max_attempts in EMR operator doc… #51676'
     prCount: 7
     githubUrl: https://github.com/onestn
-    lastUpdated: '2025-10-18T01:24:40.478Z'
+    lastUpdated: '2025-10-19T01:46:51.384Z'
   - name: Kyungjun Lee
     githubUsername: kyungjunleeme
     contributions:
@@ -36,7 +36,7 @@ contributors:
       - 'FIX reference #54490'
     prCount: 28
     githubUrl: https://github.com/kyungjunleeme
-    lastUpdated: '2025-10-18T01:24:40.868Z'
+    lastUpdated: '2025-10-19T01:46:51.831Z'
   - name: Geonwoo Kim
     githubUsername: kgw7401
     contributions:
@@ -45,11 +45,11 @@ contributors:
       - 'Provider Migration: Update beam for Airflow 3.0 compatibility #52607'
     prCount: 8
     githubUrl: https://github.com/kgw7401
-    lastUpdated: '2025-10-18T01:24:40.518Z'
+    lastUpdated: '2025-10-19T01:46:51.454Z'
   - name: NOEUN KIM
     githubUsername: noeunkim
     contributions:
       - 'Add run_id_pattern search for Dag Run API. #52437'
     prCount: 1
     githubUrl: https://github.com/noeunkim
-    lastUpdated: '2025-10-18T01:24:40.364Z'
+    lastUpdated: '2025-10-19T01:46:51.306Z'
