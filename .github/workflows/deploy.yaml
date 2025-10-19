@@ -4,13 +4,25 @@ on:
   push:
     branches:
       - main
+  workflow_run:
+    workflows: ["Update Airflow Contributors"]
+    types:
+      - completed
 
 jobs:
   deploy:
+    if: |
+      github.event_name == 'push' ||
+      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')
+
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # workflow_run 이벤트는 기본적으로 코드가 포함되지 않기 때문에 반드시 필요
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
