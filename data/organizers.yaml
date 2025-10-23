@@ -65,9 +65,9 @@ organizers:
       name: 최지현
       role: 운영진
       generation: 3
-      email: null
-      linkedIn: null
-      github: null
+      email: eeeclipse@airflow-kr.org
+      linkedIn: jhchoii
+      github: eeeclipse
     - id: '10'
       name: 추영욱
       role: 리더
