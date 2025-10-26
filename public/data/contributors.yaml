@@ -1,7 +1,7 @@
 # Apache Airflow 한국인 기여자 정보
 # - contribution_type: code, docs, community, translation 등
 # - 본인 동의하에만 추가
-# - 자동 업데이트: 2025-10-25T01:28:05.766Z
+# - 자동 업데이트: 2025-10-26T01:43:46.425Z
 
 approvedContributors:
   - githubUsername: choo121600
@@ -13,12 +13,12 @@ contributors:
   - name: Yeonguk Choo
     githubUsername: choo121600
     contributions:
+      - 'i18n(Ko): add missing translations(Oct 25) #57240'
       - 'Fix MyPy type errors in dot_renderer.py(#56735) #56841'
       - 'i18n(Ko): add missing translations(Oct 19) #56823'
-      - 'Fix MyPy type errors in test_dags.py (#56735) #56770'
-    prCount: 45
+    prCount: 46
     githubUrl: https://github.com/choo121600
-    lastUpdated: '2025-10-25T01:28:05.763Z'
+    lastUpdated: '2025-10-26T01:43:46.423Z'
   - name: Wonseok Yang
     githubUsername: onestn
     contributions:
@@ -27,16 +27,16 @@ contributors:
       - 'docs: Add missing ''param'' for waiter_max_attempts in EMR operator doc… #51676'
     prCount: 7
     githubUrl: https://github.com/onestn
-    lastUpdated: '2025-10-25T01:28:05.501Z'
+    lastUpdated: '2025-10-26T01:43:45.898Z'
   - name: Kyungjun Lee
     githubUsername: kyungjunleeme
     contributions:
+      - '[Docs]updates the Spark base image #56593'
       - 'delete assigned variable #54708'
       - 'fix comment in dag.test() #54654'
-      - 'FIX reference #54490'
-    prCount: 28
+    prCount: 29
     githubUrl: https://github.com/kyungjunleeme
-    lastUpdated: '2025-10-25T01:28:05.690Z'
+    lastUpdated: '2025-10-26T01:43:46.296Z'
   - name: Geonwoo Kim
     githubUsername: kgw7401
     contributions:
@@ -45,11 +45,11 @@ contributors:
       - 'Provider Migration: Update beam for Airflow 3.0 compatibility #52607'
     prCount: 8
     githubUrl: https://github.com/kgw7401
-    lastUpdated: '2025-10-25T01:28:05.484Z'
+    lastUpdated: '2025-10-26T01:43:45.911Z'
   - name: NOEUN KIM
     githubUsername: noeunkim
     contributions:
       - 'Add run_id_pattern search for Dag Run API. #52437'
     prCount: 1
     githubUrl: https://github.com/noeunkim
-    lastUpdated: '2025-10-25T01:28:05.447Z'
+    lastUpdated: '2025-10-26T01:43:45.867Z'
