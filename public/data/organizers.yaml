@@ -23,9 +23,9 @@ organizers:
       name: 김진희
       role: 운영진
       generation: 3
-      email: null
-      linkedIn: null
-      github: null
+      email: queryjin@airflow-kr.org
+      linkedIn: queryjin
+      github: queryjin
     - id: '4'
       name: 김탄
       role: 운영진
