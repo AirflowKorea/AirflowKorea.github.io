@@ -174,7 +174,7 @@ const Contributors = () => {
               </a>
 
               <a
-                href="https://github.com/apache/airflow/blob/main/CONTRIBUTING.md"
+                href="https://github.com/AirflowKorea/AirflowKorea.github.io?tab=readme-ov-file#%EA%B8%B0%EC%97%AC%EC%9E%90-%EA%B4%80%EB%A6%AC-publicdatacontributorsyaml"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-100 hover:bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
