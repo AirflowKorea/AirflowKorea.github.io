@@ -1,7 +1,7 @@
 # Apache Airflow 한국인 기여자 정보
 # - contribution_type: code, docs, community, translation 등
 # - 본인 동의하에만 추가
-# - 자동 업데이트: 2025-11-17T01:43:52.674Z
+# - 자동 업데이트: 2025-11-18T01:41:52.082Z
 
 approvedContributors:
   - githubUsername: choo121600
@@ -18,7 +18,7 @@ contributors:
       - 'chore: update navigation z-index using Chakra token #57493'
     prCount: 50
     githubUrl: https://github.com/choo121600
-    lastUpdated: '2025-11-17T01:43:52.672Z'
+    lastUpdated: '2025-11-18T01:41:52.080Z'
   - name: Wonseok Yang
     githubUsername: onestn
     contributions:
@@ -27,7 +27,7 @@ contributors:
       - 'docs: Add missing ''param'' for waiter_max_attempts in EMR operator doc… #51676'
     prCount: 7
     githubUrl: https://github.com/onestn
-    lastUpdated: '2025-11-17T01:43:52.201Z'
+    lastUpdated: '2025-11-18T01:41:51.444Z'
   - name: Kyungjun Lee
     githubUsername: kyungjunleeme
     contributions:
@@ -36,7 +36,7 @@ contributors:
       - 'fix comment in dag.test() #54654'
     prCount: 29
     githubUrl: https://github.com/kyungjunleeme
-    lastUpdated: '2025-11-17T01:43:52.328Z'
+    lastUpdated: '2025-11-18T01:41:51.840Z'
   - name: Geonwoo Kim
     githubUsername: kgw7401
     contributions:
@@ -45,11 +45,11 @@ contributors:
       - 'Provider Migration: Update beam for Airflow 3.0 compatibility #52607'
     prCount: 8
     githubUrl: https://github.com/kgw7401
-    lastUpdated: '2025-11-17T01:43:52.129Z'
+    lastUpdated: '2025-11-18T01:41:51.456Z'
   - name: NOEUN KIM
     githubUsername: noeunkim
     contributions:
       - 'Add run_id_pattern search for Dag Run API. #52437'
     prCount: 1
     githubUrl: https://github.com/noeunkim
-    lastUpdated: '2025-11-17T01:43:52.130Z'
+    lastUpdated: '2025-11-18T01:41:51.335Z'
