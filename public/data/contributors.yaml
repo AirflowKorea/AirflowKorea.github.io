@@ -1,7 +1,7 @@
 # Apache Airflow 한국인 기여자 정보
 # - contribution_type: code, docs, community, translation 등
 # - 본인 동의하에만 추가
-# - 자동 업데이트: 2025-12-04T01:45:53.886Z
+# - 자동 업데이트: 2025-12-05T01:46:12.022Z
 
 approvedContributors:
   - githubUsername: choo121600
@@ -15,19 +15,19 @@ contributors:
     contributions:
       - 'Refactor Dashboard layout and Health, Pools component responsiveness #59015'
       - 'Refactor FavoriteDags layout for improved responsiveness #59014'
-      - 'Improve 404 handling by adding fallback route for invalid URLs #58546'
-    prCount: 54
+      - 'i18n(Ko): add missing translations in assets.json (Nov 26) #58709'
+    prCount: 55
     githubUrl: https://github.com/choo121600
-    lastUpdated: '2025-12-04T01:45:53.884Z'
+    lastUpdated: '2025-12-05T01:46:12.020Z'
   - name: Wonseok Yang
     githubUsername: onestn
     contributions:
+      - 'i18n(Ko): add missing translations in common.json (Dec 4) #59039'
       - 'i18n(Ko): Replace "활성 필터" as "필터 적용하기" #58544'
       - 'chore: rename 0ne-stone to onestn for consistency #56574'
-      - 'i18n(Ko): Replace 연결 as 커넥션 #52440'
-    prCount: 8
+    prCount: 9
     githubUrl: https://github.com/onestn
-    lastUpdated: '2025-12-04T01:45:53.258Z'
+    lastUpdated: '2025-12-05T01:46:11.245Z'
   - name: Kyungjun Lee
     githubUsername: kyungjunleeme
     contributions:
@@ -36,7 +36,7 @@ contributors:
       - 'fix comment in dag.test() #54654'
     prCount: 29
     githubUrl: https://github.com/kyungjunleeme
-    lastUpdated: '2025-12-04T01:45:53.637Z'
+    lastUpdated: '2025-12-05T01:46:11.535Z'
   - name: Geonwoo Kim
     githubUsername: kgw7401
     contributions:
@@ -45,11 +45,12 @@ contributors:
       - 'Provider Migration: Update beam for Airflow 3.0 compatibility #52607'
     prCount: 8
     githubUrl: https://github.com/kgw7401
-    lastUpdated: '2025-12-04T01:45:53.314Z'
+    lastUpdated: '2025-12-05T01:46:11.172Z'
   - name: NOEUN KIM
     githubUsername: noeunkim
     contributions:
+      - 'i18n(Ko): add missing translations in hitl.json #59037'
       - 'Add run_id_pattern search for Dag Run API. #52437'
-    prCount: 1
+    prCount: 2
     githubUrl: https://github.com/noeunkim
-    lastUpdated: '2025-12-04T01:45:53.181Z'
+    lastUpdated: '2025-12-05T01:46:11.058Z'
