@@ -1,7 +1,7 @@
 # Apache Airflow 한국인 기여자 정보
 # - contribution_type: code, docs, community, translation 등
 # - 본인 동의하에만 추가
-# - 자동 업데이트: 2025-12-08T01:46:41.353Z
+# - 자동 업데이트: 2025-12-09T01:45:45.434Z
 
 approvedContributors:
   - githubUsername: choo121600
@@ -14,12 +14,12 @@ contributors:
   - name: Yeonguk Choo
     githubUsername: choo121600
     contributions:
+      - 'i18n(Ko): add missing translation (Dec 8) #59199'
       - 'Add @noeunkim new translation owner to help maintain Korean translations #59096'
-      - 'Fix typo in Failed to Trigger DAG -> Failed to Trigger Dag #59077'
-      - 'Refactor Dashboard layout and Health, Pools component responsiveness #59015'
-    prCount: 57
+      - 'Add toggle functionality to Dags state filters #59089'
+    prCount: 59
     githubUrl: https://github.com/choo121600
-    lastUpdated: '2025-12-08T01:46:41.351Z'
+    lastUpdated: '2025-12-09T01:45:45.432Z'
   - name: Wonseok Yang
     githubUsername: onestn
     contributions:
@@ -28,16 +28,16 @@ contributors:
       - 'i18n(Ko): Replace "활성 필터" as "필터 적용하기" #58544'
     prCount: 10
     githubUrl: https://github.com/onestn
-    lastUpdated: '2025-12-08T01:46:40.389Z'
+    lastUpdated: '2025-12-09T01:45:44.717Z'
   - name: Kyungjun Lee
     githubUsername: kyungjunleeme
     contributions:
+      - '[fix] dbt docs fix link #59193'
       - '[Docs]updates the Spark base image #56593'
       - 'delete assigned variable #54708'
-      - 'fix comment in dag.test() #54654'
-    prCount: 29
+    prCount: 30
     githubUrl: https://github.com/kyungjunleeme
-    lastUpdated: '2025-12-08T01:46:40.661Z'
+    lastUpdated: '2025-12-09T01:45:45.106Z'
   - name: Geonwoo Kim
     githubUsername: kgw7401
     contributions:
@@ -46,7 +46,7 @@ contributors:
       - 'Provider Migration: Update beam for Airflow 3.0 compatibility #52607'
     prCount: 8
     githubUrl: https://github.com/kgw7401
-    lastUpdated: '2025-12-08T01:46:40.317Z'
+    lastUpdated: '2025-12-09T01:45:45.393Z'
   - name: NOEUN KIM
     githubUsername: noeunkim
     contributions:
@@ -54,11 +54,11 @@ contributors:
       - 'Add run_id_pattern search for Dag Run API. #52437'
     prCount: 2
     githubUrl: https://github.com/noeunkim
-    lastUpdated: '2025-12-08T01:46:40.310Z'
+    lastUpdated: '2025-12-09T01:45:44.573Z'
   - name: queryjin
     githubUsername: queryjin
     contributions:
       - 'i18n(ko): translating in components.json (Dec 4) #59040'
     prCount: 1
     githubUrl: https://github.com/queryjin
-    lastUpdated: '2025-12-08T01:46:40.274Z'
+    lastUpdated: '2025-12-09T01:45:44.611Z'
