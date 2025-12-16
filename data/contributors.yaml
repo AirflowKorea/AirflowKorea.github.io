@@ -1,7 +1,7 @@
 # Apache Airflow 한국인 기여자 정보
 # - contribution_type: code, docs, community, translation 등
 # - 본인 동의하에만 추가
-# - 자동 업데이트: 2025-12-15T01:52:09.640Z
+# - 자동 업데이트: 2025-12-16T01:49:02.238Z
 
 approvedContributors:
   - githubUsername: choo121600
@@ -14,12 +14,12 @@ contributors:
   - name: Yeonguk Choo
     githubUsername: choo121600
     contributions:
+      - 'Refactor deprecated SQLA query openlineage provider #59448'
       - 'Update link and typo to Apache Mentoring Program in communication guidelines #59403'
       - 'test(e2e): align DAG naming to Dag for consistency #59401'
-      - 'Fix toast notification description text truncation #59356'
-    prCount: 67
+    prCount: 68
     githubUrl: https://github.com/choo121600
-    lastUpdated: '2025-12-15T01:52:09.638Z'
+    lastUpdated: '2025-12-16T01:49:02.236Z'
   - name: Wonseok Yang
     githubUsername: onestn
     contributions:
@@ -28,7 +28,7 @@ contributors:
       - 'i18n(Ko): Replace "활성 필터" as "필터 적용하기" #58544'
     prCount: 10
     githubUrl: https://github.com/onestn
-    lastUpdated: '2025-12-15T01:52:08.818Z'
+    lastUpdated: '2025-12-16T01:49:01.611Z'
   - name: Kyungjun Lee
     githubUsername: kyungjunleeme
     contributions:
@@ -37,7 +37,7 @@ contributors:
       - 'delete assigned variable #54708'
     prCount: 30
     githubUrl: https://github.com/kyungjunleeme
-    lastUpdated: '2025-12-15T01:52:09.044Z'
+    lastUpdated: '2025-12-16T01:49:01.980Z'
   - name: Geonwoo Kim
     githubUsername: kgw7401
     contributions:
@@ -46,7 +46,7 @@ contributors:
       - 'Provider Migration: Update beam for Airflow 3.0 compatibility #52607'
     prCount: 8
     githubUrl: https://github.com/kgw7401
-    lastUpdated: '2025-12-15T01:52:08.811Z'
+    lastUpdated: '2025-12-16T01:49:01.570Z'
   - name: NOEUN KIM
     githubUsername: noeunkim
     contributions:
@@ -54,11 +54,11 @@ contributors:
       - 'Add run_id_pattern search for Dag Run API. #52437'
     prCount: 2
     githubUrl: https://github.com/noeunkim
-    lastUpdated: '2025-12-15T01:52:08.784Z'
+    lastUpdated: '2025-12-16T01:49:01.458Z'
   - name: queryjin
     githubUsername: queryjin
     contributions:
       - 'i18n(ko): translating in components.json (Dec 4) #59040'
     prCount: 1
     githubUrl: https://github.com/queryjin
-    lastUpdated: '2025-12-15T01:52:08.730Z'
+    lastUpdated: '2025-12-16T01:49:01.448Z'
