@@ -1,7 +1,7 @@
 # Apache Airflow 한국인 기여자 정보
 # - contribution_type: code, docs, community, translation 등
 # - 본인 동의하에만 추가
-# - 자동 업데이트: 2025-12-18T01:45:07.482Z
+# - 자동 업데이트: 2025-12-19T01:48:27.185Z
 
 approvedContributors:
   - githubUsername: choo121600
@@ -19,7 +19,7 @@ contributors:
       - 'Refactor/sqla2 providers(celery, kubernetes, databricks, mysql) to remove SQLA query usage #59537'
     prCount: 75
     githubUrl: https://github.com/choo121600
-    lastUpdated: '2025-12-18T01:45:07.480Z'
+    lastUpdated: '2025-12-19T01:48:27.183Z'
   - name: Wonseok Yang
     githubUsername: onestn
     contributions:
@@ -28,7 +28,7 @@ contributors:
       - 'i18n(Ko): Replace "활성 필터" as "필터 적용하기" #58544'
     prCount: 10
     githubUrl: https://github.com/onestn
-    lastUpdated: '2025-12-18T01:45:06.317Z'
+    lastUpdated: '2025-12-19T01:48:26.347Z'
   - name: Kyungjun Lee
     githubUsername: kyungjunleeme
     contributions:
@@ -37,7 +37,7 @@ contributors:
       - 'delete assigned variable #54708'
     prCount: 30
     githubUrl: https://github.com/kyungjunleeme
-    lastUpdated: '2025-12-18T01:45:06.766Z'
+    lastUpdated: '2025-12-19T01:48:26.424Z'
   - name: Geonwoo Kim
     githubUsername: kgw7401
     contributions:
@@ -46,7 +46,7 @@ contributors:
       - 'Provider Migration: Update beam for Airflow 3.0 compatibility #52607'
     prCount: 8
     githubUrl: https://github.com/kgw7401
-    lastUpdated: '2025-12-18T01:45:06.278Z'
+    lastUpdated: '2025-12-19T01:48:26.096Z'
   - name: NOEUN KIM
     githubUsername: noeunkim
     contributions:
@@ -54,11 +54,11 @@ contributors:
       - 'Add run_id_pattern search for Dag Run API. #52437'
     prCount: 2
     githubUrl: https://github.com/noeunkim
-    lastUpdated: '2025-12-18T01:45:06.270Z'
+    lastUpdated: '2025-12-19T01:48:25.967Z'
   - name: queryjin
     githubUsername: queryjin
     contributions:
       - 'i18n(ko): translating in components.json (Dec 4) #59040'
     prCount: 1
     githubUrl: https://github.com/queryjin
-    lastUpdated: '2025-12-18T01:45:06.247Z'
+    lastUpdated: '2025-12-19T01:48:25.910Z'
