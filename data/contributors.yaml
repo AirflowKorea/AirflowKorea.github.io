@@ -1,7 +1,7 @@
 # Apache Airflow 한국인 기여자 정보
 # - contribution_type: code, docs, community, translation 등
 # - 본인 동의하에만 추가
-# - 자동 업데이트: 2025-12-22T01:53:55.411Z
+# - 자동 업데이트: 2025-12-24T01:47:43.418Z
 
 approvedContributors:
   - githubUsername: choo121600
@@ -19,7 +19,7 @@ contributors:
       - 'Update README.md "DAG" to "Dag" for consistency #59554'
     prCount: 77
     githubUrl: https://github.com/choo121600
-    lastUpdated: '2025-12-22T01:53:55.409Z'
+    lastUpdated: '2025-12-24T01:47:43.415Z'
   - name: Wonseok Yang
     githubUsername: onestn
     contributions:
@@ -28,7 +28,7 @@ contributors:
       - 'i18n(Ko): Replace "활성 필터" as "필터 적용하기" #58544'
     prCount: 10
     githubUrl: https://github.com/onestn
-    lastUpdated: '2025-12-22T01:53:54.614Z'
+    lastUpdated: '2025-12-24T01:47:42.814Z'
   - name: Kyungjun Lee
     githubUsername: kyungjunleeme
     contributions:
@@ -37,7 +37,7 @@ contributors:
       - 'delete assigned variable #54708'
     prCount: 30
     githubUrl: https://github.com/kyungjunleeme
-    lastUpdated: '2025-12-22T01:53:54.885Z'
+    lastUpdated: '2025-12-24T01:47:42.982Z'
   - name: Geonwoo Kim
     githubUsername: kgw7401
     contributions:
@@ -46,7 +46,7 @@ contributors:
       - 'Provider Migration: Update beam for Airflow 3.0 compatibility #52607'
     prCount: 8
     githubUrl: https://github.com/kgw7401
-    lastUpdated: '2025-12-22T01:53:54.587Z'
+    lastUpdated: '2025-12-24T01:47:42.666Z'
   - name: NOEUN KIM
     githubUsername: noeunkim
     contributions:
@@ -55,11 +55,11 @@ contributors:
       - 'Add run_id_pattern search for Dag Run API. #52437'
     prCount: 3
     githubUrl: https://github.com/noeunkim
-    lastUpdated: '2025-12-22T01:53:54.535Z'
+    lastUpdated: '2025-12-24T01:47:42.636Z'
   - name: queryjin
     githubUsername: queryjin
     contributions:
       - 'i18n(ko): translating in components.json (Dec 4) #59040'
     prCount: 1
     githubUrl: https://github.com/queryjin
-    lastUpdated: '2025-12-22T01:53:54.506Z'
+    lastUpdated: '2025-12-24T01:47:42.637Z'
