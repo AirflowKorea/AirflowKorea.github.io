@@ -1,7 +1,7 @@
 # Apache Airflow 한국인 기여자 정보
 # - contribution_type: code, docs, community, translation 등
 # - 본인 동의하에만 추가
-# - 자동 업데이트: 2025-12-29T01:57:56.753Z
+# - 자동 업데이트: 2025-12-30T01:49:56.197Z
 
 approvedContributors:
   - githubUsername: choo121600
@@ -19,7 +19,7 @@ contributors:
       - 'Fix process context for connections CLI to use Metastore secrets backend #59624'
     prCount: 78
     githubUrl: https://github.com/choo121600
-    lastUpdated: '2025-12-29T01:57:56.750Z'
+    lastUpdated: '2025-12-30T01:49:56.194Z'
   - name: Wonseok Yang
     githubUsername: onestn
     contributions:
@@ -28,7 +28,7 @@ contributors:
       - 'i18n(Ko): add missing translations in common.json (Dec 4) #59039'
     prCount: 11
     githubUrl: https://github.com/onestn
-    lastUpdated: '2025-12-29T01:57:55.644Z'
+    lastUpdated: '2025-12-30T01:49:55.206Z'
   - name: Kyungjun Lee
     githubUsername: kyungjunleeme
     contributions:
@@ -37,7 +37,7 @@ contributors:
       - 'delete assigned variable #54708'
     prCount: 30
     githubUrl: https://github.com/kyungjunleeme
-    lastUpdated: '2025-12-29T01:57:55.989Z'
+    lastUpdated: '2025-12-30T01:49:55.358Z'
   - name: Geonwoo Kim
     githubUsername: kgw7401
     contributions:
@@ -46,7 +46,7 @@ contributors:
       - 'Provider Migration: Update beam for Airflow 3.0 compatibility #52607'
     prCount: 8
     githubUrl: https://github.com/kgw7401
-    lastUpdated: '2025-12-29T01:57:55.627Z'
+    lastUpdated: '2025-12-30T01:49:55.076Z'
   - name: NOEUN KIM
     githubUsername: noeunkim
     contributions:
@@ -55,11 +55,11 @@ contributors:
       - 'Add run_id_pattern search for Dag Run API. #52437'
     prCount: 3
     githubUrl: https://github.com/noeunkim
-    lastUpdated: '2025-12-29T01:57:55.651Z'
+    lastUpdated: '2025-12-30T01:49:54.945Z'
   - name: queryjin
     githubUsername: queryjin
     contributions:
       - 'i18n(ko): translating in components.json (Dec 4) #59040'
     prCount: 1
     githubUrl: https://github.com/queryjin
-    lastUpdated: '2025-12-29T01:57:55.498Z'
+    lastUpdated: '2025-12-30T01:49:55.418Z'
