@@ -1,7 +1,7 @@
 # Apache Airflow 한국인 기여자 정보
 # - contribution_type: code, docs, community, translation 등
 # - 본인 동의하에만 추가
-# - 자동 업데이트: 2026-02-15T02:28:23.171Z
+# - 자동 업데이트: 2026-02-16T02:25:02.472Z
 
 approvedContributors:
   - githubUsername: choo121600
@@ -19,7 +19,7 @@ contributors:
       - 'Add JWT issuer config to docker-compose and breeze environment #61385'
     prCount: 89
     githubUrl: https://github.com/choo121600
-    lastUpdated: '2026-02-15T02:28:23.169Z'
+    lastUpdated: '2026-02-16T02:25:02.470Z'
   - name: Wonseok Yang
     githubUsername: onestn
     contributions:
@@ -28,7 +28,7 @@ contributors:
       - 'i18n(Ko): add missing translations in common.json (Dec 4) #59039'
     prCount: 11
     githubUrl: https://github.com/onestn
-    lastUpdated: '2026-02-15T02:28:22.310Z'
+    lastUpdated: '2026-02-16T02:25:01.172Z'
   - name: Kyungjun Lee
     githubUsername: kyungjunleeme
     contributions:
@@ -37,7 +37,7 @@ contributors:
       - 'delete assigned variable #54708'
     prCount: 30
     githubUrl: https://github.com/kyungjunleeme
-    lastUpdated: '2026-02-15T02:28:22.601Z'
+    lastUpdated: '2026-02-16T02:25:01.498Z'
   - name: Geonwoo Kim
     githubUsername: kgw7401
     contributions:
@@ -46,7 +46,7 @@ contributors:
       - 'Provider Migration: Update beam for Airflow 3.0 compatibility #52607'
     prCount: 8
     githubUrl: https://github.com/kgw7401
-    lastUpdated: '2026-02-15T02:28:22.168Z'
+    lastUpdated: '2026-02-16T02:25:01.129Z'
   - name: NOEUN KIM
     githubUsername: noeunkim
     contributions:
@@ -55,11 +55,11 @@ contributors:
       - 'Add run_id_pattern search for Dag Run API. #52437'
     prCount: 3
     githubUrl: https://github.com/noeunkim
-    lastUpdated: '2026-02-15T02:28:22.197Z'
+    lastUpdated: '2026-02-16T02:25:01.043Z'
   - name: queryjin
     githubUsername: queryjin
     contributions:
       - 'i18n(ko): translating in components.json (Dec 4) #59040'
     prCount: 1
     githubUrl: https://github.com/queryjin
-    lastUpdated: '2026-02-15T02:28:22.125Z'
+    lastUpdated: '2026-02-16T02:25:01.041Z'
