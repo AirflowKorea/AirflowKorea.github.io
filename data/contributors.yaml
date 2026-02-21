@@ -1,7 +1,7 @@
 # Apache Airflow 한국인 기여자 정보
 # - contribution_type: code, docs, community, translation 등
 # - 본인 동의하에만 추가
-# - 자동 업데이트: 2026-02-20T02:13:13.976Z
+# - 자동 업데이트: 2026-02-21T02:07:49.616Z
 
 approvedContributors:
   - githubUsername: choo121600
@@ -19,7 +19,7 @@ contributors:
       - 'Add JWT issuer config to docker-compose and breeze environment #61385'
     prCount: 89
     githubUrl: https://github.com/choo121600
-    lastUpdated: '2026-02-20T02:13:13.974Z'
+    lastUpdated: '2026-02-21T02:07:49.613Z'
   - name: Wonseok Yang
     githubUsername: onestn
     contributions:
@@ -28,7 +28,7 @@ contributors:
       - 'i18n(Ko): add missing translations in common.json (Dec 4) #59039'
     prCount: 11
     githubUrl: https://github.com/onestn
-    lastUpdated: '2026-02-20T02:13:12.807Z'
+    lastUpdated: '2026-02-21T02:07:48.324Z'
   - name: Kyungjun Lee
     githubUsername: kyungjunleeme
     contributions:
@@ -37,7 +37,7 @@ contributors:
       - 'delete assigned variable #54708'
     prCount: 30
     githubUrl: https://github.com/kyungjunleeme
-    lastUpdated: '2026-02-20T02:13:12.957Z'
+    lastUpdated: '2026-02-21T02:07:48.657Z'
   - name: Geonwoo Kim
     githubUsername: kgw7401
     contributions:
@@ -46,7 +46,7 @@ contributors:
       - 'Provider Migration: Update beam for Airflow 3.0 compatibility #52607'
     prCount: 8
     githubUrl: https://github.com/kgw7401
-    lastUpdated: '2026-02-20T02:13:12.673Z'
+    lastUpdated: '2026-02-21T02:07:48.210Z'
   - name: NOEUN KIM
     githubUsername: noeunkim
     contributions:
@@ -55,11 +55,11 @@ contributors:
       - 'Add run_id_pattern search for Dag Run API. #52437'
     prCount: 3
     githubUrl: https://github.com/noeunkim
-    lastUpdated: '2026-02-20T02:13:12.582Z'
+    lastUpdated: '2026-02-21T02:07:48.210Z'
   - name: queryjin
     githubUsername: queryjin
     contributions:
       - 'i18n(ko): translating in components.json (Dec 4) #59040'
     prCount: 1
     githubUrl: https://github.com/queryjin
-    lastUpdated: '2026-02-20T02:13:12.530Z'
+    lastUpdated: '2026-02-21T02:07:48.198Z'
