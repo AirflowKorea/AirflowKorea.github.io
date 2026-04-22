@@ -1,7 +1,7 @@
 # Apache Airflow 한국인 기여자 정보
 # - contribution_type: code, docs, community, translation 등
 # - 본인 동의하에만 추가
-# - 자동 업데이트: 2026-04-21T02:44:54.993Z
+# - 자동 업데이트: 2026-04-22T02:43:20.233Z
 
 approvedContributors:
   - githubUsername: choo121600
@@ -13,53 +13,37 @@ approvedContributors:
 contributors:
   - name: Yeonguk Choo
     githubUsername: choo121600
-    contributions:
-      - 'Mark tests as fixme for asset details and connection deletion #65487'
-      - 'i18n(ko): add missing translations(Apr 4) #64706'
-      - 'E2E: Parallelize fixture Dag run cleanup #64670'
-    prCount: 100
+    contributions: []
+    prCount: 0
     githubUrl: https://github.com/choo121600
-    lastUpdated: '2026-04-21T02:44:54.991Z'
+    lastUpdated: '2026-04-22T02:43:20.194Z'
   - name: Wonseok Yang
     githubUsername: onestn
-    contributions:
-      - 'i18n(Ko): add missing translations (Dec 28) #59861'
-      - 'i18n(Ko): add missing translation in components.json (Dec 5) #59076'
-      - 'i18n(Ko): add missing translations in common.json (Dec 4) #59039'
-    prCount: 11
+    contributions: []
+    prCount: 0
     githubUrl: https://github.com/onestn
-    lastUpdated: '2026-04-21T02:44:53.870Z'
+    lastUpdated: '2026-04-22T02:43:20.225Z'
   - name: Kyungjun Lee
     githubUsername: kyungjunleeme
-    contributions:
-      - '[fix] dbt docs fix link #59193'
-      - '[Docs]updates the Spark base image #56593'
-      - 'delete assigned variable #54708'
-    prCount: 30
+    contributions: []
+    prCount: 0
     githubUrl: https://github.com/kyungjunleeme
-    lastUpdated: '2026-04-21T02:44:54.159Z'
+    lastUpdated: '2026-04-22T02:43:20.200Z'
   - name: Geonwoo Kim
     githubUsername: kgw7401
-    contributions:
-      - 'delete: async_get_operation in test_dataproc #53531'
-      - 'fix: Change DataprocAsyncHook parent class to GoogleBaseAsyncHook #52981'
-      - 'Provider Migration: Update beam for Airflow 3.0 compatibility #52607'
-    prCount: 8
+    contributions: []
+    prCount: 0
     githubUrl: https://github.com/kgw7401
-    lastUpdated: '2026-04-21T02:44:53.883Z'
+    lastUpdated: '2026-04-22T02:43:20.231Z'
   - name: NOEUN KIM
     githubUsername: noeunkim
-    contributions:
-      - 'i18n(Ko): add missing translations in common.json #59682'
-      - 'i18n(Ko): add missing translations in hitl.json #59037'
-      - 'Add run_id_pattern search for Dag Run API. #52437'
-    prCount: 3
+    contributions: []
+    prCount: 0
     githubUrl: https://github.com/noeunkim
-    lastUpdated: '2026-04-21T02:44:53.801Z'
+    lastUpdated: '2026-04-22T02:43:20.206Z'
   - name: queryjin
     githubUsername: queryjin
-    contributions:
-      - 'i18n(ko): translating in components.json (Dec 4) #59040'
-    prCount: 1
+    contributions: []
+    prCount: 0
     githubUrl: https://github.com/queryjin
-    lastUpdated: '2026-04-21T02:44:53.807Z'
+    lastUpdated: '2026-04-22T02:43:20.223Z'
