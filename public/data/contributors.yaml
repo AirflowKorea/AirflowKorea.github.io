@@ -1,7 +1,7 @@
 # Apache Airflow 한국인 기여자 정보
 # - contribution_type: code, docs, community, translation 등
 # - 본인 동의하에만 추가
-# - 자동 업데이트: 2026-04-22T02:43:20.233Z
+# - 자동 업데이트: 2026-04-23T02:46:30.115Z
 
 approvedContributors:
   - githubUsername: choo121600
@@ -13,37 +13,38 @@ approvedContributors:
 contributors:
   - name: Yeonguk Choo
     githubUsername: choo121600
-    contributions: []
-    prCount: 0
+    contributions:
+      - 'Fix e2e flaky in AssetDetailPage and ConnectionsPage tests #65494'
+    prCount: 1
     githubUrl: https://github.com/choo121600
-    lastUpdated: '2026-04-22T02:43:20.194Z'
+    lastUpdated: '2026-04-23T02:46:30.113Z'
   - name: Wonseok Yang
     githubUsername: onestn
     contributions: []
     prCount: 0
     githubUrl: https://github.com/onestn
-    lastUpdated: '2026-04-22T02:43:20.225Z'
+    lastUpdated: '2026-04-23T02:46:30.102Z'
   - name: Kyungjun Lee
     githubUsername: kyungjunleeme
     contributions: []
     prCount: 0
     githubUrl: https://github.com/kyungjunleeme
-    lastUpdated: '2026-04-22T02:43:20.200Z'
+    lastUpdated: '2026-04-23T02:46:30.062Z'
   - name: Geonwoo Kim
     githubUsername: kgw7401
     contributions: []
     prCount: 0
     githubUrl: https://github.com/kgw7401
-    lastUpdated: '2026-04-22T02:43:20.231Z'
+    lastUpdated: '2026-04-23T02:46:30.082Z'
   - name: NOEUN KIM
     githubUsername: noeunkim
     contributions: []
     prCount: 0
     githubUrl: https://github.com/noeunkim
-    lastUpdated: '2026-04-22T02:43:20.206Z'
+    lastUpdated: '2026-04-23T02:46:30.112Z'
   - name: queryjin
     githubUsername: queryjin
     contributions: []
     prCount: 0
     githubUrl: https://github.com/queryjin
-    lastUpdated: '2026-04-22T02:43:20.223Z'
+    lastUpdated: '2026-04-23T02:46:30.078Z'
