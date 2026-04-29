@@ -1,7 +1,7 @@
 # Apache Airflow 한국인 기여자 정보
 # - contribution_type: code, docs, community, translation 등
 # - 본인 동의하에만 추가
-# - 자동 업데이트: 2026-04-28T03:24:51.638Z
+# - 자동 업데이트: 2026-04-29T03:22:58.390Z
 
 approvedContributors:
   - githubUsername: choo121600
@@ -19,7 +19,7 @@ contributors:
       - 'Fix e2e flaky in AssetDetailPage and ConnectionsPage tests #65494'
     prCount: 100
     githubUrl: https://github.com/choo121600
-    lastUpdated: '2026-04-28T03:24:51.635Z'
+    lastUpdated: '2026-04-29T03:22:58.388Z'
   - name: Wonseok Yang
     githubUsername: onestn
     contributions:
@@ -28,7 +28,7 @@ contributors:
       - 'i18n(Ko): Replace 연결 as 커넥션 #52440'
     prCount: 4
     githubUrl: https://github.com/onestn
-    lastUpdated: '2026-04-28T03:24:50.313Z'
+    lastUpdated: '2026-04-29T03:22:57.180Z'
   - name: Kyungjun Lee
     githubUsername: kyungjunleeme
     contributions:
@@ -37,7 +37,7 @@ contributors:
       - 'fix comment in dag.test() #54654'
     prCount: 29
     githubUrl: https://github.com/kyungjunleeme
-    lastUpdated: '2026-04-28T03:24:50.655Z'
+    lastUpdated: '2026-04-29T03:22:57.598Z'
   - name: Geonwoo Kim
     githubUsername: kgw7401
     contributions:
@@ -46,7 +46,7 @@ contributors:
       - 'Provider Migration: Update beam for Airflow 3.0 compatibility #52607'
     prCount: 6
     githubUrl: https://github.com/kgw7401
-    lastUpdated: '2026-04-28T03:24:50.323Z'
+    lastUpdated: '2026-04-29T03:22:57.258Z'
   - name: NOEUN KIM
     githubUsername: noeunkim
     contributions:
@@ -54,10 +54,10 @@ contributors:
       - 'Add run_id_pattern search for Dag Run API. #52437'
     prCount: 2
     githubUrl: https://github.com/noeunkim
-    lastUpdated: '2026-04-28T03:24:50.288Z'
+    lastUpdated: '2026-04-29T03:22:57.124Z'
   - name: queryjin
     githubUsername: queryjin
     contributions: []
     prCount: 0
     githubUrl: https://github.com/queryjin
-    lastUpdated: '2026-04-28T03:24:50.179Z'
+    lastUpdated: '2026-04-29T03:22:57.084Z'
