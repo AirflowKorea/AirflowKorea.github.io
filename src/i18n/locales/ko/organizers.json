@@ -8,7 +8,7 @@
   },
   "ob": {
     "title": "OB 서포터",
-    "description": "기수 활동을 마쳤지만 커뮤니티 기획을 계속 지원해주시는 분들입니다.",
+    "description": "기수 활동을 마치신 후에도, 현 운영진의 기획에 힘을 보태고 커뮤니티와 꾸준히 교류해주시는 분들입니다.",
     "badge": "OB",
     "fromGeneration": "{{generations}}기 출신",
     "term": "{{start}} ~ {{end}}"

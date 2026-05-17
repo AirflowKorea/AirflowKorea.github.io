@@ -8,7 +8,7 @@
   },
   "ob": {
     "title": "OB Supporters",
-    "description": "Former organizers who continue to support community initiatives after their term.",
+    "description": "Former cohort members who continue to lend a hand to the current organizers' initiatives and stay engaged with the community.",
     "badge": "OB",
     "fromGeneration": "Gen. {{generations}} alumni",
     "term": "{{start}} ~ {{end}}"
