@@ -2,6 +2,12 @@
 # - generation: 기수 (숫자)
 # - role: 리더, 운영진
 # - pre-commit run --all-files 를 실행하면 이름 가나다 순으로 id 값이 정렬됨
+#
+# OB 서포터(ob_supporters): 기수 활동을 마쳤지만 커뮤니티의 각종 기획을 계속 지원하는 분들
+# - from_generations: 출신 기수 목록 (e.g. [1, 2])
+# - term_start / term_end: OB 활동 기간 (YYYY-MM, 기본 2년 권장)
+# - term_end가 지난 OB는 페이지에서 자동으로 숨겨집니다. 갱신 시 term_end를 연장하세요.
+# - id는 ob_001, ob_002 형식으로 pre-commit이 이름 가나다 순으로 자동 재번호합니다
 
 organizers:
   generation_3:
@@ -159,6 +165,18 @@ organizers:
       email: choo121600@airflow-kr.org
       linkedIn: yeonguk-choo
       github: choo121600
+ob_supporters:
+  - id: ob_001
+    name: 추영욱
+    from_generations:
+      - 1
+      - 2
+      - 3
+    term_start: 2026-10
+    term_end: 2028-10
+    email: choo121600@airflow-kr.org
+    linkedIn: yeonguk-choo
+    github: choo121600
 recruitment:
   is_recruiting: false
   application_url: https://forms.gle/GmjWmxtpBPdYPb9f7
