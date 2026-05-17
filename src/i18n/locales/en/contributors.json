@@ -1,5 +1,5 @@
 {
-  "title": "Korean Contributors Status",
+  "title": "The People Building It Together",
   "subtitle": "Introducing Korean developers who have contributed to the Apache Airflow project",
   "loading": "Loading contributor information...",
   "intro": {
@@ -9,12 +9,12 @@
     "contributors": "Contributors",
     "contributions": "Contributions"
   },
-  "contributionLabel": "Major Contributions",
+  "contributionLabel": "Recent Contributions",
   "profileButton": "View GitHub Profile",
   "hallOfFame": {
     "title": "Thank You to All Our Contributors",
     "description": "We sincerely appreciate everyone who has contributed to the development of Apache Airflow, and we welcome more contributors to join us",
     "button": "I Want to Contribute Too",
-    "registerButton": "View Contribution Guide"
+    "registerButton": "Register as a Contributor"
   }
 }

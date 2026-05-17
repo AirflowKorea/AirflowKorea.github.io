@@ -7,13 +7,13 @@
   "membersParticipating": "members are participating!",
   "joinButton": "Join",
   "intro": {
-    "title": "Which Channel Is Right for Me?",
-    "description": "Choose the right channel based on your purpose and preferences!"
+    "title": "Communication Channels for Every Purpose",
+    "description": "Choose the channel that fits your needs—questions, discussions, networking, and more—and join freely."
   },
   "channels": {
     "forum": {
       "title": "Forum - In-depth Discussion",
-      "description": "From technical questions to advanced discussions, communicate in a systematically organized space.",
+      "description": "From technical questions to architectural concerns, share in-depth discussions in a space organized by topic.",
       "recommended": "Recommended Use",
       "responseTime": "Response Time",
       "participants": "Participants",
@@ -27,7 +27,7 @@
     },
     "chat": {
       "title": "Real-time Chat - Quick Communication",
-      "description": "Ask questions instantly and get real-time answers.",
+      "description": "When you want to ask casually and get instant answers, talk freely in a friendly atmosphere.",
       "responseTimeValue": "Few minutes ~ Few hours",
       "participantsValue": "120+",
       "pros": [
@@ -37,9 +37,9 @@
       ]
     },
     "social": {
-      "title": "Social Network - Professional Exchange",
-      "description": "Professional networking and career information sharing through LinkedIn and GitHub",
-      "responseTimeValue": "1 day ~ 1 week",
+      "title": "Networking Events - Professional Exchange",
+      "description": "Meet real users at meetups and seminars, and share your career and experiences.",
+      "responseTimeValue": "1 day",
       "participantsValue": "290+",
       "pros": [
         "Professional networking",
@@ -49,14 +49,10 @@
     },
     "video": {
       "title": "Video - Visual Learning",
-      "description": "Visual learning materials through YouTube and recorded meetups",
-      "responseTimeValue": "Asynchronous",
+      "description": "Learn visually anytime, anywhere through recorded meetups and tutorial videos.",
+      "responseTimeValue": "Uploaded 1-2 weeks after the event",
       "participantsValue": "30+",
-      "pros": [
-        "Visual learning materials",
-        "Repeatable learning",
-        "High-quality tutorials"
-      ]
+      "pros": ["Recorded meetup videos", "Tutorial videos"]
     }
   },
   "guidelines": {
