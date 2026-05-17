@@ -1,6 +1,7 @@
 import * as yaml from 'js-yaml';
 import type {
   Organizer,
+  OBSupporter,
   Contributor,
   CommunityChannel,
   CommunityStats,
@@ -23,9 +24,15 @@ async function loadYamlFile(path: string): Promise<Record<string, unknown>> {
   }
 }
 
+// 현재 YYYY-MM 문자열 반환 (OB 만료 비교용)
+function currentYearMonth(): string {
+  return new Date().toISOString().slice(0, 7);
+}
+
 // 운영진 데이터 로드
 export async function loadOrganizersData(): Promise<{
   organizers: Organizer[];
+  obSupporters: OBSupporter[];
   recruitment: Recruitment;
 }> {
   const data = await loadYamlFile('/data/organizers.yaml');
@@ -46,10 +53,22 @@ export async function loadOrganizersData(): Promise<{
     }
   });
 
+  // OB 서포터: term_end가 지난 경우 자동 숨김 (YYYY-MM 문자열 비교)
+  // YAML 파서가 'YYYY-MM' 값을 다른 타입으로 해석할 수 있어 명시적으로 문자열 변환
+  const today = currentYearMonth();
+  const rawOB = (data.ob_supporters as OBSupporter[] | undefined) ?? [];
+  const obSupporters = rawOB
+    .map(ob => ({
+      ...ob,
+      term_start: String(ob.term_start),
+      term_end: String(ob.term_end),
+    }))
+    .filter(ob => ob.term_end >= today);
+
   // recruitment 정보 추출
   const recruitment = data.recruitment as Recruitment;
 
-  return { organizers, recruitment };
+  return { organizers, obSupporters, recruitment };
 }
 
 // 기여자 데이터 로드
@@ -89,6 +108,7 @@ export async function loadAllData() {
 
     return {
       organizers: organizerData.organizers,
+      obSupporters: organizerData.obSupporters,
       recruitment: organizerData.recruitment,
       contributors,
       channels,

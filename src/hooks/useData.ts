@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import type {
   Organizer,
+  OBSupporter,
   Contributor,
   CommunityChannel,
   CommunityStats,
@@ -10,6 +11,7 @@ import { loadAllData } from '../utils/dataLoader';
 
 interface DataState {
   organizers: Organizer[];
+  obSupporters: OBSupporter[];
   recruitment: Recruitment;
   contributors: Contributor[];
   channels: CommunityChannel[];
@@ -21,6 +23,7 @@ interface DataState {
 export function useData(): DataState {
   const [state, setState] = useState<DataState>({
     organizers: [],
+    obSupporters: [],
     recruitment: {
       is_recruiting: false,
       application_url: '',
@@ -49,6 +52,7 @@ export function useData(): DataState {
         if (mounted) {
           setState({
             organizers: data.organizers,
+            obSupporters: data.obSupporters,
             recruitment: data.recruitment,
             contributors: data.contributors,
             channels: data.channels,
@@ -82,8 +86,8 @@ export function useData(): DataState {
 
 // 개별 데이터 타입별 Hook들
 export function useOrganizers() {
-  const { organizers, recruitment, loading, error } = useData();
-  return { organizers, recruitment, loading, error };
+  const { organizers, obSupporters, recruitment, loading, error } = useData();
+  return { organizers, obSupporters, recruitment, loading, error };
 }
 
 export function useContributors() {

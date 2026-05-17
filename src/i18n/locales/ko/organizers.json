@@ -6,6 +6,13 @@
     "title": "우리를 소개합니다",
     "description": "Airflow 한국 사용자 모임을 함께 만들어가는 운영진들을 만나보세요. 각자의 전문성과 경험을 바탕으로 커뮤니티 발전에 기여하고 있습니다."
   },
+  "ob": {
+    "title": "OB 서포터",
+    "description": "기수 활동을 마쳤지만 커뮤니티 기획을 계속 지원해주시는 분들입니다.",
+    "badge": "OB",
+    "fromGeneration": "{{generations}}기 출신",
+    "term": "{{start}} ~ {{end}}"
+  },
   "roles": {
     "title": "운영진 역할",
     "community": {

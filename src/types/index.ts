@@ -17,6 +17,21 @@ export interface Recruitment {
   contact_email: string;
 }
 
+// OB 서포터 관련 타입
+// - from_generations: 출신 기수 목록 (e.g. [1, 2])
+// - term_start / term_end: OB 활동 기간 (YYYY-MM)
+export interface OBSupporter {
+  id: string;
+  name: string;
+  from_generations: number[];
+  term_start: string;
+  term_end: string;
+  avatar_url?: string;
+  linkedIn?: string;
+  github?: string;
+  email?: string;
+}
+
 // 기여자 관련 타입
 export interface Contributor {
   id: string;

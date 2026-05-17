@@ -6,6 +6,13 @@
     "title": "Meet Our Team",
     "description": "Get to know the organizers who are building the Airflow Korean User Group together. Each contributes to community development based on their expertise and experience."
   },
+  "ob": {
+    "title": "OB Supporters",
+    "description": "Former organizers who continue to support community initiatives after their term.",
+    "badge": "OB",
+    "fromGeneration": "Gen. {{generations}} alumni",
+    "term": "{{start}} ~ {{end}}"
+  },
   "roles": {
     "title": "Organizer Roles",
     "community": {

@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from 'react';
 import { useOrganizers } from '../hooks/useData';
-import type { Organizer } from '../types';
+import type { Organizer, OBSupporter } from '../types';
 import { useTranslation } from 'react-i18next';
 import {
   CalendarIcon,
@@ -92,8 +92,98 @@ const OrganizerCard = ({ organizer }: { organizer: Organizer }) => {
   );
 };
 
+const OBSupporterCard = ({ supporter }: { supporter: OBSupporter }) => {
+  const { t } = useTranslation('organizers');
+
+  const avatarUrl =
+    supporter.avatar_url ||
+    (supporter.github ? `https://github.com/${supporter.github}.png` : null);
+
+  const generationsLabel = [...supporter.from_generations]
+    .sort((a, b) => a - b)
+    .join('·');
+
+  return (
+    <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-200 overflow-hidden">
+      <div className="p-6 text-center">
+        <div className="w-24 h-24 mx-auto mb-4 relative">
+          {avatarUrl ? (
+            <img
+              src={avatarUrl}
+              alt={`${supporter.name} 프로필`}
+              className="w-full h-full rounded-full object-cover border-4 border-white shadow-lg"
+              onError={e => {
+                const target = e.target as HTMLImageElement;
+                target.style.display = 'none';
+                const fallback = target.nextElementSibling as HTMLElement;
+                if (fallback) fallback.style.display = 'flex';
+              }}
+            />
+          ) : null}
+          <div
+            className={`w-full h-full bg-gradient-to-br from-airflow-orange to-airflow-navy rounded-full flex items-center justify-center text-white text-2xl font-bold ${avatarUrl ? 'hidden' : 'flex'}`}
+          >
+            {supporter.name.charAt(0)}
+          </div>
+          <span className="absolute -top-1 -right-1 bg-airflow-orange text-white text-xs font-semibold px-2 py-0.5 rounded-full shadow">
+            {t('ob.badge')}
+          </span>
+        </div>
+
+        <h3 className="text-xl font-bold mb-1 text-gray-800">
+          {supporter.name}
+        </h3>
+        <p className="text-sm text-gray-500 mb-1">
+          {t('ob.fromGeneration', { generations: generationsLabel })}
+        </p>
+        <p className="text-xs text-gray-400 mb-4">
+          {t('ob.term', {
+            start: supporter.term_start,
+            end: supporter.term_end,
+          })}
+        </p>
+
+        <div className="flex justify-center gap-3">
+          {supporter.email && (
+            <a
+              href={`mailto:${supporter.email}`}
+              className="w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors duration-200"
+              title={t('common.email')}
+            >
+              <FaEnvelope className="h-5 w-5 text-gray-600" />
+            </a>
+          )}
+          {supporter.github && (
+            <a
+              href={`https://github.com/${supporter.github}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors duration-200"
+              title={t('common.github')}
+            >
+              <FaGithub className="h-5 w-5 text-gray-600" />
+            </a>
+          )}
+          {supporter.linkedIn && (
+            <a
+              href={`https://linkedin.com/in/${supporter.linkedIn}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors duration-200"
+              title={t('common.linkedin')}
+            >
+              <FaLinkedin className="h-5 w-5 text-gray-600" />
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Organizers = () => {
-  const { organizers, recruitment, loading, error } = useOrganizers();
+  const { organizers, obSupporters, recruitment, loading, error } =
+    useOrganizers();
   const { t } = useTranslation('organizers');
 
   // 기수별로 분류하고 정렬
@@ -197,6 +287,27 @@ const Organizers = () => {
           </div>
         </div>
       </section>
+
+      {/* OB 서포터 */}
+      {obSupporters.length > 0 && (
+        <section className="bg-white section-padding">
+          <div className="container-max">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4 text-gray-800">
+                {t('ob.title')}
+              </h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                {t('ob.description')}
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {obSupporters.map(supporter => (
+                <OBSupporterCard key={supporter.id} supporter={supporter} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* 운영진이 하는 일 */}
       <section className="bg-white section-padding">

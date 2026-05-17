@@ -77,6 +77,19 @@ function sortOrganizers() {
     // Update the data object
     data.organizers = sortedOrganizers;
 
+    // Sort OB supporters by name and renumber ids (ob_001, ob_002, ...)
+    let obSortedCount = 0;
+    if (Array.isArray(data.ob_supporters)) {
+      const sortedOB = data.ob_supporters.sort((a, b) =>
+        a.name.localeCompare(b.name, 'ko')
+      );
+      sortedOB.forEach((ob, index) => {
+        ob.id = `ob_${String(index + 1).padStart(3, '0')}`;
+      });
+      data.ob_supporters = sortedOB;
+      obSortedCount = sortedOB.length;
+    }
+
     // Convert back to YAML with proper formatting
     const yamlString = yaml.dump(data, {
       indent: 2,
@@ -104,6 +117,11 @@ function sortOrganizers() {
         `- ${genKey}: ${count} organizers sorted by name and re-numbered`
       );
     });
+    if (obSortedCount > 0) {
+      console.log(
+        `- ob_supporters: ${obSortedCount} entries sorted by name and re-numbered (ob_NNN)`
+      );
+    }
   } catch (error) {
     console.error('Error sorting organizers.yaml:', error.message);
     process.exit(1);
