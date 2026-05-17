@@ -47,6 +47,7 @@ async function fetchUserContributions(username, githubToken) {
 
     const data = await response.json();
     const mergedPullRequests = data.items || [];
+    const totalPrCount = data.total_count ?? mergedPullRequests.length;
 
     // 2. 최근 3개 머지된 PR의 제목 추출
     const recentContributions = mergedPullRequests
@@ -64,7 +65,7 @@ async function fetchUserContributions(username, githubToken) {
       name: userData.name || username,
       githubUsername: username,
       contributions: recentContributions,
-      prCount: mergedPullRequests.length,
+      prCount: totalPrCount,
       githubUrl: `https://github.com/${username}`,
       lastUpdated: new Date().toISOString(),
     };
