@@ -1,7 +1,7 @@
 # Apache Airflow 한국인 기여자 정보
 # - contribution_type: code, docs, community, translation 등
 # - 본인 동의하에만 추가
-# - 자동 업데이트: 2026-07-03T03:23:51.447Z
+# - 자동 업데이트: 2026-07-04T03:17:29.192Z
 
 approvedContributors:
   - githubUsername: choo121600
@@ -14,12 +14,12 @@ contributors:
   - name: Yeonguk Choo
     githubUsername: choo121600
     contributions:
+      - 'Regenerate REST API permission reference to fix static check #69341'
       - 'UI E2E: Clarify HITL e2e helper parameter name and error message #68646'
       - 'i18n(ko): add missing translations(Jun 16) #68600'
-      - 'Unify Dag Code tab toolbar with Logs toolbar style #68449'
-    prCount: 151
+    prCount: 152
     githubUrl: https://github.com/choo121600
-    lastUpdated: '2026-07-03T03:23:51.444Z'
+    lastUpdated: '2026-07-04T03:17:29.190Z'
   - name: Wonseok Yang
     githubUsername: onestn
     contributions:
@@ -28,7 +28,7 @@ contributors:
       - 'i18n(Ko): add missing translations in common.json (Dec 4) #59039'
     prCount: 11
     githubUrl: https://github.com/onestn
-    lastUpdated: '2026-07-03T03:23:50.918Z'
+    lastUpdated: '2026-07-04T03:17:28.512Z'
   - name: Kyungjun Lee
     githubUsername: kyungjunleeme
     contributions:
@@ -37,7 +37,7 @@ contributors:
       - 'delete assigned variable #54708'
     prCount: 30
     githubUrl: https://github.com/kyungjunleeme
-    lastUpdated: '2026-07-03T03:23:50.943Z'
+    lastUpdated: '2026-07-04T03:17:28.636Z'
   - name: Geonwoo Kim
     githubUsername: kgw7401
     contributions:
@@ -46,7 +46,7 @@ contributors:
       - 'Provider Migration: Update beam for Airflow 3.0 compatibility #52607'
     prCount: 8
     githubUrl: https://github.com/kgw7401
-    lastUpdated: '2026-07-03T03:23:50.866Z'
+    lastUpdated: '2026-07-04T03:17:28.401Z'
   - name: NOEUN KIM
     githubUsername: noeunkim
     contributions:
@@ -55,11 +55,11 @@ contributors:
       - 'Add run_id_pattern search for Dag Run API. #52437'
     prCount: 3
     githubUrl: https://github.com/noeunkim
-    lastUpdated: '2026-07-03T03:23:50.757Z'
+    lastUpdated: '2026-07-04T03:17:28.381Z'
   - name: queryjin
     githubUsername: queryjin
     contributions:
       - 'i18n(ko): translating in components.json (Dec 4) #59040'
     prCount: 1
     githubUrl: https://github.com/queryjin
-    lastUpdated: '2026-07-03T03:23:50.755Z'
+    lastUpdated: '2026-07-04T03:17:28.447Z'
