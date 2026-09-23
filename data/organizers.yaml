@@ -10,6 +10,83 @@
 # - id는 ob_001, ob_002 형식으로 pre-commit이 이름 가나다 순으로 자동 재번호합니다
 
 organizers:
+  generation_4:
+    - id: '1'
+      name: 김건영
+      role: 운영진
+      generation: 4
+      email: kkyoung@airflow-kr.org
+    - id: '2'
+      name: 김노은
+      role: 운영진
+      generation: 4
+      email: noeunkim511@airflow-kr.org
+      linkedIn: noeunkim
+      github: noeunkim
+    - id: '3'
+      name: 김진희
+      role: 운영진
+      generation: 4
+      email: queryjin@airflow-kr.org
+      linkedIn: queryjin
+      github: queryjin
+    - id: '4'
+      name: 백형준
+      role: 운영진
+      generation: 4
+      email: vividbaek@airflow-kr.org
+    - id: '5'
+      name: 양원석
+      role: 운영진
+      generation: 4
+      email: onestone.yang@airflow-kr.org
+      linkedIn: wonseokyang-de
+      github: onestn
+    - id: '6'
+      name: 이준원
+      role: 운영진
+      generation: 4
+      email: cpprhtn@airflow-kr.org
+      linkedIn: cpprhtn
+      github: cpprhtn
+    - id: '7'
+      name: 장원용
+      role: 운영진
+      generation: 4
+      email: wonyong-jang@airflow-kr.org
+    - id: '8'
+      name: 조민성
+      role: 운영진
+      generation: 4
+      email: mscho@airflow-kr.org
+      linkedIn: mscho7969
+      github: kkumtree
+    - id: '9'
+      name: 최병호
+      role: 운영진
+      generation: 4
+      email: themars@airflow-kr.org
+    - id: '10'
+      name: 최지현
+      role: 운영진
+      generation: 4
+      email: eeeclipse@airflow-kr.org
+      linkedIn: jhchoii
+      github: eeeclipse
+    - id: '11'
+      name: 추영욱
+      role: 리더
+      generation: 4
+      email: choo121600@airflow-kr.org
+      linkedIn: yeonguk-choo
+      github: choo121600
+    - id: '12'
+      name: 한상곤
+      role: 운영진
+      generation: 4
+      email: sangkon@airflow-kr.org
+      linkedIn: sangkonhan
+      github: sigmadream
   generation_3:
     - id: '1'
       name: 김건우
