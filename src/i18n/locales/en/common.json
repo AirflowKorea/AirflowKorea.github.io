@@ -15,10 +15,10 @@
     "joinUs": "Join Us"
   },
   "footer": {
-    "title": "Airflow Korean User Group",
-    "description": "Apache Airflow Korean User Group is a community for everyone interested in data engineering and workflow management.",
+    "title": "Airflow Korea User Group",
+    "description": "Apache Airflow Korea User Group is a community for everyone interested in data engineering and workflow management.",
     "quickLinks": "Quick Links",
-    "copyright": "© 2025 Apache Airflow Korean User Group. All rights reserved.",
+    "copyright": "© 2025 Apache Airflow Korea User Group. All rights reserved.",
     "trademark": "Apache Airflow is a registered trademark of the Apache Software Foundation."
   }
 }
