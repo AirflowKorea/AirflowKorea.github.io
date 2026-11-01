@@ -1,0 +1,326 @@
+{
+  "title": "Apache Airflow & Magpie Asia 2026",
+  "dateLabel": "Date",
+  "date": "Sat, Nov 21, 2026 · 10:00 – 17:00 KST",
+  "venueLabel": "Venue",
+  "venue": "5F Elice, 445 Teheran-ro, Gangnam-gu, Seoul (no parking)",
+  "ticket": "Get tickets",
+  "scheduleTitle": "Schedule",
+  "scheduleHint": "Select a talk to read its abstract.",
+  "timeLabel": "Time",
+  "periods": {
+    "morning": "Morning",
+    "afternoon": "Afternoon",
+    "closing": "Closing",
+    "evening": "Evening"
+  },
+  "rooms": {
+    "room1": "Room 1",
+    "room2": "Room 2"
+  },
+  "tags": {
+    "keynote": "Keynote",
+    "sprint": "Sprint"
+  },
+  "labels": {
+    "format": "Format",
+    "track": "Track",
+    "audience": "Audience",
+    "language": "Language"
+  },
+  "sessions": {
+    "checkin": {
+      "title": "Check-in"
+    },
+    "opening": {
+      "title": "Opening: 2026 Community Recap & Organizer Introductions",
+      "speaker": "Organizers"
+    },
+    "keynote": {
+      "title": "Eight Times the Reports: Surviving the AI Vulnerability Flood at Apache Airflow",
+      "speaker": "Jarek Potiuk",
+      "detail": {
+        "format": "Talk (30–40 min)",
+        "audience": "Maintainers, PMC members and security teams",
+        "language": "English",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "In 2025 Airflow's security team tracked about 30 reports. In 2026 we passed 250, roughly eight times as many, and in one summer month we got more than in all of 2024. Most of them read like a serious finding: confident, detailed, often with a CVSS score attached."
+          },
+          {
+            "type": "p",
+            "text": "The twist is that the flood isn't all junk. Plenty of reports were invalid or only hardening suggestions, but well over 100 became CVEs, around six times as many as the year before. AI tools find real bugs as well as imaginary ones. That makes it worse, not better: you can't ignore the flood, and you can't afford to read it all by hand."
+          },
+          {
+            "type": "p",
+            "text": "So we fought AI with AI. Apache Magpie:"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "imports reports from the mailing list into a tracker",
+              "suggests a classification",
+              "catches duplicates and helps allocate CVEs",
+              "keeps every tracker in sync with its email thread and fix PRs",
+              "drafts replies to reporters"
+            ]
+          },
+          {
+            "type": "p",
+            "text": "A human on the security team approves every step."
+          },
+          {
+            "type": "p",
+            "text": "This is the story from the trenches: what the flood looks like, what we automated and what we never will, the mistakes along the way, and how your project can set up the same defences before the wave reaches you."
+          }
+        ]
+      }
+    },
+    "airflow101": {
+      "title": "Apache Airflow 101",
+      "speaker": "Organizers",
+      "detail": {
+        "format": "Intro session (approx. 25 min)",
+        "audience": "Newcomers to Airflow, or anyone who has only heard the name",
+        "language": "Korean",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "An introductory session for people meeting Airflow for the first time. To make the rest of the day's talks easy to follow, we start from the basics: what Apache Airflow is and why people use it."
+          },
+          {
+            "type": "sub",
+            "text": "Goals of this session"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Understand the problem Airflow solves: defining recurring data jobs as code, scheduling them and monitoring them.",
+              "Learn the core concepts: Dags, tasks, operators and the scheduler.",
+              "Walk through a simple Dag to see how a workflow is written and run.",
+              "Get a quick look at what changed in Airflow 3.x, as background for the talks later in the day."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "No Airflow experience needed. After this session, the terms and examples in the afternoon talks will be much easier to follow."
+          }
+        ]
+      }
+    },
+    "sprintIntro": {
+      "title": "Sprint Introduction & Group Photo",
+      "speaker": "Jarek Potiuk, Yeonguk Choo"
+    },
+    "lunch": {
+      "title": "Lunch (provided)"
+    },
+    "soloDev": {
+      "title": "Surviving as a Solo Developer with Airflow",
+      "subtitle": "From Data Collection to Operations Automation",
+      "speaker": "Seonyeop Lee",
+      "detail": {
+        "format": "Regular Talk (approx. 30 min)",
+        "track": "Connection Track",
+        "language": "Korean",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "As the only developer on a web service, I had to handle much more than building features: collecting and refreshing data, scheduling recurring jobs, and checking that the service was healthy."
+          },
+          {
+            "type": "p",
+            "text": "To cut down on that repetitive work, I adopted Apache Airflow to automate data collection and built an environment where many jobs can be managed in one place."
+          },
+          {
+            "type": "p",
+            "text": "This talk introduces a data pipeline that connects Airflow 3.x with external APIs and PostgreSQL. I'll walk through how its scope grew from collecting and refreshing data to change detection, alerting and generating static JSON for the website, and share the lessons learned from running it in production."
+          }
+        ]
+      }
+    },
+    "pyconTw": {
+      "title": "Our PyCon TW Expedition",
+      "subtitle": "What the Airflow Korea organizers brought back from a conference abroad",
+      "speaker": "Organizers",
+      "detail": {
+        "format": "Recap session (approx. 35 min)",
+        "language": "Korean",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "The organizers of the Apache Airflow Korea User Group share their trip to PyCon TW (PyCon Taiwan). This recap looks back on what we did at an overseas conference and what we saw, heard and learned there."
+          },
+          {
+            "type": "sub",
+            "text": "What we'll cover"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Why we went to PyCon TW and what we did on site",
+              "What stood out when meeting Python and data communities from another country",
+              "The insights we brought home, and how we can put them to work in the Korean Airflow community"
+            ]
+          },
+          {
+            "type": "p",
+            "text": "If you're thinking about attending or speaking at a conference abroad, or you're interested in community work, come and listen."
+          }
+        ]
+      }
+    },
+    "migration": {
+      "title": "Best Practices Learned from Migrating Airflow 2.x to 3.x",
+      "speaker": "Sanggon Han",
+      "detail": {
+        "format": "Regular Talk (approx. 30 min)",
+        "track": "3.x version Track",
+        "language": "Korean",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "We ran Airflow 2.x for about three years and believed we had built up solid experience along the way. This talk is a short retrospective on how that same experience ended up pushing our team into late nights on 3.x."
+          },
+          {
+            "type": "p",
+            "text": "When the things we considered best practices start holding us back, what decision should we have made?"
+          }
+        ]
+      }
+    },
+    "break": {
+      "title": "Break"
+    },
+    "cdcMerge": {
+      "title": "CDC MERGE Without Spark",
+      "subtitle": "Moving a DocumentDB CDC Pipeline to Airflow + DuckDB + delta-rs",
+      "speaker": "Taeyeon Kim",
+      "detail": {
+        "format": "Regular Talk (approx. 30 min)",
+        "track": "3.x version Track",
+        "language": "Korean",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "This talk shares how we moved the batch job that applies CDC data from our design-service DocumentDB to Delta Lake off Spark, running it instead with DuckDB + delta-rs on Airflow's KubernetesPodOperator."
+          },
+          {
+            "type": "p",
+            "text": "I'll explain how we validated the move by running the Spark Dag and the DuckDB Dag side by side on the same data, and how we solved the problems we ran into along the way:"
+          },
+          {
+            "type": "ul",
+            "items": [
+              "OOM from raw MongoDB events that keep the whole document as a string — deduplicate first, parse only the remaining records with an Arrow UDF, and MERGE partition by partition",
+              "Finding the partition for delete events that carry no document — file pruning based on parquet statistics, using the timestamp prefix of the ObjectId",
+              "Silent data loss from sampling-based schema inference — treat the target schema as the reference and keep unknown keys in a rescued column",
+              "DuckDB memory settings inside a container — what to leave to cgroup auto-detection and what to handle yourself (spill, refreshing STS credentials)"
+            ]
+          }
+        ]
+      }
+    },
+    "llm": {
+      "title": "Adding LLMs to Airflow",
+      "subtitle": "Lessons from Building a Product Catalog Enrichment Pipeline",
+      "speaker": "Sangkyoon Nam",
+      "detail": {
+        "format": "Regular Talk (approx. 30 min)",
+        "track": "Data Track",
+        "language": "Korean",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Put LLM calls into an existing data pipeline and response formats, partial failures, quotas and observability all become problems at once. This talk shares what I ran into while validating Airflow 3 and @task.llm from the Common AI provider 1.0 with a PoC that extracts product categories and attributes to build a catalog feed for ads."
+          },
+          {
+            "type": "p",
+            "text": "Turning an LLM call into a task with @task.llm and Pydantic structured output is the easy part. But once you split the calls across many tasks with dynamic task mapping, you need extra handling to collect the results back against their original inputs when only some of them fail. Models also return values that aren't on the allowed list, and task state alone tells you little about how the LLM calls inside a task went."
+          },
+          {
+            "type": "p",
+            "text": "I'll show how the PoC solved these problems and, drawing on my experience contributing to OpenTelemetry's Python GenAI instrumentation, explain how to look inside LLM tasks with Airflow tracing and GenAI spans. Finally, I'll sum up when Airflow is and isn't a good fit for batch LLM workloads, so anyone planning to add LLM calls to Airflow has criteria to weigh before adopting it."
+          }
+        ]
+      }
+    },
+    "sprint": {
+      "title": "Be the Human in the Loop: Your First PR to Apache Airflow and Apache Magpie",
+      "speaker": "Jarek Potiuk, Yeonguk Choo",
+      "detail": {
+        "format": "Hands-on workshop · about 4 hours",
+        "audience": "First-time open source contributors (basic Python helps; no Airflow or AI experience needed)",
+        "blocks": [
+          {
+            "type": "p",
+            "text": "Airflow now gets well over 10,000 pull requests a year, and thousands are closed without merging. Many of those are AI-generated changes that nobody had really written or checked. A small, tested first contribution that is clearly yours stands out more now than ever. This workshop shows you how to make one, in two projects."
+          },
+          {
+            "type": "sub",
+            "text": "Part 1: Apache Airflow (about 2 hours)"
+          },
+          {
+            "type": "p",
+            "text": "This is the contributor workshop I've run at Airflow Summit, PyCon and Outreachy since 2021, brought up to date."
+          },
+          {
+            "type": "ul",
+            "items": [
+              "Set up the Airflow development environment (Breeze) and run the tests locally.",
+              "Find your way around a large codebase.",
+              "Pick a good first issue and make the change.",
+              "Open a pull request that reviewers are happy to see: a focused diff, a clear description, and tests that pass."
+            ]
+          },
+          {
+            "type": "p",
+            "text": "We'll also cover what happens after you open the PR: review comments, CI failures, rebasing, and how long things usually take."
+          },
+          {
+            "type": "sub",
+            "text": "Part 2: Apache Magpie (about 1.5 hours)"
+          },
+          {
+            "type": "p",
+            "text": "Magpie is a newer ASF project that helps maintainers cope with the AI flood. Much of it is written in plain English, as agent instructions in Markdown files, so clearer wording, a better test case or an improved reply template is a real contribution even if you don't write much code. We'll use Magpie's own newcomer tools to explain an issue and check your PR before you open it."
+          },
+          {
+            "type": "sub",
+            "text": "Throughout: using AI without becoming the problem"
+          },
+          {
+            "type": "p",
+            "text": "We'll talk openly about what AI tools are good for when contributing, what annoys reviewers, what the ASF expects (including how to disclose AI help in your commits), and why you must understand every line you submit."
+          },
+          {
+            "type": "sub",
+            "text": "Bring"
+          },
+          {
+            "type": "p",
+            "text": "A laptop with Git, Docker and a GitHub account. Setup notes go out before the workshop."
+          },
+          {
+            "type": "sub",
+            "text": "You leave with"
+          },
+          {
+            "type": "p",
+            "text": "A working dev setup and at least one open pull request."
+          }
+        ]
+      }
+    },
+    "closing": {
+      "title": "Lightning Talks & Closing",
+      "subtitle": "Including sprint results",
+      "speaker": "Organizers"
+    },
+    "dinner": {
+      "title": "Conference Dinner",
+      "subtitle": "A networking dinner with speakers, attendees and organizers"
+    }
+  }
+}

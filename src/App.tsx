@@ -7,6 +7,7 @@ import Events from './pages/Events';
 import Organizers from './pages/Organizers';
 import Contributors from './pages/Contributors';
 import Channels from './pages/Channels';
+import AirflowMagpieMeetup from './pages/AirflowMagpieMeetup';
 
 function App() {
   return (
@@ -21,6 +22,10 @@ function App() {
             <Route path="/organizers" element={<Organizers />} />
             <Route path="/contributors" element={<Contributors />} />
             <Route path="/channels" element={<Channels />} />
+            <Route
+              path="/airflow-magpie-meetup"
+              element={<AirflowMagpieMeetup />}
+            />
           </Routes>
         </main>
         <Footer />

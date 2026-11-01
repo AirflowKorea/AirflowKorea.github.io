@@ -10,6 +10,7 @@ import koEvents from './locales/ko/events.json';
 import koOrganizers from './locales/ko/organizers.json';
 import koContributors from './locales/ko/contributors.json';
 import koChannels from './locales/ko/channels.json';
+import koMagpieMeetup from './locales/ko/magpieMeetup.json';
 
 // English translations
 import enCommon from './locales/en/common.json';
@@ -19,6 +20,7 @@ import enEvents from './locales/en/events.json';
 import enOrganizers from './locales/en/organizers.json';
 import enContributors from './locales/en/contributors.json';
 import enChannels from './locales/en/channels.json';
+import enMagpieMeetup from './locales/en/magpieMeetup.json';
 
 const resources = {
   ko: {
@@ -29,6 +31,7 @@ const resources = {
     organizers: koOrganizers,
     contributors: koContributors,
     channels: koChannels,
+    magpieMeetup: koMagpieMeetup,
   },
   en: {
     common: enCommon,
@@ -38,6 +41,7 @@ const resources = {
     organizers: enOrganizers,
     contributors: enContributors,
     channels: enChannels,
+    magpieMeetup: enMagpieMeetup,
   },
 };
 
@@ -59,6 +63,7 @@ i18n
       'organizers',
       'contributors',
       'channels',
+      'magpieMeetup',
     ],
 
     detection: {
