@@ -74,7 +74,7 @@ const SCHEDULE: Period[] = [
   },
   {
     id: 'evening',
-    slots: [{ id: 'dinner', start: '17:00', end: '21:30', kind: 'session' }],
+    slots: [{ id: 'dinner', start: '18:00', end: '21:30', kind: 'session' }],
   },
 ];
 
