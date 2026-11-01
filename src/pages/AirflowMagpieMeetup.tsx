@@ -118,12 +118,47 @@ const DetailBlocks = ({ blocks }: { blocks: Block[] }) => (
   </div>
 );
 
-/** Time column width, shared by the header and every row so columns line up. */
-const TIME_COLS =
-  'grid-cols-[4.5rem_minmax(0,1fr)] sm:grid-cols-[6.5rem_minmax(0,1fr)] md:grid-cols-[7rem_minmax(0,1fr)]';
+/**
+ * Breakpoint-dependent classes. The page uses the responsive set; the downloadable image
+ * always uses the wide set so it looks the same whatever device it is saved from.
+ * Class strings stay literal so Tailwind can see them.
+ */
+const LAYOUTS = {
+  responsive: {
+    rowCols:
+      'grid-cols-[4.5rem_minmax(0,1fr)] sm:grid-cols-[6.5rem_minmax(0,1fr)] md:grid-cols-[7rem_minmax(0,1fr)]',
+    timePad: 'pl-4 sm:pl-6',
+    sessionPad: 'pr-4 sm:pr-6',
+    headingPad: 'px-4 sm:px-6',
+    roomHeader: 'hidden lg:grid',
+    parallel:
+      'lg:grid lg:grid-cols-[calc(7rem_+_(100%_-_7rem)_/_2)_minmax(0,1fr)]',
+    room2Column: 'lg:border-l lg:border-t',
+    // Below lg the Room 2 row is an ordinary row; side by side it drops its own time column.
+    room2Row:
+      'grid grid-cols-[4.5rem_minmax(0,1fr)] sm:grid-cols-[6.5rem_minmax(0,1fr)] md:grid-cols-[7rem_minmax(0,1fr)] lg:block lg:border-t-0 lg:[&>div:first-child]:hidden',
+    roomLabel: 'lg:hidden',
+  },
+  wide: {
+    rowCols: 'grid-cols-[7rem_minmax(0,1fr)]',
+    timePad: 'pl-6',
+    sessionPad: 'pr-6',
+    headingPad: 'px-6',
+    roomHeader: 'grid',
+    parallel: 'grid grid-cols-[calc(7rem_+_(100%_-_7rem)_/_2)_minmax(0,1fr)]',
+    room2Column: 'border-l border-t',
+    room2Row: 'block border-t-0 [&>div:first-child]:hidden',
+    roomLabel: 'hidden',
+  },
+};
 
-const TimeLabel = ({ slot }: { slot: Slot }) => (
-  <div className="py-4 pl-4 tabular-nums sm:pl-6">
+type Layout = (typeof LAYOUTS)['responsive'];
+
+/** Content width of the schedule at the widest page layout; the image is rendered at it. */
+const EXPORT_WIDTH = 1152;
+
+const TimeLabel = ({ slot, layout }: { slot: Slot; layout: Layout }) => (
+  <div className={`py-4 tabular-nums ${layout.timePad}`}>
     <span
       className={`block text-sm font-semibold ${slot.kind === 'break' ? 'text-gray-500' : 'text-gray-900'}`}
     >
@@ -162,13 +197,17 @@ const DetailPanel = ({ id, detail }: { id: string; detail: SessionDetail }) => {
 const SessionBody = ({
   slot,
   session,
+  layout,
   roomLabel,
+  interactive,
   isOpen,
   onToggle,
 }: {
   slot: Slot;
   session: Session;
+  layout: Layout;
   roomLabel?: string;
+  interactive: boolean;
   isOpen: boolean;
   onToggle: () => void;
 }) => {
@@ -191,7 +230,9 @@ const SessionBody = ({
             </span>
           )}
           {roomLabel && (
-            <span className="text-xs font-medium text-gray-500 lg:hidden">
+            <span
+              className={`text-xs font-medium text-gray-500 ${layout.roomLabel}`}
+            >
               {roomLabel}
             </span>
           )}
@@ -218,7 +259,19 @@ const SessionBody = ({
   );
 
   if (!detail) {
-    return <div className="min-w-0 py-4 pl-3 pr-4 sm:pr-6">{summary}</div>;
+    return (
+      <div className={`min-w-0 py-4 pl-3 ${layout.sessionPad}`}>{summary}</div>
+    );
+  }
+
+  if (!interactive) {
+    // Keep the toggle's footprint so titles wrap exactly as on the page.
+    return (
+      <div className={`flex min-w-0 gap-3 py-4 pl-3 ${layout.sessionPad}`}>
+        {summary}
+        <span aria-hidden="true" className="h-5 w-5 shrink-0" />
+      </div>
+    );
   }
 
   return (
@@ -228,12 +281,11 @@ const SessionBody = ({
         onClick={onToggle}
         aria-expanded={isOpen}
         aria-controls={panelId}
-        className="group flex w-full gap-3 py-4 pl-3 pr-4 text-left transition-colors hover:bg-slate-50/80 focus-visible:bg-slate-50/80 sm:pr-6"
+        className={`group flex w-full gap-3 py-4 pl-3 text-left transition-colors hover:bg-slate-50/80 focus-visible:bg-slate-50/80 ${layout.sessionPad}`}
       >
         {summary}
         <ChevronDownIcon
           aria-hidden="true"
-          data-export="exclude"
           className={`mt-1 h-5 w-5 shrink-0 text-gray-400 transition-transform duration-200 group-hover:text-primary-blue ${
             isOpen ? 'rotate-180 text-primary-blue' : ''
           }`}
@@ -244,47 +296,96 @@ const SessionBody = ({
   );
 };
 
-/** Elements marked `data-export="exclude"` only make sense on the interactive page. */
-const isExportable = (node: Node) =>
-  !(node instanceof Element && node.getAttribute('data-export') === 'exclude');
+const ScheduleTable = ({
+  layout,
+  interactive,
+  openIds,
+  onToggle,
+}: {
+  layout: Layout;
+  interactive: boolean;
+  openIds: Set<string>;
+  onToggle?: (id: string) => void;
+}) => {
+  const { t } = useTranslation('magpieMeetup');
+
+  /** One schedule row: time on the left, session on the right. */
+  const renderRow = (
+    slot: Slot,
+    roomLabel?: string,
+    rowClass = `grid ${layout.rowCols}`
+  ) => {
+    const isOpen = openIds.has(slot.id);
+    const background =
+      slot.kind === 'break' ? 'bg-gray-50' : isOpen ? 'bg-slate-50/70' : '';
+    return (
+      <div
+        key={slot.id}
+        className={`border-t border-gray-200 ${background} ${rowClass}`}
+      >
+        <TimeLabel slot={slot} layout={layout} />
+        <SessionBody
+          slot={slot}
+          session={t(`sessions.${slot.id}`, { returnObjects: true }) as Session}
+          layout={layout}
+          roomLabel={roomLabel}
+          interactive={interactive}
+          isOpen={isOpen}
+          onToggle={() => onToggle?.(slot.id)}
+        />
+      </div>
+    );
+  };
+
+  return (
+    <div className="overflow-hidden rounded-xl border border-gray-200">
+      <div
+        className={`${layout.roomHeader} grid-cols-[7rem_minmax(0,1fr)_minmax(0,1fr)] text-xs font-semibold text-gray-500`}
+      >
+        <div className="px-6 py-3">{t('timeLabel')}</div>
+        <div className="py-3 pl-3">{t('rooms.room1')}</div>
+        <div className="border-l border-gray-200 py-3 pl-3">
+          {t('rooms.room2')}
+        </div>
+      </div>
+
+      {SCHEDULE.map(period => (
+        <div key={period.id}>
+          <h3
+            className={`border-t border-gray-200 bg-gray-50 py-2.5 text-sm font-bold text-gray-900 ${layout.headingPad}`}
+          >
+            {t(`periods.${period.id}`)}
+          </h3>
+          {period.parallel ? (
+            // Room 2 is its own column so opening either side never stretches the other.
+            <div className={layout.parallel}>
+              <div>
+                {period.slots.map(slot => renderRow(slot, t('rooms.room1')))}
+              </div>
+              <div
+                className={`border-gray-200 bg-cyan-50/40 ${layout.room2Column}`}
+              >
+                {renderRow(period.parallel, t('rooms.room2'), layout.room2Row)}
+              </div>
+            </div>
+          ) : (
+            period.slots.map(slot => renderRow(slot))
+          )}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+const NO_OPEN_SESSIONS = new Set<string>();
 
 const AirflowMagpieMeetup = () => {
   const { t, i18n } = useTranslation('magpieMeetup');
   const [openIds, setOpenIds] = useState<Set<string>>(new Set());
-  const scheduleRef = useRef<HTMLDivElement>(null);
+  const exportRef = useRef<HTMLDivElement>(null);
   const [exportState, setExportState] = useState<'idle' | 'saving' | 'error'>(
     'idle'
   );
-
-  const downloadSchedule = async () => {
-    const node = scheduleRef.current;
-    if (!node) return;
-    // Export the plain timetable: collapse open abstracts for the capture, then restore them.
-    const previouslyOpen = openIds;
-    flushSync(() => {
-      setOpenIds(new Set());
-      setExportState('saving');
-    });
-    try {
-      const dataUrl = await toPng(node, {
-        pixelRatio: 2,
-        backgroundColor: '#ffffff',
-        filter: isExportable,
-        // The wrapper's negative margin only offsets its padding on the page.
-        style: { margin: '0' },
-      });
-      const link = document.createElement('a');
-      link.href = dataUrl;
-      link.download = `airflow-magpie-asia-2026-schedule-${i18n.language}.png`;
-      link.click();
-      setExportState('idle');
-    } catch (error) {
-      console.error('Failed to export schedule image', error);
-      setExportState('error');
-    } finally {
-      setOpenIds(previouslyOpen);
-    }
-  };
 
   const toggle = (id: string) =>
     setOpenIds(prev => {
@@ -294,26 +395,26 @@ const AirflowMagpieMeetup = () => {
       return next;
     });
 
-  /** One schedule row: time on the left, session on the right. */
-  const renderRow = (slot: Slot, roomLabel?: string, className = '') => {
-    const isOpen = openIds.has(slot.id);
-    const background =
-      slot.kind === 'break' ? 'bg-gray-50' : isOpen ? 'bg-slate-50/70' : '';
-    return (
-      <div
-        key={slot.id}
-        className={`grid ${TIME_COLS} border-t border-gray-200 ${background} ${className}`}
-      >
-        <TimeLabel slot={slot} />
-        <SessionBody
-          slot={slot}
-          session={t(`sessions.${slot.id}`, { returnObjects: true }) as Session}
-          roomLabel={roomLabel}
-          isOpen={isOpen}
-          onToggle={() => toggle(slot.id)}
-        />
-      </div>
-    );
+  const downloadSchedule = async () => {
+    // Mount the off-screen wide copy, capture it, then unmount it.
+    flushSync(() => setExportState('saving'));
+    const node = exportRef.current;
+    if (!node) return;
+    try {
+      await document.fonts.ready;
+      const dataUrl = await toPng(node, {
+        pixelRatio: 2,
+        backgroundColor: '#ffffff',
+      });
+      const link = document.createElement('a');
+      link.href = dataUrl;
+      link.download = `airflow-magpie-asia-2026-schedule-${i18n.language}.png`;
+      link.click();
+      setExportState('idle');
+    } catch (error) {
+      console.error('Failed to export schedule image', error);
+      setExportState('error');
+    }
   };
 
   return (
@@ -356,73 +457,60 @@ const AirflowMagpieMeetup = () => {
       </section>
 
       <section className="mx-auto max-w-6xl px-5 py-14 sm:px-6 md:py-20">
-        <div ref={scheduleRef} className="-m-6 bg-white p-6">
-          <div className="mb-8 flex flex-wrap items-end justify-between gap-x-6 gap-y-4">
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900 md:text-3xl">
-              {t('scheduleTitle')}
-            </h2>
-            <div
-              data-export="exclude"
-              className="flex flex-wrap items-center gap-x-4 gap-y-2"
+        <div className="mb-8 flex flex-wrap items-end justify-between gap-x-6 gap-y-4">
+          <h2 className="text-2xl font-bold tracking-tight text-gray-900 md:text-3xl">
+            {t('scheduleTitle')}
+          </h2>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <p className="text-sm text-gray-500">{t('scheduleHint')}</p>
+            <button
+              type="button"
+              onClick={downloadSchedule}
+              disabled={exportState === 'saving'}
+              className="inline-flex items-center gap-2 rounded-lg border border-solid border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-800 shadow-sm transition-colors hover:border-primary-blue hover:text-primary-blue disabled:cursor-wait disabled:opacity-60"
             >
-              <p className="text-sm text-gray-500">{t('scheduleHint')}</p>
-              <button
-                type="button"
-                onClick={downloadSchedule}
-                disabled={exportState === 'saving'}
-                className="inline-flex items-center gap-2 rounded-lg border border-solid border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-800 shadow-sm transition-colors hover:border-primary-blue hover:text-primary-blue disabled:cursor-wait disabled:opacity-60"
-              >
-                <ArrowDownTrayIcon aria-hidden="true" className="h-4 w-4" />
-                {exportState === 'saving'
-                  ? t('download.saving')
-                  : t('download.button')}
-              </button>
-              {exportState === 'error' && (
-                <p role="alert" className="w-full text-sm text-red-700">
-                  {t('download.error')}
-                </p>
-              )}
-            </div>
-          </div>
-
-          <div className="overflow-hidden rounded-xl border border-gray-200">
-            <div className="hidden grid-cols-[7rem_minmax(0,1fr)_minmax(0,1fr)] text-xs font-semibold text-gray-500 lg:grid">
-              <div className="px-6 py-3">{t('timeLabel')}</div>
-              <div className="py-3 pl-3">{t('rooms.room1')}</div>
-              <div className="border-l border-gray-200 py-3 pl-3">
-                {t('rooms.room2')}
-              </div>
-            </div>
-
-            {SCHEDULE.map(period => (
-              <div key={period.id}>
-                <h3 className="border-t border-gray-200 bg-gray-50 px-4 py-2.5 text-sm font-bold text-gray-900 sm:px-6">
-                  {t(`periods.${period.id}`)}
-                </h3>
-                {period.parallel ? (
-                  // Room 2 is its own column so opening either side never stretches the other.
-                  <div className="lg:grid lg:grid-cols-[calc(7rem_+_(100%_-_7rem)_/_2)_minmax(0,1fr)]">
-                    <div>
-                      {period.slots.map(slot =>
-                        renderRow(slot, t('rooms.room1'))
-                      )}
-                    </div>
-                    <div className="border-gray-200 bg-cyan-50/40 lg:border-l lg:border-t">
-                      {renderRow(
-                        period.parallel,
-                        t('rooms.room2'),
-                        'lg:block lg:border-t-0 lg:[&>div:first-child]:hidden'
-                      )}
-                    </div>
-                  </div>
-                ) : (
-                  period.slots.map(slot => renderRow(slot))
-                )}
-              </div>
-            ))}
+              <ArrowDownTrayIcon aria-hidden="true" className="h-4 w-4" />
+              {exportState === 'saving'
+                ? t('download.saving')
+                : t('download.button')}
+            </button>
+            {exportState === 'error' && (
+              <p role="alert" className="w-full text-sm text-red-700">
+                {t('download.error')}
+              </p>
+            )}
           </div>
         </div>
+
+        <ScheduleTable
+          layout={LAYOUTS.responsive}
+          interactive
+          openIds={openIds}
+          onToggle={toggle}
+        />
       </section>
+
+      {exportState === 'saving' && (
+        <div
+          aria-hidden="true"
+          className="pointer-events-none fixed left-[-10000px] top-0"
+        >
+          <div
+            ref={exportRef}
+            style={{ width: EXPORT_WIDTH }}
+            className="break-keep bg-white px-6 py-14"
+          >
+            <h2 className="mb-8 text-3xl font-bold tracking-tight text-gray-900">
+              {t('scheduleTitle')}
+            </h2>
+            <ScheduleTable
+              layout={LAYOUTS.wide}
+              interactive={false}
+              openIds={NO_OPEN_SESSIONS}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
