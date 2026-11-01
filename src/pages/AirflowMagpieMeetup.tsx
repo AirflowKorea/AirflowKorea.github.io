@@ -408,7 +408,7 @@ const AirflowMagpieMeetup = () => {
       });
       const link = document.createElement('a');
       link.href = dataUrl;
-      link.download = `airflow-magpie-asia-2026-schedule-${i18n.language}.png`;
+      link.download = `airflow-magpie-meetup-2026-schedule-${i18n.language}.png`;
       link.click();
       setExportState('idle');
     } catch (error) {
