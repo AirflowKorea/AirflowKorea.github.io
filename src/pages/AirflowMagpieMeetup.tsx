@@ -1,6 +1,9 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import { flushSync } from 'react-dom';
+import { toPng } from 'html-to-image';
 import { useTranslation } from 'react-i18next';
 import {
+  ArrowDownTrayIcon,
   ArrowUpRightIcon,
   CalendarDaysIcon,
   ChevronDownIcon,
@@ -230,6 +233,7 @@ const SessionBody = ({
         {summary}
         <ChevronDownIcon
           aria-hidden="true"
+          data-export="exclude"
           className={`mt-1 h-5 w-5 shrink-0 text-gray-400 transition-transform duration-200 group-hover:text-primary-blue ${
             isOpen ? 'rotate-180 text-primary-blue' : ''
           }`}
@@ -240,9 +244,47 @@ const SessionBody = ({
   );
 };
 
+/** Elements marked `data-export="exclude"` only make sense on the interactive page. */
+const isExportable = (node: Node) =>
+  !(node instanceof Element && node.getAttribute('data-export') === 'exclude');
+
 const AirflowMagpieMeetup = () => {
-  const { t } = useTranslation('magpieMeetup');
+  const { t, i18n } = useTranslation('magpieMeetup');
   const [openIds, setOpenIds] = useState<Set<string>>(new Set());
+  const scheduleRef = useRef<HTMLDivElement>(null);
+  const [exportState, setExportState] = useState<'idle' | 'saving' | 'error'>(
+    'idle'
+  );
+
+  const downloadSchedule = async () => {
+    const node = scheduleRef.current;
+    if (!node) return;
+    // Export the plain timetable: collapse open abstracts for the capture, then restore them.
+    const previouslyOpen = openIds;
+    flushSync(() => {
+      setOpenIds(new Set());
+      setExportState('saving');
+    });
+    try {
+      const dataUrl = await toPng(node, {
+        pixelRatio: 2,
+        backgroundColor: '#ffffff',
+        filter: isExportable,
+        // The wrapper's negative margin only offsets its padding on the page.
+        style: { margin: '0' },
+      });
+      const link = document.createElement('a');
+      link.href = dataUrl;
+      link.download = `airflow-magpie-asia-2026-schedule-${i18n.language}.png`;
+      link.click();
+      setExportState('idle');
+    } catch (error) {
+      console.error('Failed to export schedule image', error);
+      setExportState('error');
+    } finally {
+      setOpenIds(previouslyOpen);
+    }
+  };
 
   const toggle = (id: string) =>
     setOpenIds(prev => {
@@ -314,48 +356,71 @@ const AirflowMagpieMeetup = () => {
       </section>
 
       <section className="mx-auto max-w-6xl px-5 py-14 sm:px-6 md:py-20">
-        <div className="mb-8 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900 md:text-3xl">
-            {t('scheduleTitle')}
-          </h2>
-          <p className="text-sm text-gray-500">{t('scheduleHint')}</p>
-        </div>
-
-        <div className="overflow-hidden rounded-xl border border-gray-200">
-          <div className="hidden grid-cols-[7rem_minmax(0,1fr)_minmax(0,1fr)] text-xs font-semibold text-gray-500 lg:grid">
-            <div className="px-6 py-3">{t('timeLabel')}</div>
-            <div className="py-3 pl-3">{t('rooms.room1')}</div>
-            <div className="border-l border-gray-200 py-3 pl-3">
-              {t('rooms.room2')}
+        <div ref={scheduleRef} className="-m-6 bg-white p-6">
+          <div className="mb-8 flex flex-wrap items-end justify-between gap-x-6 gap-y-4">
+            <h2 className="text-2xl font-bold tracking-tight text-gray-900 md:text-3xl">
+              {t('scheduleTitle')}
+            </h2>
+            <div
+              data-export="exclude"
+              className="flex flex-wrap items-center gap-x-4 gap-y-2"
+            >
+              <p className="text-sm text-gray-500">{t('scheduleHint')}</p>
+              <button
+                type="button"
+                onClick={downloadSchedule}
+                disabled={exportState === 'saving'}
+                className="inline-flex items-center gap-2 rounded-lg border border-solid border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-800 shadow-sm transition-colors hover:border-primary-blue hover:text-primary-blue disabled:cursor-wait disabled:opacity-60"
+              >
+                <ArrowDownTrayIcon aria-hidden="true" className="h-4 w-4" />
+                {exportState === 'saving'
+                  ? t('download.saving')
+                  : t('download.button')}
+              </button>
+              {exportState === 'error' && (
+                <p role="alert" className="w-full text-sm text-red-700">
+                  {t('download.error')}
+                </p>
+              )}
             </div>
           </div>
 
-          {SCHEDULE.map(period => (
-            <div key={period.id}>
-              <h3 className="border-t border-gray-200 bg-gray-50 px-4 py-2.5 text-sm font-bold text-gray-900 sm:px-6">
-                {t(`periods.${period.id}`)}
-              </h3>
-              {period.parallel ? (
-                // Room 2 is its own column so opening either side never stretches the other.
-                <div className="lg:grid lg:grid-cols-[calc(7rem_+_(100%_-_7rem)_/_2)_minmax(0,1fr)]">
-                  <div>
-                    {period.slots.map(slot =>
-                      renderRow(slot, t('rooms.room1'))
-                    )}
-                  </div>
-                  <div className="border-gray-200 bg-cyan-50/40 lg:border-l lg:border-t">
-                    {renderRow(
-                      period.parallel,
-                      t('rooms.room2'),
-                      'lg:block lg:border-t-0 lg:[&>div:first-child]:hidden'
-                    )}
-                  </div>
-                </div>
-              ) : (
-                period.slots.map(slot => renderRow(slot))
-              )}
+          <div className="overflow-hidden rounded-xl border border-gray-200">
+            <div className="hidden grid-cols-[7rem_minmax(0,1fr)_minmax(0,1fr)] text-xs font-semibold text-gray-500 lg:grid">
+              <div className="px-6 py-3">{t('timeLabel')}</div>
+              <div className="py-3 pl-3">{t('rooms.room1')}</div>
+              <div className="border-l border-gray-200 py-3 pl-3">
+                {t('rooms.room2')}
+              </div>
             </div>
-          ))}
+
+            {SCHEDULE.map(period => (
+              <div key={period.id}>
+                <h3 className="border-t border-gray-200 bg-gray-50 px-4 py-2.5 text-sm font-bold text-gray-900 sm:px-6">
+                  {t(`periods.${period.id}`)}
+                </h3>
+                {period.parallel ? (
+                  // Room 2 is its own column so opening either side never stretches the other.
+                  <div className="lg:grid lg:grid-cols-[calc(7rem_+_(100%_-_7rem)_/_2)_minmax(0,1fr)]">
+                    <div>
+                      {period.slots.map(slot =>
+                        renderRow(slot, t('rooms.room1'))
+                      )}
+                    </div>
+                    <div className="border-gray-200 bg-cyan-50/40 lg:border-l lg:border-t">
+                      {renderRow(
+                        period.parallel,
+                        t('rooms.room2'),
+                        'lg:block lg:border-t-0 lg:[&>div:first-child]:hidden'
+                      )}
+                    </div>
+                  </div>
+                ) : (
+                  period.slots.map(slot => renderRow(slot))
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>

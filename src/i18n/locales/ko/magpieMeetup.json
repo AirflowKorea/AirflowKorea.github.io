@@ -8,6 +8,11 @@
   "scheduleTitle": "시간표",
   "scheduleHint": "발표를 누르면 자세한 소개를 볼 수 있어요.",
   "timeLabel": "시간",
+  "download": {
+    "button": "이미지로 저장",
+    "saving": "저장 중…",
+    "error": "이미지를 만들지 못했습니다. 다시 시도해 주세요."
+  },
   "periods": {
     "morning": "오전",
     "afternoon": "오후",

@@ -8,6 +8,11 @@
   "scheduleTitle": "Schedule",
   "scheduleHint": "Select a talk to read its abstract.",
   "timeLabel": "Time",
+  "download": {
+    "button": "Download image",
+    "saving": "Saving…",
+    "error": "Couldn't create the image. Please try again."
+  },
   "periods": {
     "morning": "Morning",
     "afternoon": "Afternoon",
