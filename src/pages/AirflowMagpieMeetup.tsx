@@ -469,52 +469,56 @@ const AirflowMagpieMeetup = () => {
       </section>
 
       <section className="mx-auto max-w-6xl px-5 py-14 sm:px-6 md:py-20">
-        <div className="mb-8 flex flex-wrap items-end justify-between gap-x-6 gap-y-4">
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
+        {/* Title and hint on the left; one toolbar row of equal-height controls on the right
+            (below the title on phones). */}
+        <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
             <h2 className="text-2xl font-bold tracking-tight text-gray-900 md:text-3xl">
               {t('scheduleTitle')}
             </h2>
-            <div
-              role="group"
-              aria-label="Language"
-              className="inline-flex rounded-lg border border-solid border-gray-300 bg-white p-0.5 text-sm font-semibold"
-            >
-              {LANGUAGES.map(lang => {
-                const active = currentLanguage === lang.code;
-                return (
-                  <button
-                    key={lang.code}
-                    type="button"
-                    lang={lang.code}
-                    aria-pressed={active}
-                    onClick={() => i18n.changeLanguage(lang.code)}
-                    className={`rounded-md px-3 py-1.5 transition-colors ${
-                      active
-                        ? 'bg-primary-blue text-white'
-                        : 'text-gray-600 hover:text-primary-blue'
-                    }`}
-                  >
-                    {lang.label}
-                  </button>
-                );
-              })}
-            </div>
+            <p className="mt-1.5 text-sm text-gray-500">{t('scheduleHint')}</p>
           </div>
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-            <p className="text-sm text-gray-500">{t('scheduleHint')}</p>
-            <button
-              type="button"
-              onClick={downloadSchedule}
-              disabled={exportState === 'saving'}
-              className="inline-flex items-center gap-2 rounded-lg border border-solid border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-800 shadow-sm transition-colors hover:border-primary-blue hover:text-primary-blue disabled:cursor-wait disabled:opacity-60"
-            >
-              <ArrowDownTrayIcon aria-hidden="true" className="h-4 w-4" />
-              {exportState === 'saving'
-                ? t('download.saving')
-                : t('download.button')}
-            </button>
+          <div className="flex flex-col gap-2 sm:items-end">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div
+                role="group"
+                aria-label="Language"
+                className="inline-flex h-10 rounded-lg border border-solid border-gray-300 bg-white p-0.5 text-sm font-semibold"
+              >
+                {LANGUAGES.map(lang => {
+                  const active = currentLanguage === lang.code;
+                  return (
+                    <button
+                      key={lang.code}
+                      type="button"
+                      lang={lang.code}
+                      aria-pressed={active}
+                      onClick={() => i18n.changeLanguage(lang.code)}
+                      className={`rounded-md px-3 transition-colors ${
+                        active
+                          ? 'bg-primary-blue text-white'
+                          : 'text-gray-600 hover:text-primary-blue'
+                      }`}
+                    >
+                      {lang.label}
+                    </button>
+                  );
+                })}
+              </div>
+              <button
+                type="button"
+                onClick={downloadSchedule}
+                disabled={exportState === 'saving'}
+                className="inline-flex h-10 items-center gap-2 whitespace-nowrap rounded-lg border border-solid border-gray-300 bg-white px-4 text-sm font-semibold text-gray-800 shadow-sm transition-colors hover:border-primary-blue hover:text-primary-blue disabled:cursor-wait disabled:opacity-60"
+              >
+                <ArrowDownTrayIcon aria-hidden="true" className="h-4 w-4" />
+                {exportState === 'saving'
+                  ? t('download.saving')
+                  : t('download.button')}
+              </button>
+            </div>
             {exportState === 'error' && (
-              <p role="alert" className="w-full text-sm text-red-700">
+              <p role="alert" className="text-sm text-red-700">
                 {t('download.error')}
               </p>
             )}
