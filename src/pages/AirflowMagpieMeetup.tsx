@@ -379,8 +379,14 @@ const ScheduleTable = ({
 
 const NO_OPEN_SESSIONS = new Set<string>();
 
+const LANGUAGES = [
+  { code: 'ko', label: '한국어' },
+  { code: 'en', label: 'English' },
+] as const;
+
 const AirflowMagpieMeetup = () => {
   const { t, i18n } = useTranslation('magpieMeetup');
+  const currentLanguage = i18n.resolvedLanguage === 'en' ? 'en' : 'ko';
   const [openIds, setOpenIds] = useState<Set<string>>(new Set());
   const exportRef = useRef<HTMLDivElement>(null);
   const [exportState, setExportState] = useState<'idle' | 'saving' | 'error'>(
@@ -458,9 +464,36 @@ const AirflowMagpieMeetup = () => {
 
       <section className="mx-auto max-w-6xl px-5 py-14 sm:px-6 md:py-20">
         <div className="mb-8 flex flex-wrap items-end justify-between gap-x-6 gap-y-4">
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900 md:text-3xl">
-            {t('scheduleTitle')}
-          </h2>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
+            <h2 className="text-2xl font-bold tracking-tight text-gray-900 md:text-3xl">
+              {t('scheduleTitle')}
+            </h2>
+            <div
+              role="group"
+              aria-label="Language"
+              className="inline-flex rounded-lg border border-solid border-gray-300 bg-white p-0.5 text-sm font-semibold"
+            >
+              {LANGUAGES.map(lang => {
+                const active = currentLanguage === lang.code;
+                return (
+                  <button
+                    key={lang.code}
+                    type="button"
+                    lang={lang.code}
+                    aria-pressed={active}
+                    onClick={() => i18n.changeLanguage(lang.code)}
+                    className={`rounded-md px-3 py-1.5 transition-colors ${
+                      active
+                        ? 'bg-primary-blue text-white'
+                        : 'text-gray-600 hover:text-primary-blue'
+                    }`}
+                  >
+                    {lang.label}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
             <p className="text-sm text-gray-500">{t('scheduleHint')}</p>
             <button
