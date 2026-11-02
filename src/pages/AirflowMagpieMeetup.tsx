@@ -125,10 +125,13 @@ const DetailBlocks = ({ blocks }: { blocks: Block[] }) => (
  */
 const LAYOUTS = {
   responsive: {
+    // Phones stack time above the session so titles and abstracts get the full width.
     rowCols:
-      'grid-cols-[4.5rem_minmax(0,1fr)] sm:grid-cols-[6.5rem_minmax(0,1fr)] md:grid-cols-[7rem_minmax(0,1fr)]',
-    timePad: 'pl-4 sm:pl-6',
-    sessionPad: 'pr-4 sm:pr-6',
+      'grid-cols-1 sm:grid-cols-[6.5rem_minmax(0,1fr)] md:grid-cols-[7rem_minmax(0,1fr)]',
+    timeBox: 'px-4 pt-4 sm:py-4 sm:pl-6 sm:pr-0',
+    timeStart: 'inline sm:block',
+    timeEnd: 'ml-1 inline sm:ml-0 sm:block',
+    sessionBox: 'px-4 pb-4 pt-1 sm:py-4 sm:pl-3 sm:pr-6',
     headingPad: 'px-4 sm:px-6',
     roomHeader: 'hidden lg:grid',
     parallel:
@@ -136,13 +139,15 @@ const LAYOUTS = {
     room2Column: 'lg:border-l lg:border-t',
     // Below lg the Room 2 row is an ordinary row; side by side it drops its own time column.
     room2Row:
-      'grid grid-cols-[4.5rem_minmax(0,1fr)] sm:grid-cols-[6.5rem_minmax(0,1fr)] md:grid-cols-[7rem_minmax(0,1fr)] lg:block lg:border-t-0 lg:[&>div:first-child]:hidden',
-    roomLabel: 'lg:hidden',
+      'grid grid-cols-1 sm:grid-cols-[6.5rem_minmax(0,1fr)] md:grid-cols-[7rem_minmax(0,1fr)] lg:block lg:border-t-0 lg:[&>div:first-child]:hidden',
+    roomLabel: 'ml-2 inline sm:ml-0 sm:mt-1 sm:block lg:hidden',
   },
   wide: {
     rowCols: 'grid-cols-[7rem_minmax(0,1fr)]',
-    timePad: 'pl-6',
-    sessionPad: 'pr-6',
+    timeBox: 'py-4 pl-6',
+    timeStart: 'block',
+    timeEnd: 'block',
+    sessionBox: 'py-4 pl-3 pr-6',
     headingPad: 'px-6',
     roomHeader: 'grid',
     parallel: 'grid grid-cols-[calc(7rem_+_(100%_-_7rem)_/_2)_minmax(0,1fr)]',
@@ -157,14 +162,29 @@ type Layout = (typeof LAYOUTS)['responsive'];
 /** Content width of the schedule at the widest page layout; the image is rendered at it. */
 const EXPORT_WIDTH = 1152;
 
-const TimeLabel = ({ slot, layout }: { slot: Slot; layout: Layout }) => (
-  <div className={`py-4 tabular-nums ${layout.timePad}`}>
+const TimeLabel = ({
+  slot,
+  layout,
+  roomLabel,
+}: {
+  slot: Slot;
+  layout: Layout;
+  roomLabel?: string;
+}) => (
+  <div className={`tabular-nums ${layout.timeBox}`}>
     <span
-      className={`block text-sm font-semibold ${slot.kind === 'break' ? 'text-gray-500' : 'text-gray-900'}`}
+      className={`${layout.timeStart} text-sm font-semibold ${slot.kind === 'break' ? 'text-gray-500' : 'text-gray-900'}`}
     >
       {slot.start}
     </span>
-    <span className="block text-sm text-gray-500">– {slot.end}</span>
+    <span className={`${layout.timeEnd} text-sm text-gray-500`}>
+      – {slot.end}
+    </span>
+    {roomLabel && (
+      <span className={`${layout.roomLabel} text-xs font-medium text-gray-500`}>
+        {roomLabel}
+      </span>
+    )}
   </div>
 );
 
@@ -178,7 +198,7 @@ const DetailPanel = ({ id, detail }: { id: string; detail: SessionDetail }) => {
   ].filter((item): item is { label: string; value: string } => !!item.value);
 
   return (
-    <div id={id} className="min-w-0 pb-6 pl-3 pr-4 sm:pr-10">
+    <div id={id} className="min-w-0 px-4 pb-6 sm:pl-3 sm:pr-10">
       <dl className="mb-5 grid grid-cols-[auto_1fr] gap-x-6 gap-y-2 border-y border-gray-200 py-3 text-sm">
         {meta.map(item => (
           <div key={item.label} className="contents">
@@ -198,7 +218,6 @@ const SessionBody = ({
   slot,
   session,
   layout,
-  roomLabel,
   interactive,
   isOpen,
   onToggle,
@@ -206,7 +225,6 @@ const SessionBody = ({
   slot: Slot;
   session: Session;
   layout: Layout;
-  roomLabel?: string;
   interactive: boolean;
   isOpen: boolean;
   onToggle: () => void;
@@ -222,20 +240,11 @@ const SessionBody = ({
 
   const summary = (
     <div className="min-w-0 flex-1">
-      {(tag || roomLabel) && (
-        <div className="mb-1.5 flex flex-wrap items-center gap-2">
-          {tag && (
-            <span className="inline-block rounded-full bg-cyan-50 px-2.5 py-0.5 text-xs font-semibold text-cyan-800 ring-1 ring-inset ring-cyan-100">
-              {tag}
-            </span>
-          )}
-          {roomLabel && (
-            <span
-              className={`text-xs font-medium text-gray-500 ${layout.roomLabel}`}
-            >
-              {roomLabel}
-            </span>
-          )}
+      {tag && (
+        <div className="mb-1.5 flex">
+          <span className="inline-block rounded-full bg-cyan-50 px-2.5 py-0.5 text-xs font-semibold text-cyan-800 ring-1 ring-inset ring-cyan-100">
+            {tag}
+          </span>
         </div>
       )}
       <p
@@ -259,15 +268,13 @@ const SessionBody = ({
   );
 
   if (!detail) {
-    return (
-      <div className={`min-w-0 py-4 pl-3 ${layout.sessionPad}`}>{summary}</div>
-    );
+    return <div className={`min-w-0 ${layout.sessionBox}`}>{summary}</div>;
   }
 
   if (!interactive) {
     // Keep the toggle's footprint so titles wrap exactly as on the page.
     return (
-      <div className={`flex min-w-0 gap-3 py-4 pl-3 ${layout.sessionPad}`}>
+      <div className={`flex min-w-0 gap-3 ${layout.sessionBox}`}>
         {summary}
         <span aria-hidden="true" className="h-5 w-5 shrink-0" />
       </div>
@@ -281,7 +288,7 @@ const SessionBody = ({
         onClick={onToggle}
         aria-expanded={isOpen}
         aria-controls={panelId}
-        className={`group flex w-full gap-3 py-4 pl-3 text-left transition-colors hover:bg-slate-50/80 focus-visible:bg-slate-50/80 ${layout.sessionPad}`}
+        className={`group flex w-full gap-3 text-left transition-colors hover:bg-slate-50/80 focus-visible:bg-slate-50/80 ${layout.sessionBox}`}
       >
         {summary}
         <ChevronDownIcon
@@ -323,12 +330,11 @@ const ScheduleTable = ({
         key={slot.id}
         className={`border-t border-gray-200 ${background} ${rowClass}`}
       >
-        <TimeLabel slot={slot} layout={layout} />
+        <TimeLabel slot={slot} layout={layout} roomLabel={roomLabel} />
         <SessionBody
           slot={slot}
           session={t(`sessions.${slot.id}`, { returnObjects: true }) as Session}
           layout={layout}
-          roomLabel={roomLabel}
           interactive={interactive}
           isOpen={isOpen}
           onToggle={() => onToggle?.(slot.id)}
@@ -427,7 +433,7 @@ const AirflowMagpieMeetup = () => {
     <div className="bg-white break-keep">
       <section className="border-b border-gray-200 bg-gradient-to-b from-cyan-50/60 to-white">
         <div className="mx-auto max-w-6xl px-5 pb-12 pt-16 sm:px-6 md:pb-16 md:pt-24">
-          <h1 className="text-balance text-4xl font-bold tracking-tight text-gray-900 md:text-5xl">
+          <h1 className="text-balance text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl md:text-5xl">
             {t('title')}
           </h1>
 
