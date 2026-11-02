@@ -52,39 +52,33 @@ organizers:
       linkedIn: cpprhtn
       github: cpprhtn
     - id: '7'
-      name: 장원용
-      role: 운영진
-      generation: 4
-      email: wonyong-jang@airflow-kr.org
-      github: WonYong-Jang
-    - id: '8'
       name: 조민성
       role: 운영진
       generation: 4
       email: mscho@airflow-kr.org
       linkedIn: mscho7969
       github: kkumtree
-    - id: '9'
+    - id: '8'
       name: 최병호
       role: 운영진
       generation: 4
       email: themars@airflow-kr.org
       github: mars2cbh
-    - id: '10'
+    - id: '9'
       name: 최지현
       role: 운영진
       generation: 4
       email: eeeclipse@airflow-kr.org
       linkedIn: jhchoii
       github: eeeclipse
-    - id: '11'
+    - id: '10'
       name: 추영욱
       role: 리더
       generation: 4
       email: choo121600@airflow-kr.org
       linkedIn: yeonguk-choo
       github: choo121600
-    - id: '12'
+    - id: '11'
       name: 한상곤
       role: 운영진
       generation: 4
