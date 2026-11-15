@@ -16,6 +16,8 @@ organizers:
       role: 운영진
       generation: 4
       email: kkyoung@airflow-kr.org
+      avatar_url: /images/organizers/kunyoungkim.jpg
+      linkedIn: kunyoung-kim-b360a7279
       github: kunyoungkim
     - id: '2'
       name: 김노은
@@ -36,6 +38,8 @@ organizers:
       role: 운영진
       generation: 4
       email: vividbaek@airflow-kr.org
+      avatar_url: /images/organizers/vividbaek.jpg
+      linkedIn: vividbaek
       github: vividdream
     - id: '5'
       name: 양원석
@@ -63,6 +67,7 @@ organizers:
       role: 운영진
       generation: 4
       email: themars@airflow-kr.org
+      linkedIn: bchoi1
       github: mars2cbh
     - id: '9'
       name: 최지현
